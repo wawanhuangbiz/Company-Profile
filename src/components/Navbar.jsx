@@ -1,8 +1,11 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import LanguageSelector from "./LanguageSelector";
+import 'react-tooltip/dist/react-tooltip.css';
+import mainData from "../data/mainData.json";
 
-const Navbar = () => {
+const Navbar = ({ selectedLanguage }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
@@ -15,15 +18,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Our Team", href: "#our-team" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const menuItems = mainData[selectedLanguage]?.navbar?.menuItems;
 
+  console.log("Selected Language:", selectedLanguage || []);
+  console.log("Menu Items:", menuItems || []);
+
+ 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 text-[#1D1616] ${
@@ -39,14 +39,14 @@ const Navbar = () => {
               className="flex-shrink-0"
             >
               <img
-                className="h-20 w-auto"
-                src="/src/assets/logo_SSI.svg"
+                className="h-12 w-auto"
+                src="/public/logo-ssi-no-back.png"
                 alt="Logo"
               />
             </motion.div>
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-8">
-                {menuItems.map((item) => (
+                {menuItems?.map((item) => (
                   <motion.a
                     key={item.name}
                     href={item.href}
@@ -61,10 +61,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:block">
+            <LanguageSelector selectedLanguage={selectedLanguage} />
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#D84040] text-white px-6 py-2 rounded-full hover:bg-[#8E1616] transition-colors duration-300 font-medium"
+              className="bg-[#D84040] text-white px-6 py-2 rounded-full hover:bg-[#8E1630] transition-colors duration-300 font-medium"
             >
               Get Started
             </motion.button>
@@ -101,11 +102,14 @@ const Navbar = () => {
                   {item.name}
                 </motion.a>
               ))}
+              <div className="flex justify-center mt-4">
+                <LanguageSelector selectedLanguage={selectedLanguage} />
+              </div>
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium"
               >
-                  Get Started
+                Get Started
               </motion.button>
             </div>
           </motion.div>

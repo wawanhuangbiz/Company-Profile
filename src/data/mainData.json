@@ -1,0 +1,26 @@
+{
+  "en": {
+    "navbar": {
+      "menuItems": [
+        { "name": "Home", "href": "#home" },
+        { "name": "About", "href": "#about" },
+        { "name": "Services", "href": "#services" },
+        { "name": "Portfolio", "href": "#portfolio" },
+        { "name": "Our Team", "href": "#our-team" },
+        { "name": "Contact", "href": "#contact" }
+      ]
+    }
+  },
+  "zh": {
+    "navbar": {
+      "menuItems": [
+        { "name": "首页", "href": "#home" },
+        { "name": "关于", "href": "#about" },
+        { "name": "服务", "href": "#services" },
+        { "name": "作品集", "href": "#portfolio" },
+        { "name": "我们的团队", "href": "#our-team" },
+        { "name": "联系", "href": "#contact" }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ScrollProgress from "./components/ScrollProgress";
@@ -18,11 +18,12 @@ import Footer from "./components/Footer";
 import OurTeam from "./components/OurTeam.jsx";
 import TeamMember from "./components/TeamMember.jsx"; // Import the dynamic team member page
 import ScrollToTop from "./components/ScrollProgress.jsx"; // Import the scroll-to-top component
+import mainData from "./data/mainData.json"
 
-const Home = () => (
+const Home = ({ selectedLanguage }) => (
     <>
         <ScrollProgress />
-        <Navbar />
+        <Navbar selectedLanguage={selectedLanguage}/>
         <Hero />
         <About />
         <Services />
@@ -40,15 +41,21 @@ const Home = () => (
 );
 
 const App = () => {
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
+    const translations = mainData[selectedLanguage];
+
+    // useEffect(() => {
+    //     setTranslations(mainData[selectedLanguage]);
+    // }, [selectedLanguage]);
     return (
         <Router>
             <ScrollToTop />
             <Routes>
                 {/* Home Route */}
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home translations={translations} />} />
 
                 {/* Team Member Route */}
-                <Route path="/team/:id" element={<TeamMember />} />
+                <Route path="/team/:id" element={<TeamMember translations={translations} />} />
             </Routes>
         </Router>
     );
