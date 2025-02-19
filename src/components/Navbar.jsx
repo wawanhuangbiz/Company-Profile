@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 text-[#1D1616] ${
         scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
@@ -51,7 +51,7 @@ const Navbar = () => {
                     key={item.name}
                     href={item.href}
                     whileHover={{ scale: 1.05 }}
-                    className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-300"
+                    className="text-gray-800 hover:text-[#8E1630] px-3 py-2 text-md font-medium transition-colors duration-300"
                   >
                     {item.name}
                   </motion.a>
@@ -64,7 +64,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 font-medium"
+              className="bg-[#D84040] text-white px-6 py-2 rounded-full hover:bg-[#8E1616] transition-colors duration-300 font-medium"
             >
               Get Started
             </motion.button>
@@ -105,7 +105,7 @@ const Navbar = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium"
               >
-                Get Started
+                  Get Started
               </motion.button>
             </div>
           </motion.div>

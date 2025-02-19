@@ -51,20 +51,20 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue-950 pt-20 pb-8 relative">
+    <footer className="bg-[#800000] pt-20 pb-8 relative">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
             <img
-              src="/api/placeholder/120/40"
+              src="public/logo-ssi-no-back.png"
               alt="Logo"
-              className="h-10 w-auto mb-6"
+              className="h-50 w-auto mb-6"
             />
             <p className="text-blue-200 mb-6 leading-relaxed">
-              Creating innovative digital solutions for businesses worldwide. We
-              transform ideas into powerful digital experiences.
+              Creating innovative solutions for businesses worldwide. We
+              transform ideas into amazing experiences.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (

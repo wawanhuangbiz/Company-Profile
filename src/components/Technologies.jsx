@@ -4,69 +4,44 @@ import {
   Database,
   Cloud,
   Palette,
-  Blocks,
-  FileJson,
+  Boxes,
+  Layers2,
   Container,
   Brain,
+  FileText,
+  Grid2x2Check,
+  Images
 } from "lucide-react";
 
 const Technologies = () => {
   const techs = [
     {
       name: "AutoCAD",
-      icon: "src/assets/auto-cad.png",
-      color: "text-blue-600",
+      icon: FileText,
+      color: "text-red-600",
       bgColor: "bg-blue-50",
       description: "Modern frontend development",
     },
     {
-      name: "Node.js",
-      icon: FileJson, // Changed to FileJson to better represent Node.js
-      color: "text-green-600",
+      name: "Sketchup",
+      icon: Boxes, // Changed to FileJson to better represent Node.js
+      color: "text-blue-600",
       bgColor: "bg-green-50",
       description: "Backend development",
     },
     {
-      name: "TypeScript",
-      icon: Cpu, // Changed to Cpu to represent TypeScript's type processing
+      name: "Revit",
+      icon: Layers2, // Changed to Cpu to represent TypeScript's type processing
       color: "text-purple-600",
       bgColor: "bg-purple-50",
       description: "Type-safe development",
     },
     {
-      name: "MongoDB",
-      icon: Database, // Kept Database as it's perfect for MongoDB
+      name: "SAP2000",
+      icon: Grid2x2Check, // Kept Database as it's perfect for MongoDB
       color: "text-emerald-600",
       bgColor: "bg-emerald-50",
       description: "Database solutions",
-    },
-    {
-      name: "TailwindCSS",
-      icon: Palette, // Changed to Palette to represent styling/CSS
-      color: "text-cyan-600",
-      bgColor: "bg-cyan-50",
-      description: "Modern styling",
-    },
-    {
-      name: "AWS",
-      icon: Cloud, // Kept Cloud as it's perfect for AWS
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      description: "Cloud infrastructure",
-    },
-    {
-      name: "Docker",
-      icon: Container, // Changed to Container to represent Docker containers
-      color: "text-indigo-600",
-      bgColor: "bg-indigo-50",
-      description: "Containerization",
-    },
-    {
-      name: "AI Integration",
-      icon: Brain, // Changed to Brain to represent AI/ML
-      color: "text-rose-600",
-      bgColor: "bg-rose-50",
-      description: "Smart solutions",
     },
   ];
 

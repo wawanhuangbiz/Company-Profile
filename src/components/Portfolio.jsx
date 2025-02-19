@@ -23,7 +23,7 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "GFT New Factory",
       category: "Web Development",
       image: "/src/assets/Logo.jpg",
       description: "Modern e-commerce solution with advanced features",
@@ -32,7 +32,7 @@ const Portfolio = () => {
       link: "#",
     },
     {
-      title: "Mobile Banking App",
+      title: "Fuling New Factory",
       category: "Mobile Development",
       image: "/src/assets/Logo.jpg",
       description: "Secure and user-friendly banking application",
@@ -41,7 +41,7 @@ const Portfolio = () => {
       link: "#",
     },
     {
-      title: "Corporate Website",
+      title: "Makuku New Factory",
       category: "Web Development",
       image: "/src/assets/Logo.jpg",
       description: "Professional website with custom CMS",
@@ -50,7 +50,7 @@ const Portfolio = () => {
       link: "#",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Citra Sanxing Indonesia New Factory",
       category: "UI/UX Design",
       image: "/src/assets/Logo.jpg",
       description: "Analytics and management platform",
@@ -59,7 +59,7 @@ const Portfolio = () => {
       link: "#",
     },
     {
-      title: "Delivery Tracking System",
+      title: "SMJ-SBRI New Factory",
       category: "Web Development",
       image: "/src/assets/Logo.jpg",
       description: "Real-time tracking and management system",

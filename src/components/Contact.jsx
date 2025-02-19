@@ -21,14 +21,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@yourcompany.com",
+      content: "suryasolusiinternasional.pt@gmail.com",
       color: "bg-purple-50",
       iconColor: "text-purple-600",
     },
     {
       icon: MapPin,
       title: "Address",
-      content: "123 Business Street, Suite 100\nNew York, NY 10001",
+      content: "Jl. Pandanaran No.30, Pekunden, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50134, Lantai 12",
       color: "bg-pink-50",
       iconColor: "text-pink-600",
     },
@@ -36,7 +36,7 @@ const Contact = () => {
       icon: Clock,
       title: "Business Hours",
       content:
-        "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 2:00 PM",
+        "Monday - Saturday: 8:00 AM - 5:00 PM",
       color: "bg-green-50",
       iconColor: "text-green-600",
     },
@@ -133,7 +133,7 @@ const Contact = () => {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition duration-200"
-                    placeholder="John Doe"
+                    placeholder="Adolf Hitler"
                   />
                 </div>
                 <div>
@@ -151,7 +151,7 @@ const Contact = () => {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition duration-200"
-                    placeholder="john@example.com"
+                    placeholder="example@email.com"
                   />
                 </div>
                 <div>

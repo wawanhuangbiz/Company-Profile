@@ -24,9 +24,9 @@ const Services = () => {
       ],
     },
     {
-      title: "Mobile Apps",
+      title: "Transforming Design",
       description:
-        "Native and cross-platform mobile applications for iOS and Android.",
+        "Transforming design from usual to extraordinary",
       icon: Smartphone,
       color: "text-purple-600",
       bgColor: "bg-purple-50",
@@ -38,9 +38,9 @@ const Services = () => {
       ],
     },
     {
-      title: "UI/UX Design",
+      title: "Legalitas",
       description:
-        "User-centered design solutions that enhance user experience.",
+        "Bantu bikin PBG dkk",
       icon: Palette,
       color: "text-pink-600",
       bgColor: "bg-pink-50",
@@ -52,7 +52,7 @@ const Services = () => {
       ],
     },
     {
-      title: "Digital Marketing",
+      title: "Supervisi Lapangan",
       description:
         "Strategic marketing solutions to grow your online presence.",
       icon: TrendingUp,
@@ -65,7 +65,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
+      className="py-20 bg-gradient-to-b bg-[#EEEEEE] from-white to-gray-50 relative overflow-hidden"
     >
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50 rounded-full filter blur-3xl opacity-30"></div>

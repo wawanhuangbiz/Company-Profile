@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative pt-32 lg:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-blue-50 via-purple-50/30 to-white"
+      className="relative pt-32 lg:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-[#EEEEEE] to-white"
     >
       {/* Bottom blur effect overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white backdrop-blur-sm"></div>
@@ -32,7 +32,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium"
+                className="inline-flex items-center px-4 py-2 bg-[#D84040] bg-opacity-50 text-[#8E1616] rounded-full mb-6 text-sm font-medium"
               >
                 <Star className="w-4 h-4 mr-2" />
                 Trusted by 500+ companies worldwide
@@ -46,9 +46,11 @@ const Hero = () => {
               >
                 Building Partnerships{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 text-blue-600">
-                    Building Dreams
-                  </span>
+                  <div className="">
+                    <span className="relative z-10 bg-gradient-to-l from-[#E0AA3E] via-[#B88A44] to-[#FAF398] text-transparent bg-clip-text shadow-lg shadow-[#8E1616]/50">
+                      Building Dreams
+                    </span>
+                  </div>
                   <motion.span
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}

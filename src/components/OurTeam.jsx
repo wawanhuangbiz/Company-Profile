@@ -2,15 +2,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     ArrowRight,
     ExternalLink,
-    Code,
-    Palette,
-    Smartphone,
     Search,
     Brush,
     Handshake,
     PencilRuler,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 
 const OurTeam = () => {
     const [activeFilter, setActiveFilter] = useState("All");
@@ -19,65 +17,128 @@ const OurTeam = () => {
 
     const categories = [
         "All",
-        "Web Development",
-        "Mobile Development",
-        "UI/UX Design",
+        "Architect",
+        "Structural Engineer",
+        "Administrator",
     ];
 
     const projects = [
         {
-            title: "Freddy Hermawan Liwarto",
+            title: "Freddy Hermawan",
             category: "Pak Bos",
             image: "/src/assets/PakFred.jpg",
             description: "Anda Puas, kami senang",
             icon: Handshake,
             tools: ["AutoCAD", "SketchUp", "Excel", "Powerpoint", "Whatsapp"],
-            link: "#",
+            link: "freddy-hermawan",
         },
         {
-            title: "Tantya Galuh Puspa Hendika",
-            category: "Junior Architect",
-            image: "/src/assets/kuya.jpg",
-            description: "Kaum Stoic Modern",
+            title: "李伟锋",
+            category: "Director",
+            image: "public/logo-ssi-no-back.png",
+            description: "成就源于对工作的无尽热爱和坚持。",
+            icon: Handshake,
+            tools: ["AutoCAD", "SketchUp"],
+            link: "li-weifeng",
+        },
+        {
+            title: "高攀",
+            category: "Architect",
+            image: "public/logo-ssi-no-back.png",
+            description: "成功是留给那些废寝忘食、全力以赴的人。",
             icon: Brush,
             tools: ["AutoCAD", "SketchUp", "Revit", "Enscape"],
-            link: "#",
+            link: "gao-pan",
         },
         {
-            title: "Sabilya Mahardika Saputri",
-            category: "Junior Structural Engineer",
-            image: "/src/assets/sabil.jpg",
-            description: "Keep grinding, good things come to those who hustle.",
+            title: "邓成林",
+            category: "Structural Engineer",
+            image: "public/logo-ssi-no-back.png",
+            description: "今天不努力工作，明天就得努力找工作。",
             icon: PencilRuler,
             tools: ["TSSD", "PKPM", "SAP2000", "AutoCAD"],
-            link: "#",
+            link: "deng-chenglin",
         },
         {
             title: "Wijiyanto",
             category: "Architect",
-            image: "/src/assets/Logo.jpg",
+            image: "public/logo-ssi-no-back.png",
             description: "Analytics and management platform",
-            icon: Palette,
-            tools: ["Figma", "Adobe XD", "Sketch"],
-            link: "#",
+            icon: Brush,
+            tools: ["AutoCAD", "SketchUp", "Revit", "Enscape"],
+            link: "wijiyanto",
         },
         {
-            title: "Delivery Tracking System",
-            category: "Web Development",
-            image: "/src/assets/Logo.jpg",
+            title: "M. Nur Abdul Bashirudin",
+            category: "Structural Engineer",
+            image: "public/logo-ssi-no-back.png",
             description: "Real-time tracking and management system",
-            icon: Code,
-            tools: ["Vue.js", "Express", "PostgreSQL"],
-            link: "#",
+            icon: PencilRuler,
+            tools: ["TSSD", "PKPM", "SAP2000", "AutoCAD"],
+            link: "nur-abdul",
         },
         {
-            title: "Educational Platform",
-            category: "Web Development",
-            image: "/src/assets/Logo.jpg",
+            title: "Tantya Galuh Puspa Hendika",
+            category: "Architect",
+            image: "/src/assets/kuya.jpg",
+            description: "Kaum Stoic Modern",
+            icon: Brush,
+            tools: ["AutoCAD", "SketchUp", "Revit", "Enscape"],
+            link: "tantya-galuh",
+        },
+        {
+            title: "Sabilya Mahardika Saputri",
+            category: "Structural Engineer",
+            image: "/src/assets/sabil.jpg",
+            description: "Keep grinding, good things come to those who hustle.",
+            icon: PencilRuler,
+            tools: ["TSSD", "PKPM", "SAP2000", "AutoCAD"],
+            link: "sabilya-mahardika",
+        },
+        {
+            title: "Anis Salma",
+            category: "Structural Engineer",
+            image: "public/logo-ssi-no-back.png",
             description: "Online learning management system",
-            icon: Code,
-            tools: ["Django", "React", "AWS"],
-            link: "#",
+            icon: PencilRuler,
+            tools: ["TSSD", "PKPM", "SAP2000", "AutoCAD"],
+            link: "anis-salma",
+        },
+        {
+            title: "Christian Aji Wicaksono",
+            category: "Architect",
+            image: "public/logo-ssi-no-back.png",
+            description: "Online learning management system",
+            icon: PencilRuler,
+            tools: ["AutoCAD", "SketchUp", "Photoshop", "CorelDraw", "Enscape", "5D Render", "Adobe Premiere Pros"],
+            link: "christian-aji",
+        },
+        {
+            title: "Lafifatul Badriyah",
+            category: "Administrator",
+            image: "public/logo-ssi-no-back.png",
+            description: "Analytics and management platform",
+            icon: Brush,
+            tools: ["Excel", "Word"],
+            link: "lafifatul-badriyah",
+        },
+        {
+            title: "Ign. Kurniawan Eko Wibowo",
+            category: "Administrator",
+            image: "public/logo-ssi-no-back.png",
+            description: "Analytics and management platform",
+            icon: Brush,
+            tools: ["Python","JavaScript","PHP","TensorFlow", "Excel", "Word"],
+            link: "team/ign-kurniawan",
+        },
+        {
+            title: "Ahmad Sugiyanto",
+            category: "General Affair",
+            image: "public/logo-ssi-no-back.png",
+            description: "Analytics and management platform",
+            icon: Brush,
+            tools: ["Excel", "Word"],
+            link: "team/ahmad-sugiyanto",
         },
     ];
 
@@ -114,7 +175,7 @@ const OurTeam = () => {
     );
 
     return (
-        <section id="portfolio" className="bg-gray-50 py-20">
+        <section id="our-team" className="bg-gray-50 py-20">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="mb-16 text-center">
@@ -151,7 +212,7 @@ const OurTeam = () => {
                         <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                         <input
                             type="text"
-                            placeholder="Search projects..."
+                            placeholder="Search member..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="w-full rounded-lg border border-gray-200 bg-white py-2 pl-10 pr-4 text-gray-600 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 md:w-80"
@@ -166,7 +227,7 @@ const OurTeam = () => {
                     </motion.div>
                 </div>
 
-                {/* Projects Grid */}
+                {/* Members Grid */}
                 <motion.div layout className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <AnimatePresence mode="wait">
                         {filteredProjects.length === 0 ? (
@@ -202,13 +263,13 @@ const OurTeam = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 transition duration-300 group-hover:opacity-70"></div>
                                         <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                            <a
-                                                href={project.link}
+                                            <Link
+                                                to={`/team/${project.link.toLowerCase().replace(/\s+/g, "-")}`}
                                                 className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-900 transition duration-300 hover:scale-105"
                                             >
-                                                View Project
+                                                View Profile
                                                 <ExternalLink className="ml-2 h-4 w-4" />
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 
@@ -248,7 +309,7 @@ const OurTeam = () => {
                     className="mt-12 text-center"
                 >
                     <button className="group inline-flex items-center rounded-full bg-blue-600 px-6 py-3 font-medium text-white transition duration-300 hover:bg-blue-700">
-                        View All Projects
+                        View All Members
                         <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                     </button>
                 </motion.div>
