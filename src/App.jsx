@@ -18,27 +18,7 @@ import Footer from "./components/Footer";
 import OurTeam from "./components/OurTeam.jsx";
 import TeamMember from "./components/TeamMember.jsx"; // Import the dynamic team member page
 import ScrollToTop from "./components/ScrollProgress.jsx"; // Import the scroll-to-top component
-import mainData from "./data/mainData.json"
-
-const Home = ({ selectedLanguage }) => (
-    <>
-        <ScrollProgress />
-        <Navbar selectedLanguage={selectedLanguage}/>
-        <Hero />
-        <About />
-        <Services />
-        <ProcessSteps />
-        <Stats />
-        <Portfolio />
-        <Technologies />
-        <Testimonials />
-        <OurTeam />
-        <CTABanner />
-        <Contact />
-        <Footer />
-        <FloatingCTA />
-    </>
-);
+import mainData from "./data/mainData.json";
 
 const App = () => {
     const [selectedLanguage, setSelectedLanguage] = useState('en');
@@ -52,7 +32,7 @@ const App = () => {
             <ScrollToTop />
             <Routes>
                 {/* Home Route */}
-                <Route path="/" element={<Home translations={translations} />} />
+                <Route path="/" element={<Home translations={translations} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}/>} />
 
                 {/* Team Member Route */}
                 <Route path="/team/:id" element={<TeamMember translations={translations} />} />
@@ -60,5 +40,24 @@ const App = () => {
         </Router>
     );
 };
+
+const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
+    <>
+        <ScrollProgress />
+        <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
+        <Hero />
+        <About />
+        <Services />
+        <Stats />
+        <Portfolio />
+        <Technologies />
+        <FAQs />
+        <OurTeam />
+        <CTABanner />
+        <Contact />
+        <Footer />
+        <FloatingCTA />
+    </>
+);
 
 export default App;

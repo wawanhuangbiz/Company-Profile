@@ -16,17 +16,17 @@ const LanguageSelector = ({ selectedLanguage, setSelectedLanguage }) => {
         data-tooltip-id="language-tooltip"
         data-tooltip-content="English"
       >
-        <img src="/public/flags/en.png" alt="English flag" className='h-5 w-auto' />
+        <img src="/public/flags/id.svg" alt="English flag" className='h-5 w-auto rounded-xl' />
       </button>
       <button
         onClick={() => handleSelectLanguage('zh')}
-        className={`inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300 ${
+        className={`inline-flex items-center justify-center p-2 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300 ${
           selectedLanguage === 'zh' ? 'bg-blue-50' : ''
         }`}
         data-tooltip-id="language-tooltip"
         data-tooltip-content="Chinese"
       >
-        <img src="/public/flags/zn.png" alt="Chinese flag" className='h-5 w-auto' />
+        <img src="/public/flags/cn.svg" alt="Chinese flag" className='h-5 w-auto rounded-xl' />
       </button>
       <Tooltip id="language-tooltip" place="bottom" effect="solid" />
     </div>

@@ -47,7 +47,7 @@ const Hero = () => {
                 Building Partnerships{" "}
                 <span className="relative inline-block">
                   <div className="">
-                    <span className="relative z-10 bg-gradient-to-l from-[#E0AA3E] via-[#B88A44] to-[#FAF398] text-transparent bg-clip-text shadow-lg shadow-[#8E1616]/50">
+                    <span className="relative text-[#8E1616]">
                       Building Dreams
                     </span>
                   </div>
