@@ -24,9 +24,7 @@ const App = () => {
     const [selectedLanguage, setSelectedLanguage] = useState('en');
     const translations = mainData[selectedLanguage];
 
-    // useEffect(() => {
-    //     setTranslations(mainData[selectedLanguage]);
-    // }, [selectedLanguage]);
+    useEffect(() => {}, [selectedLanguage]);
     return (
         <Router>
             <ScrollToTop />
@@ -45,7 +43,7 @@ const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
     <>
         <ScrollProgress />
         <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Hero />
+        <Hero selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <About />
         <Services />
         <Stats />

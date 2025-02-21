@@ -9,6 +9,17 @@
         { "name": "Our Team", "href": "#our-team" },
         { "name": "Contact", "href": "#contact" }
       ]
+    },
+    "hero": {
+      "trustedBy": "Trusted by 500+ companies worldwide",
+      "heading": "Building Partnerships Building Dreams",
+      "paragraph": "We believe in collaborative design, working closely with clients to understand their vision and bring it to life. Our expertise in architectural design and project management ensures seamless execution from concept to completion.",
+      "heroItems": [
+        { "type": "button", "text": "Get Started" },
+        { "type": "button", "text": "Watch Demo" },
+        { "type": "floating", "text": "BUILD" },
+        { "type": "floating", "text": "DESIGN" }
+      ]
     }
   },
   "zh": {
@@ -20,6 +31,17 @@
         { "name": "作品集", "href": "#portfolio" },
         { "name": "我们的团队", "href": "#our-team" },
         { "name": "联系", "href": "#contact" }
+      ]
+    },
+    "hero": {
+      "trustedBy": "全球500多家公司信赖",
+      "heading": "建立合作伙伴关系，构建梦想",
+      "paragraph": "我们相信协作设计，与客户紧密合作，理解他们的愿景并将其实现。我们在建筑设计和项目管理方面的专业知识确保从概念到完成的无缝执行。",
+      "heroItems": [
+        { "type": "button", "text": "开始" },
+        { "type": "button", "text": "观看演示" },
+        { "type": "floating", "text": "构建" },
+        { "type": "floating", "text": "设计" }
       ]
     }
   }

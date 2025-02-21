@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Play } from "lucide-react";
+import mainData from "../data/mainData.json";
 
-const Hero = () => {
+const Hero = ({ selectedLanguage }) => {
+  // Ensure mainData is defined
+  const languageData = mainData[selectedLanguage] || {};
+  const heroData = languageData.hero || {};
+  const heroItems = heroData.heroItems || [];
+
   return (
     <section
       id="home"
@@ -35,7 +41,7 @@ const Hero = () => {
                 className="inline-flex items-center px-4 py-2 bg-[#D84040] bg-opacity-50 text-[#8E1616] rounded-full mb-6 text-sm font-medium"
               >
                 <Star className="w-4 h-4 mr-2" />
-                Trusted by 500+ companies worldwide
+                {heroItems.trustedBy || "Trusted by 500+ companies worldwide"}
               </motion.div>
 
               <motion.h1
@@ -44,11 +50,11 @@ const Hero = () => {
                 transition={{ delay: 0.3 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
               >
-                Building Partnerships{" "}
+                {heroItems.heading || "Building Partnerships"}{" "}
                 <span className="relative inline-block">
                   <div className="">
                     <span className="relative text-[#8E1616]">
-                      Building Dreams
+                      {heroItems.subheading || "Building Dreams"}
                     </span>
                   </div>
                   <motion.span
@@ -72,8 +78,7 @@ const Hero = () => {
                 transition={{ delay: 0.4 }}
                 className="text-xl text-gray-600 mb-8 leading-relaxed"
               >
-                We believe in collaborative design, working closely with clients to understand their vision and bring it to life.
-                Our expertise in architectural design and project management ensures seamless execution from concept to completion.
+                {heroItems.paragraph || "We believe in collaborative design, working closely with clients to understand their vision and bring it to life. Our expertise in architectural design and project management ensures seamless execution from concept to completion."}
               </motion.p>
 
               <motion.div
@@ -87,7 +92,7 @@ const Hero = () => {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-blue-600 text-white rounded-full transition-all duration-300 font-medium inline-flex items-center shadow-lg hover:shadow-blue-500/50"
                 >
-                  Get Started
+                  {heroItems.buttonTexts?.[0]?.name || "Get Started"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </motion.button>
                 <motion.button
@@ -96,7 +101,7 @@ const Hero = () => {
                   className="px-8 py-4 bg-white text-gray-900 rounded-full transition-all duration-300 font-medium border-2 border-gray-200 inline-flex items-center shadow-lg hover:shadow-gray-200/50"
                 >
                   <Play className="mr-2 h-5 w-5" />
-                  Watch Demo
+                  {heroItems.buttonTexts?.[1]?.name || "Watch Demo"}
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -125,7 +130,7 @@ const Hero = () => {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium">BUILD</span>
+                  <span className="text-sm font-medium">{heroItems.floatingElements?.[0]?.name || "BUILD"}</span>
                 </div>
               </motion.div>
 
@@ -136,7 +141,7 @@ const Hero = () => {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-medium">DESIGN</span>
+                  <span className="text-sm font-medium">{heroItems.floatingElements?.[1]?.name || "DESIGN"}</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -148,3 +153,4 @@ const Hero = () => {
 };
 
 export default Hero;
+  
