@@ -8,20 +8,17 @@ const Hero = ({ selectedLanguage }) => {
   const heroData = languageData.hero || {};
   const heroItems = heroData.heroItems || [];
 
-  console.log("Language data: ", languageData);
-  console.log("heroData: ", heroData);
-  console.log("Hero items: ", heroItems);
-  
-  
-  
-
+  // console.log("Language data: ", languageData);
+  // console.log("heroData: ", heroData);
+  // console.log("Hero items: ", heroItems);
+ 
   return (
     <section
       id="home"
-      className="relative pt-32 lg:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-[#EEEEEE] to-white"
+      className="relative pt-32 lg:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-[#EEEEEE] to-white bg-custom-image"
     >
       {/* Bottom blur effect overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white backdrop-blur-sm bg-custom-image"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white backdrop-blur-sm"></div>
 
       <div className="container mx-auto px-4 relative">
         {/* Background Decorations */}
@@ -138,7 +135,7 @@ const Hero = ({ selectedLanguage }) => {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium">{heroItems?.[0].text}</span>
+                  <span className="text-sm font-medium">{heroItems?.[2].text}</span>
                 </div>
               </motion.div>
 
@@ -149,7 +146,7 @@ const Hero = ({ selectedLanguage }) => {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-medium">{heroItems?.[1]?.text}</span>
+                  <span className="text-sm font-medium">{heroItems?.[3]?.text}</span>
                 </div>
               </motion.div>
             </motion.div>

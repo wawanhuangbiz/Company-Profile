@@ -20,6 +20,35 @@
         { "type": "floating", "text": "BUILD" },
         { "type": "floating", "text": "DESIGN" }
       ]
+    },
+    "about": {
+      "statsItems": [
+        {"icon": "src", 
+        "value": "50+",
+        "label": "Buildings Completed", 
+        "description": "Sucessfully delivered projects"
+        },
+        {"icon": "src", 
+        "value": "180+",
+        "label": "Happy Clients", 
+        "description": "Satisfied customers worldwide"
+        },
+        {"icon": "src", 
+        "value": "15+",
+        "label": "Awards Won", 
+        "description": "Sucessfully delivered projects"
+        },
+        {"icon": "src", 
+        "value": "99%",
+        "label": "Client Satisfaction", 
+        "description": "Based on client feedback"
+        }
+      ],
+      "established": "Established",
+      "whyChooseUs": "Why Choose Us",
+      "transformingConcepts": "Transforming Concepts Into",
+      "industrialExcellence": "Industrial Excellence",
+      "aboutParagraph": "PT.SSI was established during a period of downturn in China's infrastructure and real estate sectors, while industrial parks and construction in Indonesia are thriving.\nIt integrates resources from a professional technical team from China and a consulting team from Indonesia, complementing each other's strengths.\nThe company aims to meet the needs of various foreign investors looking to establish factories in Indonesia by providing professional technical services, consulting services,\nsupervision services, and assistance with construction permit procedures that are tailored to Indonesia's national conditions.\nThe goal is to offer a range of specialized services to investors, addressing their concerns regarding design, consulting, supervision, and approval processes."
     }
   },
   "zh": {

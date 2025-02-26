@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Code, Users, Zap, Shield, Trophy, Factory } from "lucide-react";
+import mainData from "../data/mainData.json";
 
-const About = () => {
+const About = ({ selectedLanguage }) => {
+
+  const aboutData = mainData[selectedLanguage].about || {};
+  const aboutItems = mainData[selectedLanguage].about.statsItems || {};
+
   const stats = [
     {
       icon: Factory,
@@ -70,12 +75,12 @@ const About = () => {
               {/* Experience badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }} 
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl"
               >
                 <div className="text-4xl font-bold text-blue-600 mb-2">2024</div>
-                <div className="text-gray-600">Established</div>
+                <div className="text-gray-600">{aboutData?.established}</div>
               </motion.div>
             </motion.div>
           </div>
@@ -89,13 +94,13 @@ const About = () => {
             >
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium">
                 <Zap className="w-4 h-4 mr-2" />
-                Why Choose Us
+                {aboutData?.whyChooseUs}
               </div>
 
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Transforming Concepts Into{" "}
+                {aboutData?.transformingConcepts}{" "}
                 <span className="text-blue-600 relative">
-                  Industrial Excellence
+                  {aboutData?.industrialExcellence}
                   <svg
                     className="absolute -bottom-2 left-0 w-full"
                     viewBox="0 0 200 12"
@@ -115,12 +120,7 @@ const About = () => {
               </h2>
 
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                With experience in architectural design,
-                we specialize in creating efficient and innovative factory
-                and industrial spaces. Our team has helped businesses optimize
-                their operations with cutting-edge designs tailored to their
-                specific needs. We are committed to delivering precision, functionality,
-                and excellence in every project.
+                {aboutData?.aboutParagraph}
               </p>
 
               <motion.div
@@ -129,10 +129,9 @@ const About = () => {
                 whileInView="visible"
                 className="grid grid-cols-2 gap-6 mb-8"
               >
-                {stats.map((stat, index) => (
+                {aboutItems.map((stat, index) => (
                   <motion.div
                     key={index}
-                    variants={itemVariants}
                     className="p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition duration-300 group"
                   >
                     <div className="mb-4">
@@ -151,14 +150,15 @@ const About = () => {
                 ))}
               </motion.div>
 
-              <motion.button
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                href="#our-team"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 font-medium group"
               >
                 Learn More About Us
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
         </div>

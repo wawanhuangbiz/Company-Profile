@@ -44,7 +44,7 @@ const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
         <ScrollProgress />
         <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Hero selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <About />
+        <About selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Services />
         <Stats />
         <Portfolio />
