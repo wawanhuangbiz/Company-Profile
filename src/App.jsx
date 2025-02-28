@@ -46,7 +46,6 @@ const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
         <Hero selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <About selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Services />
-        <Stats />
         <Portfolio />
         <Technologies />
         <FAQs />
