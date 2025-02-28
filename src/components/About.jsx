@@ -1,33 +1,22 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Users, Zap, Shield, Trophy, Factory } from "lucide-react";
+import { ArrowRight, Users, Zap, Shield, Trophy, Factory } from "lucide-react";
+import mainData from "../data/mainData.json";
 
-const About = () => {
-  const stats = [
-    {
-      icon: Factory,
-      value: "50+",
-      label: "Buildings Completed",
-      description: "Successfully delivered projects",
-    },
-    {
-      icon: Users,
-      value: "180+",
-      label: "Happy Clients",
-      description: "Satisfied customers worldwide",
-    },
-    {
-      icon: Trophy,
-      value: "15+",
-      label: "Awards Won",
-      description: "Industry recognition",
-    },
-    {
-      icon: Shield,
-      value: "99%",
-      label: "Client Satisfaction",
-      description: "Based on client feedback",
-    },
-  ];
+const iconMap = {
+  Factory,
+  Users,
+  Trophy,
+  Shield
+}
+
+const About = ({ selectedLanguage }) => {
+
+  const aboutData = mainData[selectedLanguage]?.about || {};
+  const aboutItems = mainData[selectedLanguage]?.about?.statsItems || [];
+
+  console.log("About items: ",aboutItems);
+  console.log("Selected language: ", selectedLanguage);
+  console.log("aboutData: ", aboutData);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,14 +34,14 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white via-[#EEEEEE] to-white relative overflow-hidden">
-      {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50 rounded-full filter blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-50 rounded-full filter blur-3xl opacity-30"></div>
+    <section id="about" className="py-20 relative overflow-hidden">
+    {/* Background Decorations */}
+    <div className="absolute bottom-0 filter blur-m opacity-30 inset-0 bg-cover bg-center bg-no-repeat bg-fixed bg-custom-image"></div>
 
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center -mx-4">
-          <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+
+    <div className="container mx-auto px-4">
+      <div className="flex flex-wrap items-center -mx-4">
+        <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -70,12 +59,12 @@ const About = () => {
               {/* Experience badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }} 
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl"
               >
                 <div className="text-4xl font-bold text-blue-600 mb-2">2024</div>
-                <div className="text-gray-600">Established</div>
+                <div className="text-gray-600">{aboutData?.established}</div>
               </motion.div>
             </motion.div>
           </div>
@@ -89,13 +78,13 @@ const About = () => {
             >
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium">
                 <Zap className="w-4 h-4 mr-2" />
-                Why Choose Us
+                {aboutData?.whyChooseUs}
               </div>
 
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Transforming Concepts Into{" "}
+                {aboutData?.transformingConcepts}{" "}
                 <span className="text-blue-600 relative">
-                  Industrial Excellence
+                  {aboutData?.industrialExcellence}
                   <svg
                     className="absolute -bottom-2 left-0 w-full"
                     viewBox="0 0 200 12"
@@ -114,13 +103,8 @@ const About = () => {
                 </span>
               </h2>
 
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                With experience in architectural design,
-                we specialize in creating efficient and innovative factory
-                and industrial spaces. Our team has helped businesses optimize
-                their operations with cutting-edge designs tailored to their
-                specific needs. We are committed to delivering precision, functionality,
-                and excellence in every project.
+              <p className="text-lg text-gray-900 mb-8 leading-relaxed text-justify">
+                {aboutData?.aboutParagraph}
               </p>
 
               <motion.div
@@ -129,36 +113,39 @@ const About = () => {
                 whileInView="visible"
                 className="grid grid-cols-2 gap-6 mb-8"
               >
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    variants={itemVariants}
-                    className="p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition duration-300 group"
-                  >
-                    <div className="mb-4">
-                      <stat.icon className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-gray-600 font-medium mb-1">
-                      {stat.label}
-                    </div>
-                    <div className="text-sm text-gray-500">
-                      {stat.description}
-                    </div>
-                  </motion.div>
-                ))}
+                {aboutItems.map((stat, index) => {
+                  const IconComponent = iconMap[stat.icon]; // Get the icon component from the map
+                  return (
+                    <motion.div
+                      key={index}
+                      className="p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition duration-300 group"
+                    >
+                      <div className="mb-4">
+                        {IconComponent && <IconComponent className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />}
+                      </div>
+                      <div className="text-3xl font-bold text-gray-900 mb-2">
+                        {stat.value}
+                      </div>
+                      <div className="text-gray-600 font-medium mb-1">
+                        {stat.label}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {stat.description}
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </motion.div>
 
-              <motion.button
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                href="#our-team"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 font-medium group"
               >
-                Learn More About Us
+                {aboutData?.learnMore}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
         </div>

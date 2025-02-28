@@ -79,7 +79,7 @@ const TeamMemberPage = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> 
 
                 {/* Recent Projects */}
                 {member.projects?.length > 0 && (

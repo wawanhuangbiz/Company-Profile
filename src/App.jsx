@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ScrollProgress from "./components/ScrollProgress";
@@ -18,19 +18,37 @@ import Footer from "./components/Footer";
 import OurTeam from "./components/OurTeam.jsx";
 import TeamMember from "./components/TeamMember.jsx"; // Import the dynamic team member page
 import ScrollToTop from "./components/ScrollProgress.jsx"; // Import the scroll-to-top component
+import mainData from "./data/mainData.json";
 
-const Home = () => (
+const App = () => {
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
+    const translations = mainData[selectedLanguage];
+
+    useEffect(() => {}, [selectedLanguage]);
+    return (
+        <Router>
+            <ScrollToTop />
+            <Routes>
+                {/* Home Route */}
+                <Route path="/" element={<Home translations={translations} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}/>} />
+
+                {/* Team Member Route */}
+                <Route path="/team/:id" element={<TeamMember translations={translations} />} />
+            </Routes>
+        </Router>
+    );
+};
+
+const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
     <>
         <ScrollProgress />
-        <Navbar />
-        <Hero />
-        <About />
+        <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
+        <Hero selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
+        <About selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Services />
-        <ProcessSteps />
-        <Stats />
         <Portfolio />
         <Technologies />
-        <Testimonials />
+        <FAQs />
         <OurTeam />
         <CTABanner />
         <Contact />
@@ -38,20 +56,5 @@ const Home = () => (
         <FloatingCTA />
     </>
 );
-
-const App = () => {
-    return (
-        <Router>
-            <ScrollToTop />
-            <Routes>
-                {/* Home Route */}
-                <Route path="/" element={<Home />} />
-
-                {/* Team Member Route */}
-                <Route path="/team/:id" element={<TeamMember />} />
-            </Routes>
-        </Router>
-    );
-};
 
 export default App;

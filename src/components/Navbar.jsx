@@ -1,8 +1,14 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import LanguageSelector from "./LanguageSelector";
+import 'react-tooltip/dist/react-tooltip.css';
+import mainData from "../data/mainData.json";
 
-const Navbar = () => {
+const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
+  const menuItems = mainData[selectedLanguage]?.navbar?.menuItems || [];
+
+
   const [isOpen, setIsOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
@@ -15,15 +21,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Our Team", href: "#our-team" },
-    { name: "Contact", href: "#contact" },
-  ];
 
+  // console.log("Selected Language:", selectedLanguage);
+  // console.log("Menu Items:", menuItems);
+
+ 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 text-[#1D1616] ${
@@ -39,16 +41,16 @@ const Navbar = () => {
               className="flex-shrink-0"
             >
               <img
-                className="h-20 w-auto"
-                src="/src/assets/logo_SSI.svg"
+                className="h-12 w-auto"
+                src="/public/logo-ssi-no-back.png"
                 alt="Logo"
               />
             </motion.div>
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-8">
-                {menuItems.map((item) => (
+                {menuItems.map((item, index) => (
                   <motion.a
-                    key={item.name}
+                    key={index}
                     href={item.href}
                     whileHover={{ scale: 1.05 }}
                     className="text-gray-800 hover:text-[#8E1630] px-3 py-2 text-md font-medium transition-colors duration-300"
@@ -61,13 +63,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:block">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#D84040] text-white px-6 py-2 rounded-full hover:bg-[#8E1616] transition-colors duration-300 font-medium"
-            >
-              Get Started
-            </motion.button>
+            <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}/>
           </div>
 
           <div className="md:hidden">
@@ -90,10 +86,10 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white border-t border-gray-100"
           >
-            <div className="px-4 pt-2 pb-3 space-y-1">
-              {menuItems.map((item) => (
+            <div className="px-6 pt-2 pb-4 space-y-1 rounded-m">
+              {menuItems.map((item, index) => (
                 <motion.a
-                  key={item.name}
+                  key={index}
                   href={item.href}
                   whileHover={{ x: 10 }}
                   className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-300"
@@ -101,12 +97,15 @@ const Navbar = () => {
                   {item.name}
                 </motion.a>
               ))}
-              <motion.button
+              <div className="flex justify-center mt-4">
+              </div>
+                <LanguageSelector selectedLanguage={selectedLanguage} />
+              {/* <motion.button
                 whileTap={{ scale: 0.95 }}
                 className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium"
               >
-                  Get Started
-              </motion.button>
+                Get Started
+              </motion.button> */}
             </div>
           </motion.div>
         )}
