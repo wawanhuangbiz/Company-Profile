@@ -1,0 +1,113 @@
+[
+    {
+        "title": "PT. Kahatex",
+        "category": "m²",
+        "image": "public/logo-ssi.jpg",
+        "description": "Real-time tracking and management system",
+        "icon": "Expand",
+        "tools": [
+            "Building Maintenance",
+            "Design",
+            "Building Permit Approval"
+        ],
+        "link": ""
+    },
+    {
+        "title": "PT.Lesso Technology Indonesia",
+        "category": "120.000m²",
+        "image": "public/project/lesso.png",
+        "description": "Jl. Raya Serang No.KM. 16, Talaga, Kec. Cikupa, Kabupaten Tangerang, Banten 15710",
+        "icon": "Expand",
+        "tools": [
+            "Design",
+            "Transformation"
+        ],
+        "link": "https://www.google.com/maps/place/PT.+Lesso+Technology+Indonesia/@-6.9230975,110.5474705,17z/data=!3m1!4b1!4m6!3m5!1s0x2e70eda2dcdd763d:0x58c011a47b5fc354!8m2!3d-6.9230975!4d110.5500454!16s%2Fg%2F11qp3nk8dl?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+        "title": "PT. Food Packaging Jaya",
+        "category": "300.000m²",
+        "image": "public/logo-ssi.jpg",
+        "description": "Secure and user-friendly banking application",
+        "icon": "Expand",
+        "tools": [
+            "Transformation",
+            "Building Permit Approval"
+        ],
+        "link": "https://www.google.com/maps/place/PT.+Fuling+Food+Packaging+Indonesia+%E5%AF%8C%E5%B2%AD%E9%A3%9F%E5%93%81%E5%8C%85%E8%A3%85%EF%BC%88%E5%8D%B0%E5%B0%BC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@-6.9693542,110.3218803,17z/data=!3m1!4b1!4m6!3m5!1s0x2e705fce380d4a77:0xd1249928119bc2b4!8m2!3d-6.9693595!4d110.3244552!16s%2Fg%2F11j43dhl74?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+        "title": "PT. Makuku Care Indonesia",
+        "category": "100.000m²",
+        "image": "public/project/makuku.png",
+        "description": "Jatengland Industrial Park Sayung Blok F no. 1, Batu, Kabupaten Demak, Jawa Tengah 59561",
+        "icon": "Expand",
+        "tools": [
+            "Transfomation"
+        ],
+        "link": "https://www.google.com/maps/place/PT.+Makuku+Care+Indonesia/@-6.9189592,110.5453439,17z/data=!3m1!4b1!4m6!3m5!1s0x2e70ed063eba3cfd:0x69bcb61124328ff0!8m2!3d-6.9189592!4d110.5479188!16s%2Fg%2F11sk4rtv60?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+        "title": "Citra Sanxing Indonesia New Factory",
+        "category": "m²",
+        "image": "public/logo-ssi.jpg",
+        "description": "Analytics and management platform",
+        "icon": "Expand",
+        "tools": [
+            "Figma",
+            "Adobe XD",
+            "Sketch"
+        ],
+        "link": "#"
+    },
+    {
+        "title": "SMJ-SBRI New Factory",
+        "category": "m²",
+        "image": "public/logo-ssi.jpg",
+        "description": "Real-time tracking and management system",
+        "icon": "Expand",
+        "tools": [
+            "Design",
+            "Building Permit Approval",
+            "PostgreSQL"
+        ],
+        "link": ""
+    },
+    {
+        "title": "PT. Sumber Samudra Indonesia",
+        "category": "35.000m²",
+        "image": "public/project/samudra.png",
+        "description": "Jl. Kw. Industri Terboyo Gg. 5 No.16 A Blok F, Trimulyo, Kec. Genuk, Kota Semarang, Jawa Tengah 50118",
+        "icon": "Expand",
+        "tools": [
+            "Design",
+            "Transformation"
+        ],
+        "link": "https://www.google.com/maps/place/PT.+Sumber+Samudera+Indonesia/@-6.9452799,110.4674478,17z/data=!3m1!4b1!4m6!3m5!1s0x2e70f3e19e8a424f:0x1ec3b38b2880b994!8m2!3d-6.9452852!4d110.4723187!16s%2Fg%2F11hyxny7_f?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+    "title": "PT. Chingluh Indonesia",
+    "category": "120.000m²",
+    "image": "public/project/chingluh.png",
+    "description": "RGMP+F72, Jl. Jalak 2, Sukaasih, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560",
+    "icon": "Expand",
+    "tools": [
+            "Design",
+            "Transformation"
+        ],
+    "link": "https://www.google.com/maps/place/Pt.Viktory+Chingluh+Indonesia/@-6.2122692,106.4991396,11.75z/data=!4m10!1m2!2m1!1spt+ching+luh+indonesia!3m6!1s0x2e69ffdfed750aa1:0x9c4abdce5439e547!8m2!3d-6.1663636!4d106.535655!15sChZwdCBjaGluZyBsdWggaW5kb25lc2lhkgEQY29ycG9yYXRlX29mZmljZeABAA!16s%2Fg%2F11fylwhpph?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+        "title": "PT. Maju Bersama Gemilang",
+        "category": "m²",
+        "image": "public/logo-ssi.jpg",
+        "description": "Real-time tracking and management system",
+        "icon": "Expand",
+        "tools": [
+            "Vue.js",
+            "Express",
+            "PostgreSQL"
+        ],
+        "link": ""
+    }
+]

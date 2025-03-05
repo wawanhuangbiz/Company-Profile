@@ -14,9 +14,9 @@ const About = ({ selectedLanguage }) => {
   const aboutData = mainData[selectedLanguage]?.about || {};
   const aboutItems = mainData[selectedLanguage]?.about?.statsItems || [];
 
-  console.log("About items: ",aboutItems);
-  console.log("Selected language: ", selectedLanguage);
-  console.log("aboutData: ", aboutData);
+  // console.log("About items: ", aboutItems);
+  // console.log("Selected language: ", selectedLanguage);
+  // console.log("aboutData: ", aboutData);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,13 +35,12 @@ const About = ({ selectedLanguage }) => {
 
   return (
     <section id="about" className="py-20 relative overflow-hidden">
-    {/* Background Decorations */}
-    <div className="absolute bottom-0 filter blur-m opacity-30 inset-0 bg-cover bg-center bg-no-repeat bg-fixed bg-custom-image"></div>
+      {/* Background Decorations */}
+      <div className="absolute bottom-0 filter blur-m opacity-30 inset-0 bg-cover bg-center bg-no-repeat bg-fixed bg-custom-image z-0"></div>
 
-
-    <div className="container mx-auto px-4">
-      <div className="flex flex-wrap items-center -mx-4">
-        <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap items-center -mx-4">
+          <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -74,9 +73,9 @@ const About = ({ selectedLanguage }) => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="lg:pl-8"
+              className="lg:pl-8 relative z-10"  // Add relative and z-10 here
             >
-              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-300 text-blue-600 rounded-full mb-6 text-sm font-medium">
                 <Zap className="w-4 h-4 mr-2" />
                 {aboutData?.whyChooseUs}
               </div>
@@ -141,7 +140,7 @@ const About = ({ selectedLanguage }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#our-team"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 font-medium group"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 font-medium group pointer-events-auto"  // Add pointer-events-auto here
               >
                 {aboutData?.learnMore}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />

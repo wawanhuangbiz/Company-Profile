@@ -46,7 +46,7 @@ const Footer = () => {
     { icon: Mail, content: "info@yourcompany.com" },
     {
       icon: MapPin,
-      content: "123 Business Street, Suite 100, New York, NY 10001",
+      content: "Jl. Pandanaran No.30, Pekunden, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50134, Lantai 12",
     },
   ];
 

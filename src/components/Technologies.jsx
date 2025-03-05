@@ -78,7 +78,7 @@ const Technologies = () => {
             Our Stack
           </div>
           <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-            Technologies We Master
+            Applications We Master
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
             We leverage cutting-edge technologies to build scalable, robust, and
@@ -96,9 +96,9 @@ const Technologies = () => {
             <motion.div key={index} variants={itemVariants} className="group">
               <div className="h-full rounded-2xl bg-white p-6 text-center shadow-lg transition duration-300 hover:shadow-xl">
                 <div
-                  className={`${tech.bgColor} mb-6 mx-auto flex h-16 w-16 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110`}
+                  className="items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110"
                 >
-                  <tech.icon className={`h-8 w-8 ${tech.color}`} />
+                  <img src="public/PakFred.jpg" alt="NIB" className="transition-transform filter duration-300 grayscale-0 hover:grayscale-100"/>
                 </div>
                 <h3 className="mb-2 font-semibold text-gray-900">
                   {tech.name}

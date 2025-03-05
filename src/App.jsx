@@ -45,12 +45,10 @@ const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
         <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Hero selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <About selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Services />
-        <Portfolio />
-        <Technologies />
+        <Services selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
+        <Portfolio selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <FAQs />
         <OurTeam />
-        <CTABanner />
         <Contact />
         <Footer />
         <FloatingCTA />

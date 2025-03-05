@@ -62,7 +62,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
             </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="xs:block md:block">
             <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}/>
           </div>
 
@@ -97,9 +97,9 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
                   {item.name}
                 </motion.a>
               ))}
+                <LanguageSelector selectedLanguage={selectedLanguage} />
               <div className="flex justify-center mt-4">
               </div>
-                <LanguageSelector selectedLanguage={selectedLanguage} />
               {/* <motion.button
                 whileTap={{ scale: 0.95 }}
                 className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium"

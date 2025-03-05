@@ -15,7 +15,7 @@ const Hero = ({ selectedLanguage }) => {
   return (
     <section
       id="home"
-      className="relative pt-32 lg:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-[#EEEEEE] to-white bg-custom-image"
+      className="relative pt-32 lg:pt-40 pb-20 overflow-hidden bg-gradient-to-b from-[#EEEEEE] to-white"
     >
       {/* Bottom blur effect overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white backdrop-blur-sm"></div>
@@ -42,7 +42,7 @@ const Hero = ({ selectedLanguage }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center px-4 py-2 bg-[#D84040] bg-opacity-50 text-[#8E1616] rounded-full mb-6 text-sm font-medium"
+                className="inline-flex items-center px-4 py-2 bg-blue-300 bg-opacity-50 text-blue-600 rounded-full mb-6 text-sm font-medium"
               >
                 <Star className="w-4 h-4 mr-2" />
                 {heroData.trustedBy} 
@@ -53,12 +53,12 @@ const Hero = ({ selectedLanguage }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#8E1616] leading-tight mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 leading-tight mb-6"
               >
                 {heroData.heading}
                 <span className="relative inline-block">
                   <div className="">
-                    <span className="relative text-[#8E1616]">
+                    <span className="relative text-blue-600">
                       {heroData.subheading}
                     </span>
                   </div>

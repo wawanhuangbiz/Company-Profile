@@ -23,25 +23,29 @@
     },
     "about": {
       "statsItems": [
-        {"icon": "Factory", 
-        "value": "50+",
-        "label": "Buildings Completed", 
-        "description": "Sucessfully delivered projects"
+        {
+          "icon": "Factory",
+          "value": "50+",
+          "label": "Buildings Completed",
+          "description": "Sucessfully delivered projects"
         },
-        {"icon": "Users", 
-        "value": "180+",
-        "label": "Happy Clients", 
-        "description": "Satisfied customers worldwide"
+        {
+          "icon": "Users",
+          "value": "180+",
+          "label": "Happy Clients",
+          "description": "Satisfied customers worldwide"
         },
-        {"icon": "Trophy", 
-        "value": "15+",
-        "label": "Awards Won", 
-        "description": "Sucessfully delivered projects"
+        {
+          "icon": "Trophy",
+          "value": "15+",
+          "label": "Awards Won",
+          "description": "Sucessfully delivered projects"
         },
-        {"icon": "Shield", 
-        "value": "99%",
-        "label": "Client Satisfaction", 
-        "description": "Based on client feedback"
+        {
+          "icon": "Shield",
+          "value": "99%",
+          "label": "Client Satisfaction",
+          "description": "Based on client feedback"
         }
       ],
       "established": "Established",
@@ -50,6 +54,70 @@
       "industrialExcellence": "Industrial Excellence",
       "aboutParagraph": "PT.SSI was established during a period of downturn in China's infrastructure and real estate sectors, while industrial parks and construction in Indonesia are thriving.\nIt integrates resources from a professional technical team from China and a consulting team from Indonesia, complementing each other's strengths.\nThe company aims to meet the needs of various foreign investors looking to establish factories in Indonesia by providing professional technical services, consulting services,\nsupervision services, and assistance with construction permit procedures that are tailored to Indonesia's national conditions.\nThe goal is to offer a range of specialized services to investors, addressing their concerns regarding design, consulting, supervision, and approval processes.",
       "learnMore": "Learn More About Us"
+    },
+    "services": {
+      "ourServices": "Our Services",
+      "solutionWeOffer": "Solution We Offer",
+      "servicesParagraph": "We provide comprehensive services to help your business\nthrive in today's competitive landscape.",
+      "servicesItems": [
+        {
+          "title": "Design",
+          "description": "Mainly focused on various industrial zones, factories, and housing.",
+          "icon": "Building",
+          "color": "#3a53a7",
+          "bgColor": "#77e4c8"
+        },
+        {
+          "title": "Consultation",
+          "description": "Optimizing domestic paper drawings based on printing and tailing.",
+          "icon": "Cog",
+          "color": "#EE7C4B",
+          "bgColor": "#EF5A6F"
+        },
+        {
+          "title": "Transformation",
+          "description": "Translating Chinese drawings into Indonesian and preparing them for building permit.",
+          "icon": "FileInput",
+          "color": "#ec1f24",
+          "bgColor": "purple"
+        },
+        {
+          "title": "Civil Construction Design",
+          "description": "Mainly focused on residential, office, and public building types",
+          "icon": "Building2",
+          "color": "#3a53a7",
+          "bgColor": "pink"
+        },
+        {
+          "title": "Supervision",
+          "description": "Ensuring the implementation of design intentions",
+          "icon": "Search",
+          "color": "#f7d830",
+          "bgColor": "green"
+        },
+        {
+          "title": "Construction Industry Reporting",
+          "description": "Reporting various types of construction, handling procedures, and resolving issues related to the client’s concerns.",
+          "icon": "ChartBar",
+          "color": "#f7d830",
+          "bgColor": "red"
+        }
+      ]
+    },
+    "portfolio": {
+      "ourWork": "Our Work",
+      "featuredProjects": "Featured Projects",
+      "exploreOur": "Explore our recent work and see how we've helped businesses achieve\ntheir digital goals through innovative solutions.",
+      "noProjects": "No projects found",
+      "tryAdjusting": "Try adjusting your filters or filter criteria",
+      "viewProject": "View Project",
+      "category": [
+        "All",
+        "Design",
+        "Transformation",
+        "Building Maintenance",
+        "Building Permit Approval"
+      ]
     }
   },
   "zh": {
@@ -76,25 +144,29 @@
     },
     "about": {
       "statsItems": [
-        {"icon": "Factory", 
-        "value": "50+",
-        "label": "完成的建筑", 
-        "description": "成功交付的项目"
+        {
+          "icon": "Factory",
+          "value": "50+",
+          "label": "完成的建筑",
+          "description": "成功交付的项目"
         },
-        {"icon": "Users", 
-        "value": "180+",
-        "label": "成功交付的项目", 
-        "description": "全球满意的客户"
+        {
+          "icon": "Users",
+          "value": "180+",
+          "label": "成功交付的项目",
+          "description": "全球满意的客户"
         },
-        {"icon": "Trophy", 
-        "value": "15+",
-        "label": "获得的奖项", 
-        "description": "成功交付的项目"
+        {
+          "icon": "Trophy",
+          "value": "15+",
+          "label": "获得的奖项",
+          "description": "成功交付的项目"
         },
-        {"icon": "Shield", 
-        "value": "99%",
-        "label": "客户满意度", 
-        "description": "基于客户反馈"
+        {
+          "icon": "Shield",
+          "value": "99%",
+          "label": "客户满意度",
+          "description": "基于客户反馈"
         }
       ],
       "established": "成立",
@@ -103,6 +175,52 @@
       "industrialExcellence": "工业卓越",
       "aboutParagraph": "PT.SSI是在中国基建及地产行业低迷, 印尼产业园区及工业建设如火如荼之际, 由\n中国专业技术团队,印尼顾问团队资源整合, 优势互补,为满足来印尼投资的各国资本方投资建厂需求，提供符合印尼国情的专业技术服务、咨询服务, 监理服务,建设\n证件手续办理服务的印尼本土公司,旨在为投资方提供各类专业化服务,解决各投资\n方在设计、咨询、监理、报批报建等方面的后顾之忧而成立的设计公司。",
       "learnMore": "了解更多"
+    },
+    "services": {
+      "ourServices": "我们的服务",
+      "solutionWeOffer": "我们提供的解决方案",
+      "servicesParagraph": "我们提供全面的数字服务，以帮助您的业务在当今竞争激烈的环境中蓬勃发展。",
+      "servicesItems": [
+        {
+          "title": "设计",
+          "description": "主要集中在各种工业区、工厂和住宅。",
+          "icon": "Building"
+        },
+        {
+          "title": "咨询",
+          "description": "根据印刷和尾部优化国内纸质图纸。",
+          "icon": "Cog"
+        },
+        {
+          "title": "转图",
+          "description": "如果图纸由客户设计并委托给中国设计院，我们将帮助将其翻译成印尼文并准备建筑许可证。",
+          "icon": "FileInput"
+        },
+        {
+          "title": "土木建筑设计",
+          "description": "主要集中在住宅、办公室和公共建筑类型。",
+          "icon": "Building2"
+        },
+        {
+          "title": "监督",
+          "description": "确保设计意图的实施。",
+          "icon": "Search"
+        },
+        {
+          "title": "建筑行业报告",
+          "description": "报告各种类型的建筑，处理程序，并解决与客户关切相关的问题。",
+          "icon": "ChartBar"
+        }
+      ]
+    },
+    "portfolio": {
+      "ourWork": "我们的作品",
+      "featuredProjects": "精选项目",
+      "exploreOur": "探索我们的最新作品，看看我们如何通过创新解决方案帮助企业实现他们的数字目标。",
+      "projectsFound": "未找到项目",
+      "tryAdjusting": "尝试调整您的筛选器或筛选条件",
+      "viewProject": "查看项目",
+      "category": ["全部", "设计", "转型", "建筑维护", "建筑许可证审批"]
     }
   }
 }

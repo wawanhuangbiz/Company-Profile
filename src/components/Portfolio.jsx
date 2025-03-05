@@ -1,87 +1,30 @@
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  ArrowRight,
-  ExternalLink,
-  Code,
-  Palette,
-  Smartphone,
-  Search,
-} from "lucide-react";
+import { ArrowRight, ArrowLeft, Expand, Search } from "lucide-react";
 import { useState, useEffect } from "react";
+import mainData from "../data/mainData.json";
+import portfolioData from "../data/portfolioData";
 
-const Portfolio = () => {
+const Portfolio = ({ selectedLanguage }) => {
+  const portfolio = mainData[selectedLanguage]?.portfolio || {};
   const [activeFilter, setActiveFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [showAll, setShowAll] = useState(false); // New state for showing all projects
 
-  const categories = [
+  const tools = [
     "All",
-    "Web Development",
-    "Mobile Development",
-    "UI/UX Design",
+    "Building Maintenance",
+    "Design",
+    "Building Permit Approval",
+    "Transformation",
   ];
 
-  const projects = [
-    {
-      title: "GFT New Factory",
-      category: "Web Development",
-      image: "/src/assets/Logo.jpg",
-      description: "Modern e-commerce solution with advanced features",
-      icon: Code,
-      tools: ["React", "Node.js", "MongoDB"],
-      link: "#",
-    },
-    {
-      title: "Fuling New Factory",
-      category: "Mobile Development",
-      image: "/src/assets/Logo.jpg",
-      description: "Secure and user-friendly banking application",
-      icon: Smartphone,
-      tools: ["React Native", "Firebase", "Redux"],
-      link: "#",
-    },
-    {
-      title: "Makuku New Factory",
-      category: "Web Development",
-      image: "/src/assets/Logo.jpg",
-      description: "Professional website with custom CMS",
-      icon: Code,
-      tools: ["Next.js", "Tailwind CSS", "Strapi"],
-      link: "#",
-    },
-    {
-      title: "Citra Sanxing Indonesia New Factory",
-      category: "UI/UX Design",
-      image: "/src/assets/Logo.jpg",
-      description: "Analytics and management platform",
-      icon: Palette,
-      tools: ["Figma", "Adobe XD", "Sketch"],
-      link: "#",
-    },
-    {
-      title: "SMJ-SBRI New Factory",
-      category: "Web Development",
-      image: "/src/assets/Logo.jpg",
-      description: "Real-time tracking and management system",
-      icon: Code,
-      tools: ["Vue.js", "Express", "PostgreSQL"],
-      link: "#",
-    },
-    {
-      title: "Educational Platform",
-      category: "Web Development",
-      image: "/src/assets/Logo.jpg",
-      description: "Online learning management system",
-      icon: Code,
-      tools: ["Django", "React", "AWS"],
-      link: "#",
-    },
-  ];
+  const projects = portfolioData;
 
   useEffect(() => {
     const filtered = projects.filter((project) => {
-      const matchesCategory =
-        activeFilter === "All" || project.category === activeFilter;
+      const matchesTool =
+        activeFilter === "All" || project.tools.includes(activeFilter);
       const matchesSearch =
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -89,57 +32,27 @@ const Portfolio = () => {
           tool.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
-      return matchesCategory && matchesSearch;
+      return matchesTool && matchesSearch;
     });
     setFilteredProjects(filtered);
-  }, [activeFilter, searchTerm]);
+  }, [activeFilter, searchTerm, projects]);
 
-  // Enhanced FilterButton component
-  const FilterButton = ({ category }) => (
-    <motion.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      onClick={() => setActiveFilter(category)}
-      className={`rounded-full px-6 py-2 text-sm font-medium transition-colors duration-300 ${
-        activeFilter === category
-          ? "bg-blue-600 text-white shadow-md"
-          : "bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-      } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
-    >
-      {category}
-    </motion.button>
-  );
+  // Determine the projects to display based on the showAll state
+  const displayedProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 6); // Show only the first 6 projects
 
   return (
     <section id="portfolio" className="bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-600"
-          >
-            Our Work
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl"
-          >
-            Featured Projects
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto max-w-2xl text-lg text-gray-600"
-          >
-            Explore our recent work and see how we've helped businesses achieve
-            their digital goals through innovative solutions.
-          </motion.p>
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+            {portfolio?.featuredProjects}
+          </h2>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
+            {portfolio?.exploreOur}
+          </p>
         </div>
 
         {/* Search and Filter Controls */}
@@ -157,39 +70,40 @@ const Portfolio = () => {
           </div>
 
           {/* Filter Buttons */}
-          <motion.div className="flex flex-wrap gap-3" initial={false}>
-            {categories.map((category) => (
-              <FilterButton key={category} category={category} />
+          <div className="flex flex-wrap gap-3">
+            {tools.map((tool) => (
+              <button
+                key={tool}
+                onClick={() => setActiveFilter(tool)}
+                className={`rounded-full px-6 py-2 text-sm font-medium transition-colors duration-300 ${
+                  activeFilter === tool
+                    ? "bg-blue-600 text-white shadow-md"
+                    : "bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                }`}
+              >
+                {tool}
+              </button>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* Projects Grid */}
         <motion.div layout className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="wait">
-            {filteredProjects.length === 0 ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="col-span-full flex h-60 items-center justify-center text-center"
-              >
+            {displayedProjects.length === 0 ? (
+              <div className="col-span-full flex h-60 items-center justify-center text-center">
                 <div className="text-gray-500">
-                  <p className="mb-2 text-lg font-medium">No projects found</p>
-                  <p className="text-sm">
-                    Try adjusting your search or filter criteria
+                  <p className="mb-2 text-lg font-medium">
+                    {portfolio?.noProjects}
                   </p>
+                  <p className="text-sm">{portfolio?.tryAdjusting}</p>
                 </div>
-              </motion.div>
+              </div>
             ) : (
-              filteredProjects.map((project) => (
+              displayedProjects.map((project) => (
                 <motion.div
                   key={project.title}
                   layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
                   className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
                 >
                   <div className="relative overflow-hidden">
@@ -198,38 +112,23 @@ const Portfolio = () => {
                       alt={project.title}
                       className="h-48 w-full object-cover transition duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 transition duration-300 group-hover:opacity-70"></div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <a
-                        href={project.link}
-                        className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-900 transition duration-300 hover:scale-105"
-                      >
-                        View Project
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="mb-3 flex items-center gap-2">
-                      <project.icon className="h-5 w-5 text-blue-600" />
-                      <span className="text-sm font-medium text-blue-600">
-                        {project.category}
-                      </span>
-                    </div>
-                    <h3 className="mb-2 text-xl font-semibold text-gray-900">
-                      {project.title}
-                    </h3>
-                    <p className="mb-4 text-gray-600">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tools.map((tool, idx) => (
-                        <span
-                          key={idx}
-                          className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600"
-                        >
-                          {tool}
-                        </span>
-                      ))}
+                    <div className="p-6">
+                      <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                        {project.title}
+                      </h3>
+                      <p className="mb-4 text-gray-600">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tools.map((tool, idx) => (
+                          <span
+                            key={idx}
+                            className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -239,17 +138,19 @@ const Portfolio = () => {
         </motion.div>
 
         {/* View All Projects Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mt-12 text-center"
-        >
-          <button className="group inline-flex items-center rounded-full bg-blue-600 px-6 py-3 font-medium text-white transition duration-300 hover:bg-blue-700">
-            View All Projects
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+        <div className="mt-12 text-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group inline-flex items-center rounded-full bg-blue-600 px-6 py-3 font-medium text-white transition duration-300 hover:bg-blue-700"
+          >
+            {showAll ? "Show Less" : "View All Projects"}
+            {showAll ? (
+              <ArrowLeft className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            ) : (
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            )}
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
