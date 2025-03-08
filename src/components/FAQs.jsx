@@ -46,10 +46,11 @@ const FAQs = () => {
   );
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50 rounded-full filter blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-50 rounded-full filter blur-3xl opacity-30"></div>
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+     id="faq"
+    >
+
+
 
       <div className="container mx-auto px-4 relative">
         <motion.div

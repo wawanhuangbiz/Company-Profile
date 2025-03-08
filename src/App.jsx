@@ -11,6 +11,7 @@ import Testimonials from "./components/Testimonials";
 import Stats from "./components/Stats";
 import Technologies from "./components/Technologies";
 import FAQs from "./components/FAQs";
+import Legality from "./components/Legality";
 import Contact from "./components/Contact";
 import CTABanner from "./components/CTABanner";
 import FloatingCTA from "./components/FloatingCTA";
@@ -48,6 +49,7 @@ const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
         <Services selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Portfolio selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <FAQs />
+        <Legality selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <OurTeam />
         <Contact />
         <Footer />

@@ -1,36 +1,39 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowLeft, Expand, Search } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  Expand,
+  ExternalLink,
+  Search,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 import mainData from "../data/mainData.json";
 import portfolioData from "../data/portfolioData";
 
 const Portfolio = ({ selectedLanguage }) => {
+  // Access the portfolio data based on the selected language
   const portfolio = mainData[selectedLanguage]?.portfolio || {};
   const [activeFilter, setActiveFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProjects, setFilteredProjects] = useState([]);
-  const [showAll, setShowAll] = useState(false); // New state for showing all projects
+  const [showAll, setShowAll] = useState(false);
 
-  const tools = [
+  // Extract projects based on the selected language
+  const projects = portfolioData[selectedLanguage] || [];
+
+  // Extract unique categories from the projects for filtering
+  const categories = [
     "All",
-    "Building Maintenance",
-    "Design",
-    "Building Permit Approval",
-    "Transformation",
+    ...Array.from(new Set(projects.flatMap((project) => project.categories))),
   ];
-
-  const projects = portfolioData;
 
   useEffect(() => {
     const filtered = projects.filter((project) => {
       const matchesTool =
-        activeFilter === "All" || project.tools.includes(activeFilter);
+        activeFilter === "All" || project.categories.includes(activeFilter);
       const matchesSearch =
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        project.tools.some((tool) =>
-          tool.toLowerCase().includes(searchTerm.toLowerCase())
-        );
+        project.description.toLowerCase().includes(searchTerm.toLowerCase());
 
       return matchesTool && matchesSearch;
     });
@@ -71,17 +74,17 @@ const Portfolio = ({ selectedLanguage }) => {
 
           {/* Filter Buttons */}
           <div className="flex flex-wrap gap-3">
-            {tools.map((tool) => (
+            {categories.map((category) => (
               <button
-                key={tool}
-                onClick={() => setActiveFilter(tool)}
+                key={category}
+                onClick={() => setActiveFilter(category)}
                 className={`rounded-full px-6 py-2 text-sm font-medium transition-colors duration-300 ${
-                  activeFilter === tool
+                  activeFilter === category
                     ? "bg-blue-600 text-white shadow-md"
                     : "bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                 }`}
               >
-                {tool}
+                {category}
               </button>
             ))}
           </div>
@@ -120,14 +123,26 @@ const Portfolio = ({ selectedLanguage }) => {
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {project.tools.map((tool, idx) => (
+                        {project.categories.map((category, idx) => (
                           <span
                             key={idx}
                             className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600"
                           >
-                            {tool}
+                            {category}
                           </span>
                         ))}
+                      </div>
+
+                      {/* View Project Button */}
+                      <div className="mt-4 flex justify-end">
+                        <a
+                          href={project.link}
+                          className="inline-flex items-center rounded-full bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 transition duration-300 hover:bg-gray-300"
+                          target="_blank"
+                        >
+                          View Project
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </a>
                       </div>
                     </div>
                   </div>

@@ -7,7 +7,7 @@ const LanguageSelector = ({ selectedLanguage, setSelectedLanguage }) => {
   };
 
   return (
-    <div className="hidden md:block space-x-2">
+    <div className="space-x-2 flex justify-center md:justify-start">
       <button
         onClick={() => handleSelectLanguage('en')}
         className={`inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300 ${

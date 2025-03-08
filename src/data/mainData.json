@@ -6,6 +6,8 @@
         { "name": "About", "href": "#about" },
         { "name": "Services", "href": "#services" },
         { "name": "Portfolio", "href": "#portfolio" },
+        { "name": "FAQs", "href": "#faq" },
+        { "name": "Legality", "href": "#legality" },
         { "name": "Our Team", "href": "#our-team" },
         { "name": "Contact", "href": "#contact" }
       ]
@@ -118,6 +120,10 @@
         "Building Maintenance",
         "Building Permit Approval"
       ]
+    },
+    "legality": {
+      "legalDocuments": "Legal Documents",
+      "legalParagraph": "Explore our essential legal documents that validate our operations and compliance."
     }
   },
   "zh": {
@@ -127,6 +133,8 @@
         { "name": "关于", "href": "#about" },
         { "name": "服务", "href": "#services" },
         { "name": "作品集", "href": "#portfolio" },
+        { "name": "常见问题", "href": "#faq" },
+        { "name": "合法性", "href": "#legality" },
         { "name": "我们的团队", "href": "#our-team" },
         { "name": "联系", "href": "#contact" }
       ]
@@ -221,6 +229,10 @@
       "tryAdjusting": "尝试调整您的筛选器或筛选条件",
       "viewProject": "查看项目",
       "category": ["全部", "设计", "转型", "建筑维护", "建筑许可证审批"]
+    },
+    "legality": {
+      "legalDocuments": "法律文件",
+      "legalParagraph": "探索我们验证运营和合规性的基本法律文件。"
     }
   }
 }

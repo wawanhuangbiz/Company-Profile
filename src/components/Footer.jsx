@@ -51,7 +51,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#800000] pt-20 pb-8 relative">
+    <footer className="pt-20 pb-8 relative bg-image opacity-95 bg-footer-image bg-cover bg-center bg-no-repeat bg-fixed">
+
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -62,7 +63,7 @@ const Footer = () => {
               alt="Logo"
               className="h-50 w-auto mb-6"
             />
-            <p className="text-blue-200 mb-6 leading-relaxed">
+            <p className="text-white mb-6 leading-relaxed">
               Creating innovative solutions for businesses worldwide. We
               transform ideas into amazing experiences.
             </p>
@@ -73,7 +74,7 @@ const Footer = () => {
                   href={social.href}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-blue-200 hover:bg-blue-600 hover:text-white transition duration-300"
+                  className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white hover:bg-blue-600 hover:text-white transition duration-300"
                 >
                   <social.icon className="w-5 h-5" />
                 </motion.a>
@@ -143,34 +144,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Subscription */}
-        <div className="border-t border-blue-900 pt-8 pb-12">
-          <div className="max-w-xl mx-auto text-center">
-            <h4 className="text-white text-lg font-semibold mb-4">
-              Subscribe to Our Newsletter
-            </h4>
-            <p className="text-blue-200 mb-6">
-              Stay updated with our latest news and special offers.
-            </p>
-            <form className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-blue-900 text-white border border-blue-800 focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
-              >
-                Subscribe
-              </motion.button>
-            </form>
-          </div>
-        </div>
+        
 
         {/* Copyright */}
-        <div className="border-t border-blue-900 pt-8">
+        <div className="pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-blue-200 text-center md:text-left mb-4 md:mb-0">
               © {new Date().getFullYear()} Your Company. All rights reserved.
