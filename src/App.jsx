@@ -51,7 +51,7 @@ const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
         <FAQs />
         <Legality selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <OurTeam selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Contact />
+        <Contact selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Footer />
         <FloatingCTA />
     </>

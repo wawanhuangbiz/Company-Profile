@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
+import mainData from "../data/mainData";
 
-const Contact = () => {
+const Contact = ({ selectedLanguage }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const contacts = mainData[selectedLanguage]?.contact || {};
 
   const contactInfo = [
     {
@@ -47,7 +50,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https//your-backend-sevice.com/send-email', {
+      const response = await fetch('http://localhost:3000/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -89,14 +92,13 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium">
-              Contact Us
+              {contacts?.contactUs}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Let's Build Something Amazing Together
+              {contacts?.contactSub}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Have a project in mind? We'd love to hear about it. Get in touch
-              with us and let's make something great together.
+              {contacts?.contactParagraph}
             </p>
           </motion.div>
 
@@ -142,7 +144,7 @@ const Contact = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Full Name
+                    {contacts?.form?.fullName}
                   </label>
                   <input
                     type="text"
@@ -160,7 +162,7 @@ const Contact = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Email Address
+                    {contacts?.form?.email}
                   </label>
                   <input
                     type="email"
@@ -178,7 +180,7 @@ const Contact = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Message
+                    {contacts?.form?.message}
                   </label>
                   <textarea
                     id="message"
@@ -201,12 +203,12 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Sending...</span>
+                      <span>{contacts?.form?.isSending}</span>
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      <span>Send Message</span>
+                      <span>{contacts?.form?.send}</span>
                     </>
                   )}
                 </motion.button>
