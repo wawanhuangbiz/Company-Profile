@@ -6,7 +6,11 @@ module.exports = {
         "custom-image": "url('public/background/gold.jpg')",
         "footer-image": "url('public/background/polos.jpg')",
       }),
+      fontFamily: {
+        sans: ['Ubuntu', 'sans-serif'],
+      }
     },
   },
+  variants: {},
   plugins: [],
 };

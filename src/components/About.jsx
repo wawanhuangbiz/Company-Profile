@@ -102,7 +102,7 @@ const About = ({ selectedLanguage }) => {
                 </span>
               </h2>
 
-              <p className="text-lg text-gray-900 mb-8 leading-relaxed text-justify">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed text-justify font-normal">
                 {aboutData?.aboutParagraph}
               </p>
 

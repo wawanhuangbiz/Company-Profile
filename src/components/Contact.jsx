@@ -45,12 +45,31 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", message: "" });
-  };
 
+    try {
+      const response = await fetch('https//your-backend-sevice.com/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Something went wrong! Please try again.');
+      }
+  } catch (error) {
+    console.log('Error:', error);
+    alert('Error sending message. Please try again.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   return (
     <section
       id="contact"

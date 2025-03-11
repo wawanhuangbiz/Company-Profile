@@ -51,7 +51,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="pt-20 pb-8 relative bg-image opacity-95 bg-footer-image bg-cover bg-center bg-no-repeat bg-fixed">
+    <footer className="pt-20 pb-8 relative bg-image opacity-90 bg-footer-image bg-cover bg-center bg-no-repeat bg-fixed">
 
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
@@ -63,7 +63,7 @@ const Footer = () => {
               alt="Logo"
               className="h-50 w-auto mb-6"
             />
-            <p className="text-white mb-6 leading-relaxed">
+            <p className="text-[#FFD700] mb-6 leading-relaxed font-bold">
               Creating innovative solutions for businesses worldwide. We
               transform ideas into amazing experiences.
             </p>

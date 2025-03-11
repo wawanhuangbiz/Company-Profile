@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 0.3rem; /* Add some padding */
+    background-color: white; /* Background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.navbar-item {
+    margin: 0 10px; /* Space between items */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    font-weight: bold; /* Bold text */
+}
+
+.navbar-item:hover {
+    color: blue; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+}

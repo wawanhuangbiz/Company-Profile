@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LanguageSelector from "./LanguageSelector";
 import 'react-tooltip/dist/react-tooltip.css';
 import mainData from "../data/mainData.json";
+import "./Navbar.css";
 
 const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   const menuItems = mainData[selectedLanguage]?.navbar?.menuItems || [];
@@ -41,7 +42,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
               className="flex-shrink-0"
             >
               <img
-                className="h-12 w-auto"
+                className="h-20 w-auto"
                 src="/public/logo-ssi-no-back.png"
                 alt="Logo"
               />
@@ -53,7 +54,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
                     key={index}
                     href={item.href}
                     whileHover={{ scale: 1.05 }}
-                    className="text-gray-800 hover:text-[#8E1630] px-3 py-2 text-md font-medium transition-colors duration-300"
+                    className="text-gray-800 hover:text-[#8E1630] px-3 py-2 text-md font-medium transition-colors duration-300 md:flex flex-col"
                   >
                     {item.name}
                   </motion.a>
@@ -86,7 +87,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white border-t border-gray-100"
           >
-            <div className="px-6 pt-2 pb-4 space-y-1 rounded-m">
+            <div className="flex flex-col space-y-2 p-4">
               {menuItems.map((item, index) => (
                 <motion.a
                   key={index}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import legalityData from "../data/legalityData.json"; // Adjust the path as necessary
 import mainData from "../data/mainData.json";
 import { motion } from "framer-motion";
@@ -63,7 +63,7 @@ const Legality = ( {selectedLanguage} ) => {
             <motion.img
               src={selectedImage}
               alt="Document"
-              className="max-w-full max-h-full"
+              className="max-w-full max-h-full object-cover"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}

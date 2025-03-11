@@ -50,7 +50,7 @@ const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
         <Portfolio selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <FAQs />
         <Legality selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <OurTeam />
+        <OurTeam selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
         <Contact />
         <Footer />
         <FloatingCTA />
