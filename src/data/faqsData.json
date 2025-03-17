@@ -1,0 +1,61 @@
+{
+    "en": [
+        {
+          "question": "What is PT. Surya Solusi Internasional (PT.SSI)?",
+          "answer":
+            "PT. Surya Solusi Internasional, commonly referred to as PT.SSI, is a leading company specializing in providing innovative solutions across various sectors. Our expertise includes design, surveying, and equipment services, ensuring comprehensive support for our clients.",
+          "category": "SSI"
+        },
+        {
+          "question": "What services does PT.SSI offer?",
+          "answer":
+            "PT.SSI offers a wide range of services, including: Design Services: Tailored solutions to meet specific project requirements. Surveying Services: Accurate and reliable surveying for various applications. Transformation Services: Localizing Chinese architects' designs to fit the requirements for Indonesian's Building Permit. ",
+          "category": "Services"
+        },
+        {
+          "question": "What are the business advantages of choosing PT.SSI?",
+          "answer":
+            "Choosing PT.SSI provides several advantages, including:\nExpertise: A team of experienced professionals dedicated to delivering high-quality services.\nResource Collaboration: Efficient collaboration across different resources to enhance project outcomes.\nProven Track Record: A history of successful projects in various industries, demonstrating our capability and reliability.",
+          "category": "Advantages"
+        },
+        {
+          "question": "Where is PT.SSI located?",
+          "answer":
+            "PT.SSI is headquartered in SEMARANG, strategically positioned to serve clients across various regions effectively.",
+          "category": "Location"
+        },
+        {
+          "question": "What is PT.SSI's commitment to quality and customer satisfaction?",
+          "answer":
+            "At PT.SSI, we are committed to maintaining the highest standards of quality in all our services. We prioritize customer satisfaction by ensuring that our solutions meet or exceed client expectations.",
+          "category": "Services"
+        }
+      ],
+      "zh": [
+        {
+          "question": "PT. Surya Solusi Internasional (PT.SSI) 是什么？",
+          "answer": "PT. Surya Solusi Internasional，通常称为 PT.SSI，是一家领先的公司，专注于提供各个行业的创新解决方案。我们的专业领域包括设计、测量和设备服务，确保为客户提供全面支持。",
+          "category": "SSI"
+        },
+        {
+          "question": "PT.SSI 提供哪些服务？",
+          "answer": "PT.SSI 提供广泛的服务，包括：\n设计服务：量身定制的解决方案以满足特定项目要求。\n测量服务：为各种应用提供准确可靠的测量。\n转图服务：将中国建筑师的设计本地化，以符合印度尼西亚建筑许可证的要求。",
+          "category": "服务"
+        },
+        {
+          "question": "选择 PT.SSI 的商业优势是什么？",
+          "answer": "选择 PT.SSI 提供多个优势，包括：\n专业知识：一支经验丰富的专业团队，致力于提供高质量的服务。\n资源协作：不同资源之间的高效协作，以增强项目成果。\n成功记录：在各个行业成功项目的历史，证明我们的能力和可靠性。",
+          "category": "优势"
+        },
+        {
+          "question": "PT.SSI 位于哪里？",
+          "answer": "PT.SSI 总部位于 SEMARANG，战略性地定位于有效服务于各个地区的客户。",
+          "category": "位置"
+        },
+        {
+          "question": "PT.SSI 对质量和客户满意度的承诺是什么？",
+          "answer": "在 PT.SSI，我们致力于在所有服务中保持最高的质量标准。我们优先考虑客户满意度，确保我们的解决方案满足或超出客户的期望。",
+          "category": "服务"
+        }
+      ]
+}

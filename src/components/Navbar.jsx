@@ -43,7 +43,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
             >
               <img
                 className="h-20 w-auto"
-                src="/public/logo-ssi-no-back.png"
+                src="/images/logo-ssi-no-back.png"
                 alt="Logo"
               />
             </motion.div>

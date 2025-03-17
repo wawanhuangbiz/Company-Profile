@@ -3,7 +3,7 @@
     {
       "title": "PT. Kahatex",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "Real-time tracking and management system",
       "icon": "Expand",
       "categories": [
@@ -16,7 +16,7 @@
     {
       "title": "PT.Lesso Technology Indonesia",
       "area": "120.000m²",
-      "image": "public/project/lesso.png",
+      "image": "/project/lesso.png",
       "description": "Jl. Raya Serang No.KM. 16, Talaga, Kec. Cikupa, Kabupaten Tangerang, Banten 15710",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
@@ -25,7 +25,7 @@
     {
       "title": "PT. Food Packaging Jaya",
       "area": "300.000m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "Secure and user-friendly banking application",
       "icon": "Expand",
       "categories": ["Transformation", "Building Permit Approval"],
@@ -34,7 +34,7 @@
     {
       "title": "PT. Makuku Care Indonesia",
       "area": "100.000m²",
-      "image": "public/project/makuku.png",
+      "image": "/project/makuku.png",
       "description": "Jatengland Industrial Park Sayung Blok F no. 1, Batu, Kabupaten Demak, Jawa Tengah 59561",
       "icon": "Expand",
       "categories": ["Transformation"],
@@ -43,7 +43,7 @@
     {
       "title": "Citra Sanxing Indonesia New Factory",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "Analytics and management platform",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
@@ -52,7 +52,7 @@
     {
       "title": "SMJ-SBRI New Factory",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "Real-time tracking and management system",
       "icon": "Expand",
       "categories": ["Design", "Building Permit Approval"],
@@ -61,7 +61,7 @@
     {
       "title": "PT. Sumber Samudra Indonesia",
       "area": "35.000m²",
-      "image": "public/project/samudra.png",
+      "image": "/project/samudra.png",
       "description": "Jl. Kw. Industri Terboyo Gg. 5 No.16 A Blok F, Trimulyo, Kec. Genuk, Kota Semarang, Jawa Tengah 50118",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
@@ -70,7 +70,7 @@
     {
       "title": "PT. Chingluh Indonesia",
       "area": "120.000m²",
-      "image": "public/project/chingluh.png",
+      "image": "/project/chingluh.png",
       "description": "RGMP+F72, Jl. Jalak 2, Sukaasih, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
@@ -79,7 +79,7 @@
     {
       "title": "PT. Maju Bersama Gemilang",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "Real-time tracking and management system",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
@@ -90,7 +90,7 @@
     {
       "title": "PT. Kahatex",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "实时跟踪和管理系统",
       "icon": "展开",
       "categories": ["建筑维护", "设计", "报批报建"],
@@ -99,7 +99,7 @@
     {
       "title": "PT.Lesso Technology Indonesia",
       "area": "120.000m²",
-      "image": "public/project/lesso.png",
+      "image": "/project/lesso.png",
       "description": "Jl. Raya Serang No.KM. 16, Talaga, Kec. Cikupa, Kabupaten Tangerang, Banten 15710",
       "icon": "展开",
       "categories": ["设计", "转图"],
@@ -108,7 +108,7 @@
     {
       "title": "PT. Food Packaging Jaya",
       "area": "300.000m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "安全且用户友好的银行应用程序",
       "icon": "展开",
       "categories": ["转图", "报批报建"],
@@ -117,7 +117,7 @@
     {
       "title": "PT. Makuku Care Indonesia",
       "area": "100.000m²",
-      "image": "public/project/makuku.png",
+      "image": "/project/makuku.png",
       "description": "Jatengland工业园区Sayung Blok F no. 1, Batu, Kabupaten Demak, Jawa Tengah 59561",
       "icon": "展开",
       "categories": ["转图"],
@@ -126,7 +126,7 @@
     {
       "title": "Citra Sanxing Indonesia New Factory",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "分析和管理平台",
       "icon": "展开",
       "categories": ["设计", "转图"],
@@ -135,7 +135,7 @@
     {
       "title": "SMJ-SBRI New Factory",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "实时跟踪和管理系统",
       "icon": "展开",
       "categories": ["设计", "报批报建"],
@@ -144,7 +144,7 @@
     {
       "title": "PT. Sumber Samudra Indonesia",
       "area": "35.000m²",
-      "image": "public/project/samudra.png",
+      "image": "/project/samudra.png",
       "description": "Jl. Kw. Industri Terboyo Gg. 5 No.16 A Blok F, Trimulyo, Kec. Genuk, Kota Semarang, Jawa Tengah 50118",
       "icon": "展开",
       "categories": ["设计", "转图"],
@@ -153,7 +153,7 @@
     {
       "title": "PT. Chingluh Indonesia",
       "area": "120.000m²",
-      "image": "public/project/chingluh.png",
+      "image": "/project/chingluh.png",
       "description": "RGMP+F72, Jl. Jalak 2, Sukaasih, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560",
       "icon": "展开",
       "categories": ["设计", "转图"],
@@ -162,7 +162,7 @@
     {
       "title": "PT. Maju Bersama Gemilang",
       "area": "m²",
-      "image": "public/logo-ssi.jpg",
+      "image": "/logo-ssi.jpg",
       "description": "实时跟踪和管理系统",
       "icon": "展开",
       "categories": ["设计", "转图"],

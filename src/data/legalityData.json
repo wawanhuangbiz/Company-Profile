@@ -2,84 +2,84 @@
   "en": [
     {
       "id": 1,
-      "image": "public/legality/KTA_SSI.png",
+      "image": "/legality/KTA_SSI.png",
       "title": "Kartu Tanda Anggota "
     },
     {
       "id": 2,
-      "image": "public/legality/NIB.png",
+      "image": "/legality/NIB.png",
       "title": "Surat Perijinan Badan Usaha "
     },
     {
       "id": 3,
-      "image": "public/legality/NPWP.png",
+      "image": "/legality/NPWP.png",
       "title": "Nomor Pokok Wajib Pajak "
     },
     {
       "id": 4,
-      "image": "public/legality/SBU_AR_01.png",
+      "image": "/legality/SBU_AR_01.png",
       "title": "Sertifikat Badan Usaha  "
     },
     {
       "id": 5,
-      "image": "public/legality/SBU_AR_02.png",
+      "image": "/legality/SBU_AR_02.png",
       "title": "Sertifikat Badan Usaha  "
     },
     {
       "id": 6,
-      "image": "public/legality/SBU_AR_03.png",
+      "image": "/legality/SBU_AR_03.png",
       "title": "Sertifikat Badan Usaha  "
     },
     {
       "id": 7,
-      "image": "public/legality/SK_Kemenkumham.png",
+      "image": "/legality/SK_Kemenkumham.png",
       "title": "Sertifikat Badan Hukum "
     },
     {
       "id": 8,
-      "image": "public/legality/SKK_Wijiyanto.png",
+      "image": "/legality/SKK_Wijiyanto.png",
       "title": "Sertifikat Kemampuan Kerja "
     }
   ],
   "zh": [
     {
       "id": 1,
-      "image": "public/legality/KTA_SSI.png",
+      "image": "/legality/KTA_SSI.png",
       "title": "会员卡"
     },
     {
       "id": 2,
-      "image": "public/legality/NIB.png",
+      "image": "/legality/NIB.png",
       "title": "企业许可证"
     },
     {
       "id": 3,
-      "image": "public/legality/NPWP.png",
+      "image": "/legality/NPWP.png",
       "title": "纳税人识别号"
     },
     {
       "id": 4,
-      "image": "public/legality/SBU_AR_01.png",
+      "image": "/legality/SBU_AR_01.png",
       "title": "企业证书"
     },
     {
       "id": 5,
-      "image": "public/legality/SBU_AR_02.png",
+      "image": "/legality/SBU_AR_02.png",
       "title": "营业执照"
     },
     {
       "id": 6,
-      "image": "public/legality/SBU_AR_03.png",
+      "image": "/legality/SBU_AR_03.png",
       "title": "临时营业许可证"
     },
     {
       "id": 7,
-      "image": "public/legality/SK_Kemenkumham.png",
+      "image": "/legality/SK_Kemenkumham.png",
       "title": "营业场所许可证"
     },
     {
       "id": 8,
-      "image": "public/legality/SKK_Wijiyanto.png",
+      "image": "/legality/SKK_Wijiyanto.png",
       "title": "增值税纳税人资格证"
     }
   ]

@@ -50,7 +50,7 @@ const About = ({ selectedLanguage }) => {
               {/* Image with single blue background */}
               <div className="absolute inset-0 bg-blue-600 transform rotate-3 rounded-2xl"></div>
               <img
-                src="/src/assets/About.png"
+                src="/images/About.png"
                 alt="About Us"
                 className="relative rounded-2xl shadow-xl"
               />

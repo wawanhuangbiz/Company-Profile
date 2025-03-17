@@ -1,43 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, Search } from "lucide-react";
+import faqsData from "../data/faqsData.json";
 
-const FAQs = () => {
+const FAQs = ( {selectedLanguage} ) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const faqs = [
-    {
-      question: "How long does it take to complete a website?",
-      answer:
-        "The timeline varies depending on the project scope. Typically, a basic website takes 2-4 weeks, while more complex projects may take 6-12 weeks. We'll provide a detailed timeline during our initial consultation.",
-      category: "Timeline",
-    },
-    {
-      question: "Do you provide hosting and domain registration?",
-      answer:
-        "Yes, we can help you with domain registration and provide reliable hosting solutions. We'll handle all technical aspects to ensure your website runs smoothly.",
-      category: "Services",
-    },
-    {
-      question: "Will my website be mobile-friendly?",
-      answer:
-        "Absolutely! All our websites are built with a mobile-first approach, ensuring they look and function perfectly on all devices, from smartphones to desktop computers.",
-      category: "Features",
-    },
-    {
-      question: "Can you help with SEO?",
-      answer:
-        "Yes, we include basic SEO optimization in all our packages. This includes meta descriptions, alt tags, and proper heading structure. We also offer advanced SEO services for better search engine rankings.",
-      category: "Services",
-    },
-    {
-      question: "Do you provide website maintenance?",
-      answer:
-        "Yes, we offer various maintenance packages to keep your website secure, up-to-date, and running smoothly. This includes regular updates, backups, and technical support.",
-      category: "Services",
-    },
-  ];
+  const faqs = faqsData[selectedLanguage] || [];
 
   const filteredFaqs = faqs.filter(
     (faq) =>

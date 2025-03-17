@@ -59,7 +59,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <img
-              src="public/logo-ssi-no-back.png"
+              src="/images/logo-ssi-no-back.png"
               alt="Logo"
               className="h-50 w-auto mb-6"
             />
