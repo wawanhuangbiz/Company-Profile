@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        "custom-image": "url('public/background/gold.jpg')",
-        "footer-image": "url('public/background/polos.jpg')",
+        "custom-image": "url('/background/gold.jpg')",
+        "footer-image": "url('/background/polos.jpg')",
       }),
       fontFamily: {
         sans: ['Ubuntu', 'sans-serif'],

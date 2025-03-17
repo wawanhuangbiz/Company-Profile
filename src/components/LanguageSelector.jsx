@@ -16,7 +16,7 @@ const LanguageSelector = ({ selectedLanguage, setSelectedLanguage }) => {
         data-tooltip-id="language-tooltip"
         data-tooltip-content="English"
       >
-        <img src="/public/images/flags/id.svg" alt="English flag" className='h-5 w-auto rounded-xl' />
+        <img src="/images/flags/id.svg" alt="English flag" className='h-5 w-auto rounded-xl' />
       </button>
       <button
         onClick={() => handleSelectLanguage('zh')}
@@ -26,7 +26,7 @@ const LanguageSelector = ({ selectedLanguage, setSelectedLanguage }) => {
         data-tooltip-id="language-tooltip"
         data-tooltip-content="Chinese"
       >
-        <img src="/public/images/flags/cn.svg" alt="Chinese flag" className='h-5 w-auto rounded-xl' />
+        <img src="/images/flags/cn.svg" alt="Chinese flag" className='h-5 w-auto rounded-xl' />
       </button>
       <Tooltip id="language-tooltip" place="bottom" effect="solid" />
     </div>
