@@ -13,6 +13,7 @@ import OurTeam  from "./components/OurTeam";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
+import FAQs from "./components/FAQs";
 
 const App = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
@@ -40,6 +41,10 @@ const App = () => {
         selectedLanguage={selectedLanguage} 
         setNavbarVisible={setNavbarVisible} // Pass the function to Legality
       />
+      <FAQs 
+        selectedLanguage={selectedLanguage} 
+        setNavbarVisible={setNavbarVisible}
+      />
       <OurTeam 
         selectedLanguage={selectedLanguage} 
         setSelectedLanguage={setSelectedLanguage}
@@ -48,10 +53,10 @@ const App = () => {
         selectedLanguage={selectedLanguage} 
         setSelectedLanguage={setSelectedLanguage}
       />
-      <Footer 
+      {/* <Footer 
         selectedLanguage={selectedLanguage} 
         setSelectedLanguage={setSelectedLanguage}
-      />
+      /> */}
       <FloatingCTA 
         selectedLanguage={selectedLanguage} 
         setSelectedLanguage={setSelectedLanguage}

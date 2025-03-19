@@ -125,6 +125,11 @@
       "legalDocuments": "Legal Documents",
       "legalParagraph": "Explore our essential legal documents that validate our operations and compliance."
     },
+    "faq": {
+      "faqTitle": "FAQ",
+      "faqSub": "Frequently Asked Questions",
+      "faqParagraph": "Find answers to common questions about our services."
+    },
     "contact": {
       "contactUs": "Contact Us",
       "contactSub": "Let's Build Something Amazing Together",
@@ -247,16 +252,21 @@
       "legalParagraph": "探索我们验证运营和合规性的基本法律文件。"
     },
     "contact": {
-    "contactUs": "联系我们",
-    "contactSub": "一起创造一些惊人的东西",
-    "contactParagraph": "有什么想法吗？我们很想听听。请与我们联系，让我们一起创造伟大的东西。",
-    "form": {
+      "contactUs": "联系我们",
+      "contactSub": "一起创造一些惊人的东西",
+      "contactParagraph": "有什么想法吗？我们很想听听。请与我们联系，让我们一起创造伟大的东西。",
+      "form": {
         "fullName": "全名",
         "email": "电子邮件地址",
         "message": "信息",
         "send": "发送信息",
         "isSending": "发送中..."
+      }
+    },
+    "faq": {
+      "faqTitle": "常见问题",
+      "faqSub": "常见问题解答",
+      "faqParagraph": "找到关于我们服务的常见问题的答案。"
     }
-}
   }
 }

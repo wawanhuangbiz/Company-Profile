@@ -54,14 +54,14 @@ const FloatingCTA = () => {
                   </div>
                 </a>
                 <a
-                  href="tel:+1234567890"
+                  href="http://wa.me/6287771273503"
                   className="flex items-center p-3 hover:bg-gray-50 rounded-lg transition duration-300"
                 >
                   <Phone className="w-5 h-5 text-blue-600 mr-3" />
                   <div>
                     <div className="text-gray-900 font-medium">Call Us</div>
                     <div className="text-sm text-gray-500">
-                      Mon-Fri, 9am-6pm EST
+                      Mon-Sat, 8am-5pm WIB
                     </div>
                   </div>
                 </a>

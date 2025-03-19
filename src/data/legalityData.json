@@ -34,11 +34,6 @@
       "id": 7,
       "image": "/legality/SK_Kemenkumham.png",
       "title": "Sertifikat Badan Hukum "
-    },
-    {
-      "id": 8,
-      "image": "/legality/SKK_Wijiyanto.png",
-      "title": "Sertifikat Kemampuan Kerja "
     }
   ],
   "zh": [
@@ -76,11 +71,6 @@
       "id": 7,
       "image": "/legality/SK_Kemenkumham.png",
       "title": "营业场所许可证"
-    },
-    {
-      "id": 8,
-      "image": "/legality/SKK_Wijiyanto.png",
-      "title": "增值税纳税人资格证"
     }
   ]
 }

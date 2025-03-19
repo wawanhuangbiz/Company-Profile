@@ -33,7 +33,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer">
+    <footer>
+      <div className="absolute bottom-0 filter blur-m opacity-30 inset-0 bg-cover bg-center bg-no-repeat bg-fixed bg-custom-image z-0"></div>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-5">
           {/* Company Info */}

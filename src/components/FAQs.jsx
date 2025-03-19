@@ -2,12 +2,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, Search } from "lucide-react";
 import faqsData from "../data/faqsData.json";
+import mainData from "../data/mainData.json"
 
 const FAQs = ( {selectedLanguage} ) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   const faqs = faqsData[selectedLanguage] || [];
+
+  const faqData = mainData[selectedLanguage]?.faq || {};
 
   const filteredFaqs = faqs.filter(
     (faq) =>
@@ -19,9 +22,6 @@ const FAQs = ( {selectedLanguage} ) => {
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
      id="faq"
     >
-
-
-
       <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,13 +31,13 @@ const FAQs = ( {selectedLanguage} ) => {
         >
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium">
             <HelpCircle className="w-4 h-4 mr-2" />
-            FAQ
+            {faqData?.faqTitle}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
+            {faqData?.faqSub}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Find answers to common questions about our web development services.
+            {faqData?.faqParagraph}
           </p>
 
           {/* Search Bar */}

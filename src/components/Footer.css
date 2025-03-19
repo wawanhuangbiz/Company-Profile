@@ -1,13 +1,3 @@
-.footer {
-    background-image: url('/background/gold.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
-    padding: 20px 0;
-    color: white; /* Ensure text is readable */
-}
-
 .footer h3 {
     border-bottom: 2px solid #FFD700; /* Add a decorative line under headings */
     padding-bottom: 5px; /* Space between heading and content */
