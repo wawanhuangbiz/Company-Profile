@@ -3,20 +3,19 @@ import legalityData from "../data/legalityData.json"; // Adjust the path as nece
 import mainData from "../data/mainData.json";
 import { motion } from "framer-motion";
 
-const Legality = ( {selectedLanguage} ) => {
-
+const Legality = ({ selectedLanguage, setNavbarVisible }) => {
   const legality = legalityData[selectedLanguage] || {};
-
   const legalData = mainData[selectedLanguage]?.legality || {};
-
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
+    setNavbarVisible(false); // Hide navbar when an image is clicked
   };
 
   const handleClose = () => {
     setSelectedImage(null);
+    setNavbarVisible(true); // Show navbar when modal is closed
   };
 
   return (

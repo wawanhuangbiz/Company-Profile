@@ -22,9 +22,9 @@
       "id": "li-weifeng",
       "name": "Li Weifeng",
       "role": "Director",
-      "image": "/images/logo-ssi-no-back.png",
-      "quote": "成就源于对工作的无尽热爱和坚持。",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend commodo sem non congue.",
+      "image": "/images/liweifeng.png",
+      "quote": "A true leader's most important task is to inspire potential and help others become better people.",
+      "intro": "Hello everyone, I am Li Weifeng, the General Manager of PT.SSI. I love life, am grateful for help, and actively challenge myself in new fields; providing high-quality, thoughtful, and cost-effective services to our clients is our company's consistent pursuit.",
       "tool": ["AutoCAD", "TSSD"]
     },
     {
@@ -49,18 +49,18 @@
       "id": "gao-pan",
       "name": "Gao Pan",
       "role": "Architect",
-      "image": "/images/logo-ssi-no-back.png",
-      "quote": "成功是留给那些废寝忘食、全力以赴的人。",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend commodo sem non congue.",
+      "image": "/images/gao-pan.jpg",
+      "quote": "No pain, no gain.",
+      "intro": "Positive and upward-looking, serious about work, and passionate about creative design.",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
       "id": "deng-chenglin",
-      "name": "邓成林",
+      "name": "Deng Chenglin",
       "role": "Structural Engineer",
-      "image": "/images/logo-ssi-no-back.png",
-      "description": "今天不努力工作，明天就得努力找工作。",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend commodo sem non congue.",
+      "image": "/images/deng-gong.jpg",
+      "quote": "Structures not only support buildings but also carry safety and trust.",
+      "intro": "I am a professional passionate about structural engineering, skilled in applying engineering mechanics and innovative technologies to provide efficient, safe, and economical structural solutions for every project. I believe that precise calculations and reasonable designs can add greater value to buildings.",
       "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
     },
     {
@@ -76,8 +76,8 @@
       "id": "nur-abdul",
       "name": "M. Nur Abdul Bashirudin",
       "role": "Structural Engineer",
-      "image": "/images/logo-ssi-no-back.png",
-      "quote": "kerja cerdas, tidak banyak bicara",
+      "image": "/images/abas.jpg",
+      "quote": "Kerja cerdas, tidak banyak bicara",
       "intro": "Halo, saya Abas seorang Structural Engineer di PT. Surya Solusi Internasional, saya berusaha untuk selalu bekerja cerdas, cepat, tepat. Dengan kolaborasi antara Engineer Indonesia China menghasilkan sebuah karya yang luar biasa, kita terus berkembang maju untuk masa depan pembangunan Indonesia.",
       "tool": ["TSSD", "PKPM", "SAP2000", "AutoCAD", "TSSD"]
     },
@@ -110,11 +110,11 @@
     },
     {
       "id": "wen-long",
-      "name": "Wen long",
+      "name": "Wen Long",
       "role": "Structural Engineer",
-      "image": "/images/logo-ssi-no-back.png",
-      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "/images/wen-long.jpg",
+      "quote": "The beauty of structure lies not only in strength and stability but also in the perfect combination of science and art.",
+      "intro": "I have 13 years of experience in structural design, focusing on steel structures, concrete structures, and structural optimization design. Through years of practical accumulation, I have rich experience in complex structural analysis and project management, dedicated to providing clients with safe, economical, and efficient structural solutions. Upholding the philosophy of balancing rigor and innovation, I always strive for excellence, aiming for precision and reliability in every project.",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
@@ -148,7 +148,7 @@
       "id": "ahmad-Sugiyanto",
       "name": "Ahmad Sugiyanto",
       "role": "Facility Care Specialist",
-      "image": "/images/yanto.jpg",
+      "image": "/images/yanto2.jpg",
       "quote": "When you declutter, you create space for new opportunities.",
       "intro": "Hi there! I’m Ahmad Sugiyanto. I believe that cleanliness is not just about keeping our physical spaces tidy; it’s a reflection of our mental and emotional state. Drawing inspiration from Stoic philosophy, I embrace the idea that we should focus on what we can control and accept what we cannot."
     }
@@ -176,9 +176,9 @@
       "id": "li-weifeng",
       "name": "李伟锋",
       "role": "董事",
-      "image": "/images/logo-ssi-no-back.png",
-      "quote": "成就源于对工作的无尽热爱和坚持。",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend commodo sem non congue.",
+      "image": "/images/liweifeng.png",
+      "quote": "真正的领导者最需要做的是激发潜能，帮助他人成为更好的人。",
+      "intro": "大家好，我是李伟锋，PT.SSI的总经理。热爱生活，感恩帮助，积极挑战新领域是我的个人宗旨；为客户提供优质、贴心和有性价比的服务，是我们企业的一贯追求。",
       "tool": ["AutoCAD", "TSSD"]
     },
     {
@@ -203,18 +203,18 @@
       "id": "gao-pan",
       "name": "高攀",
       "role": "建筑师",
-      "image": "/images/logo-ssi-no-back.png",
-      "quote": "成功是留给那些废寝忘食、全力以赴的人。",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend commodo sem non congue.",
+      "image": "/images/gao-pan.jpg",
+      "quote": "不劳无获",
+      "intro": "绍:积极向上,工作认真,热爱创意设计。",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
       "id": "deng-chenglin",
       "name": "邓成林",
       "role": "结构工程师",
-      "image": "images/logo-ssi-no-back.png",
-      "description": "今天不努力工作，明天就得努力找工作。",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend commodo sem non congue.",
+      "image": "/images/deng-gong.jpg",
+      "quote": "结构不仅支撑建筑，也承载着安全与信任。",
+      "intro": "我是一名热衷于结构工程的专业人士，擅长运用工程力学和创新技术，为每一个项目提供高效、安全、经济的结构解决方案。我相信精确的计算与合理的设计能够为建筑赋予更高的价值。",
       "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
     },
     {
@@ -230,7 +230,7 @@
       "id": "nur-abdul",
       "name": "M. Nur Abdul Bashirudin",
       "role": "结构工程师",
-      "image": "/images/logo-ssi-no-back.png",
+      "image": "/images/abas.jpg",
       "quote": "聪明工作，不多说。",
       "intro": "你好，我是Abas，PT. Surya Solusi Internasional的结构工程师，我努力始终工作聪明、快速、准确。通过印尼和中国工程师之间的合作，创造出卓越的作品，我们不断向前发展，为印尼的建设未来而努力。",
       "tool": ["TSSD", "PKPM", "SAP2000", "AutoCAD", "TSSD"]
@@ -266,9 +266,9 @@
       "id": "wen-long",
       "name": "温龙",
       "role": "结构工程师",
-      "image": "images/logo-ssi-no-back.png",
-      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "intro": "您满意，我再请求一次。",
+      "image": "/images/wen-long.jpg",
+      "quote": "结构之美，不仅在于坚固与稳定，更在于科学与艺术的完美结合。",
+      "intro": "我拥有13年的结构设计经验，专注于钢结构、混凝土结构及结构优化设计。通过多年的实践积累，我在复杂结构分析和工程项目管理方面具备丰富的经验，致力于为客户提供安全、经济、高效的结构解决方案。秉持严谨与创新并重的理念，我始终追求卓越，力求在每个项目中做到精准与可靠。",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
@@ -302,7 +302,7 @@
       "id": "ahmad-Sugiyanto",
       "name": "Ahmad Sugiyanto",
       "role": "设施护理专家",
-      "image": "/images/yanto.jpg",
+      "image": "/images/yanto2.jpg",
       "quote": "当你清理杂物时，你为新的机会创造了空间。",
       "intro": "嗨！我是Ahmad Sugiyanto。我相信，清洁不仅仅是保持我们物理空间的整洁；它反映了我们的心理和情感状态。受到斯多葛哲学的启发，我接受了我们应该专注于我们能控制的事物，并接受我们无法控制的事物的想法。"
     }

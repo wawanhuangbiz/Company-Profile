@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ScrollProgress from "./components/ScrollProgress";
 import Hero from "./components/Hero";
@@ -8,53 +8,56 @@ import Services from "./components/Services";
 import ProcessSteps from "./components/ProcessSteps";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
-import Stats from "./components/Stats";
-import Technologies from "./components/Technologies";
-import FAQs from "./components/FAQs";
-import Legality from "./components/Legality";
+import Legality from "./components/Legality"; // Import your Legality component
+import OurTeam  from "./components/OurTeam";
 import Contact from "./components/Contact";
-import CTABanner from "./components/CTABanner";
-import FloatingCTA from "./components/FloatingCTA";
 import Footer from "./components/Footer";
-import OurTeam from "./components/OurTeam.jsx";
-import TeamMember from "./components/TeamMember.jsx"; // Import the dynamic team member page
-import ScrollToTop from "./components/ScrollProgress.jsx"; // Import the scroll-to-top component
-import mainData from "./data/mainData.json";
+import FloatingCTA from "./components/FloatingCTA";
 
 const App = () => {
-    const [selectedLanguage, setSelectedLanguage] = useState('en');
-    const translations = mainData[selectedLanguage];
+  const [navbarVisible, setNavbarVisible] = useState(true);
+  const [selectedLanguage, setSelectedLanguage] = useState("en"); // Default language
 
-    useEffect(() => {}, [selectedLanguage]);
-    return (
-        <Router>
-            <ScrollToTop />
-            <Routes>
-                {/* Home Route */}
-                <Route path="/" element={<Home translations={translations} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}/>} />
-
-                {/* Team Member Route */}
-                <Route path="/team/:id" element={<TeamMember translations={translations} />} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <ScrollProgress />
+      {navbarVisible && (
+        <Navbar 
+          selectedLanguage={selectedLanguage} 
+          setSelectedLanguage={setSelectedLanguage} 
+          setNavbarVisible={setNavbarVisible} // Pass the function to control visibility
+        />
+      )}
+      <Hero selectedLanguage={selectedLanguage} 
+          setSelectedLanguage={setSelectedLanguage}/>
+      <About selectedLanguage={selectedLanguage} 
+          setSelectedLanguage={setSelectedLanguage}/>
+      <Services selectedLanguage={selectedLanguage} 
+          setSelectedLanguage={setSelectedLanguage}/>
+      <Portfolio selectedLanguage={selectedLanguage} 
+          setSelectedLanguage={setSelectedLanguage}/>
+      <Legality 
+        selectedLanguage={selectedLanguage} 
+        setNavbarVisible={setNavbarVisible} // Pass the function to Legality
+      />
+      <OurTeam 
+        selectedLanguage={selectedLanguage} 
+        setSelectedLanguage={setSelectedLanguage}
+      />
+      <Contact 
+        selectedLanguage={selectedLanguage} 
+        setSelectedLanguage={setSelectedLanguage}
+      />
+      <Footer 
+        selectedLanguage={selectedLanguage} 
+        setSelectedLanguage={setSelectedLanguage}
+      />
+      <FloatingCTA 
+        selectedLanguage={selectedLanguage} 
+        setSelectedLanguage={setSelectedLanguage}
+      />
+    </Router>
+  );
 };
-
-const Home = ({ selectedLanguage, translations, setSelectedLanguage }) => (
-    <>
-        <ScrollProgress />
-        <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Hero selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <About selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Services selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Portfolio selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <FAQs selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Legality selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <OurTeam selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Contact selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage } translations={translations} />
-        <Footer />
-        <FloatingCTA />
-    </>
-);
 
 export default App;
