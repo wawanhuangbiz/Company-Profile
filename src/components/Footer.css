@@ -1,12 +1,150 @@
-.footer h3 {
-    border-bottom: 2px solid #FFD700; /* Add a decorative line under headings */
-    padding-bottom: 5px; /* Space between heading and content */
+/* Footer.css */
+.footer {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
 }
 
-.footer a {
-    transition: color 0.3s; /* Smooth color transition */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
 }
 
-.footer a:hover {
-    color: #FFD700; /* Change color on hover */
+.footer-logo img {
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    max-width: 400px; /* Limit width for better readability */
+}
+
+.cta-button {
+    background-color: #FFD700; /* Gold color */
+    color: #000000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6b800; /* Slightly darker gold on hover */
+}
+
+.footer-middle {
+    margin-bottom: 40px;
+}
+
+.quick-links h3 {
+    border-bottom: 2px solid #FFD700; /* Gold border */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+}
+
+.quick-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.stay-connected h3 {
+    border-bottom: 2px solid #FFD700; /* Gold border */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.stay-connected form {
+    display: flex;
+    align-items: center;
+}
+
+.stay-connected input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.stay-connected button {
+    background-color: #FFD700; /* Gold color */
+    color: #000000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.stay-connected button:hover {
+    background-color: #e6b800; /* Slightly darker gold on hover */
+}
+
+.social-media a {
+    margin-right: 15px;
+}
+
+.social-media img {
+    width: 30px; /* Adjust size as needed */
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stay-connected form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stay-connected input[type="email"] {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
 }

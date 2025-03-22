@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
 import FAQs from "./components/FAQs";
 
+
 const App = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const [selectedLanguage, setSelectedLanguage] = useState("en"); // Default language
@@ -61,6 +62,7 @@ const App = () => {
         selectedLanguage={selectedLanguage} 
         setSelectedLanguage={setSelectedLanguage}
       />
+      <Footer />
     </Router>
   );
 };

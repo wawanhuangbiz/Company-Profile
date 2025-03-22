@@ -4,10 +4,18 @@ import { useState, useEffect } from "react";
 import teamData from "../data/teamData"; // Ensure this path is correct
 import './OurTeam.css'; // Import the CSS file
 
-const OurTeam = ( {selectedLanguage} ) => {
+const OurTeam = ({ selectedLanguage }) => {
     const [activeFilter, setActiveFilter] = useState("All");
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredTeams, setFilteredTeams] = useState([]);
+    const [flippedCards, setFlippedCards] = useState({}); // Object to track flipped state
+
+    const handleCardClick = (id) => {
+        setFlippedCards((prev) => ({
+            ...prev,
+            [id]: !prev[id], // Toggle the flipped state for the clicked card
+        }));
+    };
 
     const teams = teamData[selectedLanguage] || [];
 
@@ -45,7 +53,7 @@ const OurTeam = ( {selectedLanguage} ) => {
                     <AnimatePresence>
                         {filteredTeams.map((team) => (
                             <motion.div className="card-container" key={team.id}>
-                                <div className="card">
+                                <div className={`card ${flippedCards[team.id] ? "flipped" : ""}`} onClick={() => handleCardClick(team.id)}>
                                     <div className="card-front">
                                         <img src={team.image} alt={team.name} className="w-full h-48 object-cover rounded-t-lg" />
                                         <div className="p-4">

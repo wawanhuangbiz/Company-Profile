@@ -41,8 +41,8 @@
       "name": "Abraham Christian Aji Wicaksono",
       "role": "Architect",
       "image": "/images/ajik.jpg",
-      "quote": "Setiap ruang luar memiliki cerita untuk diceritakan",
-      "intro": "Assalamu'alaikum! Wilujeung enjing sadayana! Sim kuring Abraham Aji Christian Wicaksono, arsitek ngora ti Bandung, pinuh ku semangat pikeun nyiptakeun tempat anu éndah tur fungsional. Inspirasi kuring asalna tina kaéndahan alam jeung arsitektur di tempat lahir kuring. Kuring yakin unggal desain mibanda carita anu unik pikeun dicaritakeun, tur kuring komitmen pikeun ngahidupkeun carita éta liwat panalungtikan desain anu jero tur inovatif.",
+      "quote": "Setiap ruang memiliki cerita untuk diceritakan",
+      "intro": "Hai! Nama saya Aji. Saya percaya bahwa alam adalah sumber inspirasi terbesar. Oleh karena itu, saya mengintegrasikan elemen-elemen alami ke dalam desain saya, menciptakan ruang yang harmonis dan menenangkan.",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Ofice"]
     },
     {
@@ -192,12 +192,12 @@
     },
     {
       "id": "christian-aji",
-      "name": "Abraham Christian Aji Wicaksono",
+      "name": "亚伯拉罕·基督教·阿吉·维查克索诺",
       "role": "建筑师",
       "image": "/images/ajik.jpg",
-      "quote": "您满意，我们高兴。",
-      "intro": "你好！我是Abraham Christian Aji Wicaksono，一名来自万隆的新建筑师，充满了对创造美观和功能空间的热情。我的灵感来自于自然的美和我家乡的建筑。我相信每个设计都有一个独特的故事要讲述，我致力于通过深入和创新的设计探索来实现这个故事。",
-      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Ofice"]
+      "quote": "每个空间都有故事可讲。",
+      "intro": "你好！我叫阿吉。我相信自然是最大的灵感来源。因此，我将自然元素融入我的设计中，创造出和谐而宁静的空间。",
+      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Office"]
     },
     {
       "id": "gao-pan",
