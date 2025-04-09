@@ -18,17 +18,12 @@
     {
       "id": 4,
       "image": "/legality/SBU_AR_01.png",
-      "title": "Sertifikat Badan Usaha  "
-    },
-    {
-      "id": 5,
-      "image": "/legality/SBU_AR_02.png",
-      "title": "Sertifikat Badan Usaha  "
+      "title": "Sertifikat Badan Usaha Arsitektur"
     },
     {
       "id": 6,
       "image": "/legality/SBU_AR_03.png",
-      "title": "Sertifikat Badan Usaha  "
+      "title": "Sertifikat Badan Usaha Desain Interior"
     },
     {
       "id": 7,
@@ -55,17 +50,12 @@
     {
       "id": 4,
       "image": "/legality/SBU_AR_01.png",
-      "title": "企业证书"
-    },
-    {
-      "id": 5,
-      "image": "/legality/SBU_AR_02.png",
-      "title": "营业执照"
+      "title": "建筑企业证书"
     },
     {
       "id": 6,
       "image": "/legality/SBU_AR_03.png",
-      "title": "临时营业许可证"
+      "title": "室内设计企业证书"
     },
     {
       "id": 7,

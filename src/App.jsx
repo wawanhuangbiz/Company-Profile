@@ -14,7 +14,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
 import FAQs from "./components/FAQs";
-
+import ImageGallery from "./components/ImageGallery";
+// import Carousel from "./components/Carousel";
 
 const App = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
@@ -32,12 +33,14 @@ const App = () => {
       )}
       <Hero selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/>
+      {/* <Carousel /> */}
       <About selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/>
       <Services selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/>
-      <Portfolio selectedLanguage={selectedLanguage} 
-          setSelectedLanguage={setSelectedLanguage}/>
+      <ImageGallery />
+      {/* <Portfolio selectedLanguage={selectedLanguage} 
+          setSelectedLanguage={setSelectedLanguage}/> */}
       <Legality 
         selectedLanguage={selectedLanguage} 
         setNavbarVisible={setNavbarVisible} // Pass the function to Legality

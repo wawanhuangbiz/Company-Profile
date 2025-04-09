@@ -1,50 +1,44 @@
 .navbar {
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+  }
+  
+  .navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 0.1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center items vertically */
-    padding: 1rem; /* Add some padding */
-    background-color: white; /* Background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    overflow: hidden; /* Prevent overflow */
-}
-
-.navbar-item {
-    margin: 0 10px; /* Space between items */
-    text-decoration: none; /* Remove underline */
-    color: black; /* Text color */
-    font-weight: bold; /* Bold text */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-.navbar-item:hover {
-    color: #8E1630; /* Change color on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 873px) {
-    .navbar {
-        flex-direction: column; /* Stack items on smaller screens */
-        align-items: flex-start; /* Align items to the left */
-        width: 100%; /* Ensure full width */
-    }
-
-    .navbar-item {
-        margin: 5px 0; /* Adjust margin for stacked items */
-        width: 100%; /* Make items full width */
-        text-align: left; /* Align text to the left */
-    }
-
-    .mobile-menu {
-        display: block; /* Show mobile menu */
-        background-color: white; /* Background color for mobile menu */
-        border-top: 1px solid #e5e5e5; /* Border for separation */
-    }
-    .hamburger {
-        display: flex;
-    }
-}
-
-.custom-hidden {
-    display: none; /* Hide by default */
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
+  button svg {
+    width: 24px;
+    height: 24px;
+    color: #333;
   }

@@ -1,0 +1,12 @@
+[
+    {"id":1 ,"src": "/images/projects/interior/interior1.jpg", "alt":"Image 1"},
+    {"id":2 ,"src": "/images/projects/interior/interior2.jpg", "alt":"Image 2"},
+    {"id":3 ,"src": "/images/projects/interior/interior3.png", "alt":"Image 3"},
+    {"id":4 ,"src": "/images/projects/interior/interior4.png", "alt":"Image 4"},
+    {"id":5 ,"src": "/images/projects/interior/interior5.png", "alt":"Image 5"},
+    {"id":6 ,"src": "/images/projects/interior/interior6.png", "alt":"Image 6"},
+    {"id":11 ,"src": "/images/projects/interior/interior11.jpg", "alt":"Image 11"},
+    {"id":7 ,"src": "/images/projects/interior/interior7.jpg", "alt":"Image 7"},
+    {"id":8 ,"src": "/images/projects/interior/interior8.jpg", "alt":"Image 8"},
+    {"id":9 ,"src": "/images/projects/interior/interior9.jpg", "alt":"Image 9"}
+]

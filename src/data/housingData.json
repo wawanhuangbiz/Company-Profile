@@ -1,0 +1,12 @@
+[
+    {"id":1 ,"src": "/images/projects/housing/housing1.png", "alt":"Housing 1"},
+    {"id":2 ,"src": "/images/projects/housing/housing2.JPG", "alt":"Housing 2"},
+    {"id":3 ,"src": "/images/projects/housing/housing3.JPG", "alt":"Housing 3"},
+    {"id":4 ,"src": "/images/projects/housing/housing4.JPG", "alt":"Housing 4"},
+    {"id":5 ,"src": "/images/projects/housing/housing5.JPG", "alt":"Housing 5"},
+    {"id":9 ,"src": "/images/projects/housing/housing9.jpg", "alt":"Housing 9"},
+    {"id":6 ,"src": "/images/projects/housing/housing6.JPG", "alt":"Housing 6"},
+    {"id":7 ,"src": "/images/projects/housing/housing7.JPG", "alt":"Housing 7"},
+    {"id":8 ,"src": "/images/projects/housing/housing8.jpg", "alt":"Housing 8"},
+    {"id":10 ,"src": "/images/projects/housing/housing10.JPG", "alt":"Housing 10"}
+]

@@ -53,7 +53,7 @@ const Hero = ({ selectedLanguage }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 leading-tight mb-6"
+                className="text-4xl font-sans md:text-5xl lg:text-6xl font-bold text-blue-600 leading-tight mb-6"
               >
                 {heroData.heading}
                 <span className="relative inline-block">

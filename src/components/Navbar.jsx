@@ -11,9 +11,14 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
+  // Handle scroll event
   React.useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -21,82 +26,54 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 text-[#1D1616] ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+      <div className="container mx-auto flex justify-between items-center p-4">
+
+          <img src="images/logo-ssi-no-back.png" className="h-20"/>
+
+        
+        {/* Menu Button */}
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+          {isOpen ? <X /> : <Menu />}
+        </button>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-4">
+          {menuItems.map((item) => (
+            <li key={item.name}>
+              <a href={item.href} className="text-gray-800 hover:text-blue-600">{item.name}</a>
+            </li>
+          ))}
+          {/* Language Selector */}
+          <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+        </ul>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex-shrink-0"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-16 left-0 w-full bg-white shadow-lg z-10"
             >
-              <img
-                className="h-20 w-auto"
-                src="/images/logo-ssi-no-back.png"
-                alt="Logo"
-              />
-            </motion.div>
-            <div className="hidden md:block ml-10">
-              <div className="flex items-baseline space-x-8">
-                {menuItems.map((item, index) => (
-                  <motion.a
-                    key={index}
-                    href={item.href}
-                    whileHover={{ scale: 1.05 }}
-                    className="text-gray-800 hover:text-[#8E1630] px-3 py-2 text-md font-medium transition-colors duration-300"
-                  >
-                    {item.name}
-                  </motion.a>
+              <ul className="flex flex-col space-y-2 p-4">
+                {menuItems.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} onClick={() => setIsOpen(false)} className="block text-gray-800 hover:text-blue-600">{item.name}</a>
+                  </li>
                 ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="xs:block md:block">
-            <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
-          </div>
-
-          <div className="hamburger md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t border-gray-100"
-          >
-            <div className="flex flex-col space-y-2 p-4">
-              {menuItems.map((item, index) => (
-                <motion.a
-                  key={index}
-                  href={item.href}
-                  whileHover={{ x: 10 }}
-                  className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-300"
-                >
-                  {item.name}
-                </motion.a>
-              ))}
-              {/* <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} /> */}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+                {/* Language Selector for Mobile */}
+                <li>
+                  <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+                </li>
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div> 
+    </nav> 
   );
 };
 

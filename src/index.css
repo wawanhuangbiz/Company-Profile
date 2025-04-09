@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'UbuntuL';
-    src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype'); /* Adjust the path as necessary */
+    font-family: 'HelveticaNeueMedium';
+    src: url('./assets/fonts/HelveticaNeueMedium.otf') format('opentype'); /* Adjust the path as necessary */
     font-weight: normal;
     font-style: normal;
 }
