@@ -15,7 +15,7 @@ import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
 import FAQs from "./components/FAQs";
 import ImageGallery from "./components/ImageGallery";
-// import Carousel from "./components/Carousel";
+import Carousels from "./components/Carousels";
 
 const App = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
@@ -33,12 +33,12 @@ const App = () => {
       )}
       <Hero selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/>
-      {/* <Carousel /> */}
       <About selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/>
       <Services selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/>
-      <ImageGallery />
+      {/* <ImageGallery /> */}
+      <Carousels />
       {/* <Portfolio selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/> */}
       <Legality 

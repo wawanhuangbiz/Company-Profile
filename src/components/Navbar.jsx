@@ -29,7 +29,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
       <div className="container mx-auto flex justify-between items-center p-4">
 
-          <img src="images/logo-ssi-no-back.png" className="h-20"/>
+          <img src="images/logo-ssi-no-back.png" className="h-[3.75rem]"/>
 
         
         {/* Menu Button */}

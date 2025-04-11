@@ -14,6 +14,10 @@
   transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
+.project-item h3 {
+  overflow: auto;
+}
+
 .project-item img:hover {
   transform: scale(1.05); /* Slight zoom on hover */
 }

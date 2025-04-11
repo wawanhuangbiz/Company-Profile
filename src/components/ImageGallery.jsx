@@ -25,24 +25,25 @@ const ImageGallery = () => {
      <section className="bg-gray-100 py-12 image-gallery" id="images">
        <div className="container mx-auto px-4">
          <h2 className="text-5xl font-bold text-center mb-8 text-blue-600">Our Projects</h2>
-         
+         <div>
          <Masonry 
            breakpointCols={breakpointColumnsObj} 
            className="my-masonry-grid" 
            columnClassName="my-masonry-grid_column"
-         >
+           >
+           <h3 className="w-auto p-4 text-7xl font-semibold text-gray-800 tracking-tight">
+             Factory
+           </h3>
            {images.map((image) => (
              <div key={image.id} className="mb-4 project-item">
                <img
                  src={image.src}
                  alt={`Project ${image.id}`}
                  className="w-full h-auto object-cover rounded-lg shadow-md"
-               />
+                 />
              </div>
            ))}
          </Masonry>
-           <div className="mb-absolute bottom-0 right-0 p-4 text-9xl font-semibold text-gray-800">
-             Factory
            </div>
 
          {/* Housings Section */}
@@ -51,9 +52,9 @@ const ImageGallery = () => {
            className="my-masonry-grid" 
            columnClassName="my-masonry-grid_column"
          >
-           <div className="col-span-full text-7xl font-semibold mb-6 flex items-center justify-center">
+           <h3 className="w-auto pb-3 pr-2 text-7xl font-semibold text-gray-800 tracking-tight">
              Housings
-           </div>
+           </h3>
            {housing.map((image) => (
              <div key={image.id} className="mb-4 project-item">
                <img 
@@ -71,6 +72,9 @@ const ImageGallery = () => {
            className="my-masonry-grid" 
            columnClassName="my-masonry-grid_column"
          >
+           <h3 className="w-auto p-4 text-7xl font-semibold text-gray-800 tracking-wider">
+             Interior
+           </h3>
            {interior.map((image) => (
              <div key={image.id} className="mb-4 project-item">
                <img
@@ -80,9 +84,6 @@ const ImageGallery = () => {
                />
              </div>
            ))}
-           <div className="col-span-full text-7xl font-semibold mb-6 flex items-center justify-center rotate-text">
-             Interior
-           </div>
          </Masonry>
        </div>   
      </section>    

@@ -1,0 +1,46 @@
+/* Ensure the SwiperSlide container is a flex container */
+.mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Center the image within the SwiperSlide */
+.mySwiper .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  border-radius: 2xl; /* Ensure the border-radius is applied */
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3.75rem;
+  font-weight: bold;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: grey;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  scale: 1.2; /* Lighter white on hover */
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
