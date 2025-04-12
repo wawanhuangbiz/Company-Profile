@@ -14,27 +14,25 @@
   border-radius: 2xl; /* Ensure the border-radius is applied */
 }
 
-h3 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 3.75rem;
-  font-weight: bold;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+/* Custom styles for navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  border-radius: 50%;
+  border: 2px solid #ccc; /* Lighter border color */
+  color: white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s;
-  color: grey;
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  scale: 1.2; /* Lighter white on hover */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 10; /* Ensure arrows are above the swiper */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for better visibility */
+  opacity: 0.8; /* Slightly transparent */
 }
 
 .swiper-button-prev {
@@ -43,4 +41,46 @@ h3 {
 
 .swiper-button-next {
   right: 10px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.1); /* Lighter background on hover */
+  opacity: 1; /* Fully opaque on hover */
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  fill: #333; /* Darker fill color for better contrast */
+}
+
+/* General styles for the swiper container */
+.swiper-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Styles for the arrow containers */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff; /* Change arrow color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Round shape */
+    width: 40px; /* Width of arrows */
+    height: 40px; /* Height of arrows */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px; /* Size of arrow icon */
+}
+
+/* Positioning adjustments if needed */
+.swiper-button-next {
+   right: 5px; 
+}
+
+.swiper-button-prev {
+   left: 5px;
 }

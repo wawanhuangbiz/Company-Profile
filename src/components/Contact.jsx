@@ -48,31 +48,31 @@ const Contact = ({ selectedLanguage }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
     try {
-      const response = await fetch('http://localhost:3000/send-email', {
+      const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-
+  
       const data = await response.json();
-
+  
       if (data.success) {
         alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
       } else {
         alert('Something went wrong! Please try again.');
       }
-  } catch (error) {
-    console.log('Error:', error);
-    alert('Error sending message. Please try again.');
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+    } catch (error) {
+      console.log('Error:', error);
+      alert('Error sending message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section
       id="contact"

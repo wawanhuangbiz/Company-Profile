@@ -4,7 +4,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation"; // Import navigation styles
+import "swiper/css/navigation";
 import imageData from "../data/imageData.json";
 import housingData from "../data/housingData.json";
 import interiorData from "../data/interiorData.json";
@@ -23,35 +23,47 @@ const Carousels = () => {
         </h2>
         <>
           {/* Swiper for Factory */}
-          <h3>Factory</h3>
-          <Swiper
-            effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView="auto"
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            pagination={true}
-            navigation={true} // Enable navigation arrows
-            modules={[EffectCoverflow, Pagination, Navigation]} // Include Navigation module
-            className="mySwiper"
-          >
-            {factories.map((image) => (
-              <SwiperSlide key={image.id}>
-                <div className="content-center">
-                  <img src={image.src} alt={image.alt} className="rounded-2xl justify-center item-center" />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <h3 className="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2">
+            Factory
+          </h3>
+          <div className="swiper-container">
+            <div className="swiper-wrapper">
+              <Swiper
+                effect="coverflow"
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView="auto"
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                pagination={true}
+                navigation={true}
+                modules={[EffectCoverflow, Pagination, Navigation]}
+                className="mySwiper ease-in"
+              >
+                {factories.map((image) => (
+                  <SwiperSlide key={image.id}>
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="rounded-2xl shadow-md border border-gray-200"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+
+
 
           {/* Swiper for Housings */}
-          <h3>Housings</h3>
+          <h3 className="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2 mt-10">
+            Housings
+          </h3>
           <Swiper
             effect="coverflow"
             grabCursor={true}
@@ -65,19 +77,25 @@ const Carousels = () => {
               slideShadows: true,
             }}
             pagination={true}
-            navigation={true} // Enable navigation arrows
-            modules={[EffectCoverflow, Pagination, Navigation]} // Include Navigation module
-            className="mySwiper mt-10"
+            navigation={true}
+            modules={[EffectCoverflow, Pagination, Navigation]}
+            className="mySwiper ease-in"
           >
             {housings.map((image) => (
               <SwiperSlide key={image.id}>
-                <img src={image.src} alt={image.alt} className="rounded-2xl justify-center item-center" />
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="rounded-2xl shadow-md border border-gray-200"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
 
           {/* Swiper for Interior */}
-          <h3>Interior</h3>
+          <h3 className="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2 mt-10">
+            Interior
+          </h3>
           <Swiper
             effect="coverflow"
             grabCursor={true}
@@ -91,13 +109,17 @@ const Carousels = () => {
               slideShadows: true,
             }}
             pagination={true}
-            navigation={true} // Enable navigation arrows
-            modules={[EffectCoverflow, Pagination, Navigation]} // Include Navigation module
-            className="mySwiper mt-10"
+            navigation={true}
+            modules={[EffectCoverflow, Pagination, Navigation]}
+            className="mySwiper ease-in"
           >
             {interiors.map((image) => (
               <SwiperSlide key={image.id}>
-                <img src={image.src} alt={image.alt} className="rounded-2xl justify-center item-center" />
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="rounded-2xl shadow-md border border-gray-200"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
