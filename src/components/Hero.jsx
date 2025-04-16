@@ -5,11 +5,11 @@ import mainData from "../data/mainData.json";
 const Hero = ({ selectedLanguage }) => {
   // Ensure mainData is defined
   const languageData = mainData[selectedLanguage] || {};
-  const heroData = languageData.hero || {};
-  const heroItems = heroData.heroItems || [];
+  const heroData = languageData?.hero || {};
+  const heroItems = heroData?.heroItems || [];
 
   // console.log("Language data: ", languageData);
-  // console.log("heroData: ", heroData);
+  // console.log("heroData: ", heroItems[2].text);
   // console.log("Hero items: ", heroItems);
  
   return (
@@ -53,7 +53,7 @@ const Hero = ({ selectedLanguage }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl font-sans md:text-5xl lg:text-6xl font-bold text-blue-600 leading-tight mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl font-sans text-blue-600 leading-tight mb-6"
               >
                 {heroData.heading}
                 <span className="relative inline-block">
@@ -128,28 +128,28 @@ const Hero = ({ selectedLanguage }) => {
                 className="relative rounded-2xl shadow-2xl"
               />
 
-              {/* Floating Elements */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -right-8 top-1/4 bg-white p-4 rounded-xl shadow-lg"
-              >
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium">{heroItems?.[2].text}</span>
-                </div>
-              </motion.div>
+              {/*/!* Floating Elements *!/*/}
+              {/*<motion.div*/}
+              {/*  animate={{ y: [0, -10, 0] }}*/}
+              {/*  transition={{ duration: 2, repeat: Infinity }}*/}
+              {/*  className="absolute -right-8 top-1/4 bg-white p-4 rounded-xl shadow-lg"*/}
+              {/*>*/}
+              {/*  <div className="flex items-center space-x-2">*/}
+              {/*    <div className="w-2 h-2 bg-green-500 rounded-full"></div>*/}
+              {/*    <span className="text-sm font-medium">{heroItems?.[2].something}</span>*/}
+              {/*  </div>*/}
+              {/*</motion.div>*/}
 
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                className="absolute -left-8 bottom-1/4 bg-white p-4 rounded-xl shadow-lg"
-              >
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-medium">{heroItems?.[3]?.text}</span>
-                </div>
-              </motion.div>
+              {/*<motion.div*/}
+              {/*  animate={{ y: [0, 10, 0] }}*/}
+              {/*  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}*/}
+              {/*  className="absolute -left-8 bottom-1/4 bg-white p-4 rounded-xl shadow-lg"*/}
+              {/*>*/}
+              {/*  <div className="flex items-center space-x-2">*/}
+              {/*    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>*/}
+              {/*    <span className="text-sm font-medium">{heroItems?.[3]?.something}</span>*/}
+              {/*  </div>*/}
+              {/*</motion.div>*/}
             </motion.div>
           </div>
         </div>

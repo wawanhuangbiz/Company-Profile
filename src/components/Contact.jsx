@@ -154,7 +154,7 @@ const Contact = ({ selectedLanguage }) => {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition duration-200"
-                    placeholder="Adolf Hitler"
+                    placeholder="John Doe"
                   />
                 </div>
                 <div>

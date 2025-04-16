@@ -9,7 +9,7 @@ import ProcessSteps from "./components/ProcessSteps";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import Legality from "./components/Legality"; // Import your Legality component
-import OurTeam  from "./components/OurTeam";
+import OurTeam from "./components/OurTeam";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
@@ -25,47 +25,56 @@ const App = () => {
     <Router>
       <ScrollProgress />
       {navbarVisible && (
-        <Navbar 
-          selectedLanguage={selectedLanguage} 
-          setSelectedLanguage={setSelectedLanguage} 
+        <Navbar
+          selectedLanguage={selectedLanguage}
+          setSelectedLanguage={setSelectedLanguage}
           setNavbarVisible={setNavbarVisible} // Pass the function to control visibility
         />
       )}
-      <Hero selectedLanguage={selectedLanguage} 
-          setSelectedLanguage={setSelectedLanguage}/>
-      <About selectedLanguage={selectedLanguage} 
-          setSelectedLanguage={setSelectedLanguage}/>
-      <Services selectedLanguage={selectedLanguage} 
-          setSelectedLanguage={setSelectedLanguage}/>
+      <Hero
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
+      />
+      <About
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
+      />
+      <Services
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
+      />
       {/* <ImageGallery /> */}
       <Carousels />
       {/* <Portfolio selectedLanguage={selectedLanguage} 
           setSelectedLanguage={setSelectedLanguage}/> */}
-      <Legality 
-        selectedLanguage={selectedLanguage} 
+      <Legality
+        selectedLanguage={selectedLanguage}
         setNavbarVisible={setNavbarVisible} // Pass the function to Legality
       />
-      <FAQs 
-        selectedLanguage={selectedLanguage} 
+      <FAQs
+        selectedLanguage={selectedLanguage}
         setNavbarVisible={setNavbarVisible}
       />
-      <OurTeam 
-        selectedLanguage={selectedLanguage} 
+      <OurTeam
+        selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
       />
-      <Contact 
-        selectedLanguage={selectedLanguage} 
+      <Contact
+        selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
       />
       {/* <Footer 
         selectedLanguage={selectedLanguage} 
         setSelectedLanguage={setSelectedLanguage}
       /> */}
-      <FloatingCTA 
-        selectedLanguage={selectedLanguage} 
+      <FloatingCTA
+        selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
       />
-      <Footer />
+      <Footer
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
+      />
     </Router>
   );
 };

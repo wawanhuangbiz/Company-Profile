@@ -141,6 +141,9 @@
         "send": "Send Message",
         "isSending": "Sending..."
       }
+    },
+    "footer":{
+      "footParagraph": "Imagine a space that seamlessly blends form and function, where innovation and sustainability work in perfect harmony. That's the SSI promise. We're more than just architects; we're storytellers, crafting narratives in brick and mortar, glass and steel. We believe that every project is an opportunity to create something extraordinary, a space that reflects your unique vision and contributes to a more sustainable world. Partner with us and experience the power of transformative design."
     }
   },
   "zh": {
@@ -267,6 +270,9 @@
       "faqTitle": "常见问题",
       "faqSub": "常见问题解答",
       "faqParagraph": "找到关于我们服务的常见问题的答案。"
+    },
+    "footer":{
+      "footParagraph": "想象一下，一个空间完美融合了形式与功能，创新与可持续发展和谐共存。这就是 SSI 的承诺。我们不仅仅是建筑师；我们是故事的讲述者，用砖瓦、玻璃和钢铁谱写着动人的篇章。我们相信，每个项目都是创造非凡的契机，一个能够反映您独特愿景并为更可持续的世界做出贡献的空间。与我们携手，体验变革性设计的魅力。"
     }
   }
 }

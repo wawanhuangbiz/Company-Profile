@@ -14,7 +14,8 @@ module.exports = {
         "footer-image": "url('/background/polos.jpg')",
       }),
       fontFamily: {
-        sans: ['HelveticaNeueMedium', 'sans-serif'],
+        sans: ['FranklinGothic', 'ui-sans-reif', 'system-ui'],
+        custom: ['Masfield', 'ui-sans-serif', 'system-ui', 'sans-serif']
       }
     },
   },
