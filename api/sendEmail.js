@@ -1,32 +1,30 @@
-// api/sendEmail.js
-require('dotenv').config();
+// api/sendEmail.mjs
+import dotenv from 'dotenv';
+import nodemailer from 'nodemailer';
 
-const nodemailer = require('nodemailer');
+dotenv.config();
 
-exports.default = async (req, res) => {
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+export default async (req, res) => {
   if (req.method === 'POST') {
     const { name, email, message } = req.body;
 
-    // Set up the email transport configuration
-    const transporter = nodemailer.createTransport({
-      service: 'gmail', // Use your email service provider
-      auth: {
-        user:process.env.EMAIL_USER, // Your email address
-        pass: process.env.EMAIL_PASS, // Your email password or app-specific password
-      },
-    });
-
-    // Set up the email options
     const mailOptions = {
-      from: name + ' <' + email + '>', // Sender address
-      to: 'studio.pt.ssi@gmail.com', // Recipient address
-      subject: 'New Contact Message', // Subject line
-      text: message, // Plain text body
-      html: `<p>${message}</p>`, // HTML body
+      from: `${name} <${email}>`,
+      to: 'studio.pt.ssi@gmail.com',
+      subject: 'New Contact Message',
+      text: message,
+      html: `<p>${message}</p>`,
     };
 
     try {
-      // Send the email
       await transporter.sendMail(mailOptions);
       res.status(200).json({ success: true });
     } catch (error) {
