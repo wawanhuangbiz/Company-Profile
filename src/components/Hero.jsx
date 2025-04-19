@@ -11,7 +11,7 @@ const Hero = ({ selectedLanguage }) => {
   // console.log("Language data: ", languageData);
   // console.log("heroData: ", heroItems[2].text);
   // console.log("Hero items: ", heroItems);
- 
+
   return (
     <section
       id="home"
@@ -45,7 +45,7 @@ const Hero = ({ selectedLanguage }) => {
                 className="inline-flex items-center px-4 py-2 bg-blue-300 bg-opacity-50 text-blue-600 rounded-full mb-6 text-sm font-medium"
               >
                 <Star className="w-4 h-4 mr-2" />
-                {heroData.trustedBy} 
+                {heroData.trustedBy}
                 {/* || "Trusted by 500+ companies worldwide"} */}
               </motion.div>
 
@@ -81,7 +81,7 @@ const Hero = ({ selectedLanguage }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl text-gray-600 mb-8 leading-relaxed"
+                className="text-xl text-gray-600 mb-8 font-custom leading-relaxed"
               >
                 {heroData.paragraph}
               </motion.p>
@@ -129,27 +129,31 @@ const Hero = ({ selectedLanguage }) => {
               />
 
               {/*/!* Floating Elements *!/*/}
-              {/*<motion.div*/}
-              {/*  animate={{ y: [0, -10, 0] }}*/}
-              {/*  transition={{ duration: 2, repeat: Infinity }}*/}
-              {/*  className="absolute -right-8 top-1/4 bg-white p-4 rounded-xl shadow-lg"*/}
-              {/*>*/}
-              {/*  <div className="flex items-center space-x-2">*/}
-              {/*    <div className="w-2 h-2 bg-green-500 rounded-full"></div>*/}
-              {/*    <span className="text-sm font-medium">{heroItems?.[2].something}</span>*/}
-              {/*  </div>*/}
-              {/*</motion.div>*/}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute -right-8 top-1/4 bg-white p-4 rounded-xl shadow-lg"
+              >
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span className="text-sm font-medium fotn-custom">
+                    {heroItems?.[2].text}
+                  </span>
+                </div>
+              </motion.div>
 
-              {/*<motion.div*/}
-              {/*  animate={{ y: [0, 10, 0] }}*/}
-              {/*  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}*/}
-              {/*  className="absolute -left-8 bottom-1/4 bg-white p-4 rounded-xl shadow-lg"*/}
-              {/*>*/}
-              {/*  <div className="flex items-center space-x-2">*/}
-              {/*    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>*/}
-              {/*    <span className="text-sm font-medium">{heroItems?.[3]?.something}</span>*/}
-              {/*  </div>*/}
-              {/*</motion.div>*/}
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                className="absolute -left-8 bottom-1/4 bg-white p-4 rounded-xl shadow-lg"
+              >
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm font-medium font-custom">
+                    {heroItems?.[3]?.text}
+                  </span>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -159,4 +163,3 @@ const Hero = ({ selectedLanguage }) => {
 };
 
 export default Hero;
-  

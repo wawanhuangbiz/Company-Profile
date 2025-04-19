@@ -106,6 +106,10 @@
         }
       ]
     },
+    "ourteam": {
+      "heading": "Meet and Greet",
+      "subheading": "Our Astounding Team"
+    },
     "portfolio": {
       "ourWork": "Our Work",
       "featuredProjects": "Featured Projects",
@@ -240,6 +244,10 @@
           "icon": "ChartBar"
         }
       ]
+    },
+    "ourteam": {
+      "heading": "见面与问候",
+      "subheading": "我们了不起的的团队"
     },
     "portfolio": {
       "ourWork": "我们的作品",

@@ -33,10 +33,10 @@ const FAQs = ( {selectedLanguage} ) => {
             <HelpCircle className="w-4 h-4 mr-2" />
             {faqData?.faqTitle}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-custom md:text-4xl font-bold text-gray-900 mb-4">
             {faqData?.faqSub}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg font-custom text-gray-600 max-w-2xl mx-auto mb-8">
             {faqData?.faqParagraph}
           </p>
 
@@ -75,7 +75,7 @@ const FAQs = ( {selectedLanguage} ) => {
                   }`}
                 >
                   <div className="flex items-center text-left">
-                    <span className="text-lg font-semibold text-gray-900">
+                    <span className="text-lg font-custom font-semibold text-gray-900">
                       {faq.question}
                     </span>
                   </div>
@@ -103,7 +103,7 @@ const FAQs = ( {selectedLanguage} ) => {
                       className="overflow-hidden"
                     >
                       <div className="p-6 bg-white border-t border-gray-100">
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 font-custom leading-relaxed">
                           {faq.answer}
                         </p>
                         <div className="mt-4 flex items-center">

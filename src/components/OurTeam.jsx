@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Search } from "lucide-react";
 import { useState, useEffect } from "react";
 import teamData from "../data/teamData"; // Ensure this path is correct
+import mainData from "../data/mainData.json";
 import './OurTeam.css'; // Import the CSS file
 
 const OurTeam = ({ selectedLanguage }) => {
@@ -9,6 +10,7 @@ const OurTeam = ({ selectedLanguage }) => {
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredTeams, setFilteredTeams] = useState([]);
     const [flippedCards, setFlippedCards] = useState({}); // Object to track flipped state
+
 
     const handleCardClick = (id) => {
         setFlippedCards((prev) => ({
@@ -18,6 +20,8 @@ const OurTeam = ({ selectedLanguage }) => {
     };
 
     const teams = teamData[selectedLanguage] || [];
+
+    const data = mainData[selectedLanguage]?.ourteam || {};
 
     useEffect(() => {
         const filtered = teams.filter((team) => {
@@ -32,8 +36,8 @@ const OurTeam = ({ selectedLanguage }) => {
         <section id="our-team" className="bg-gray-50 py-20">
             <div className="container mx-auto px-4">
                 <div className="mb-16 text-center">
-                    <h2 className="text-3xl font-bold text-gray-900">Meet and Greet</h2>
-                    <p className="mx-auto max-w-2xl text-lg text-gray-600">Our astounding team</p>
+                    <h2 className="text-3xl font-custom font-bold text-gray-900">{data?.heading}</h2>
+                    <p className="mx-auto max-w-2xl text-lg font-custom text-gray-600">{data?.subheading}</p>
                 </div>
 
                 <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
@@ -57,8 +61,8 @@ const OurTeam = ({ selectedLanguage }) => {
                                     <div className="card-front">
                                         <img src={team.image} alt={team.name} className="w-full h-48 object-cover rounded-t-lg" />
                                         <div className="p-4">
-                                            <h3 className="text-xl font-semibold">{team.name}</h3>
-                                            <p className="text-gray-600">{team.role}</p>
+                                            <h3 className="text-xl font-custom font-bold">{team.name}</h3>
+                                            <p className="text-gray-600 font-custom">{team.role}</p>
                                         </div>
                                     </div>
                                     <div className="card-back">

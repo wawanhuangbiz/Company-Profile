@@ -9,23 +9,46 @@ import imageData from "../data/imageData.json";
 import housingData from "../data/housingData.json";
 import interiorData from "../data/interiorData.json";
 import "./Carousels.css";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const factories = imageData || [];
 const housings = housingData || [];
 const interiors = interiorData || [];
 
+// Define animation variants
+const sectionHeadingVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+};
+
+const slideImageVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+};
+
 const Carousels = () => {
   return (
     <section className="bg-gray-100 py-12 image-gallery" id="our-projects">
       <div className="container mx-auto px-4 h-auto">
-        <h2 className="text-5xl font-bold text-center mb-8 text-blue-600">
+        {/* Animated Section Heading */}
+        <motion.h2
+          className="text-5xl font-bold text-center mb-8 text-blue-600"
+          variants={sectionHeadingVariants}
+          initial="hidden"
+          whileInView="visible"
+        >
           Our Projects
-        </h2>
+        </motion.h2>
         <>
           {/* Swiper for Factory */}
-          <h3 className="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2">
+          <motion.h3
+            className="text-3xl text-gray-800 mb-4 border-b-2 border-gray-300 pb-2"
+            variants={sectionHeadingVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
             Factory
-          </h3>
+          </motion.h3>
           <div className="swiper-container">
             <div className="swiper-wrapper">
               <Swiper
@@ -47,10 +70,14 @@ const Carousels = () => {
               >
                 {factories.map((image) => (
                   <SwiperSlide key={image.id}>
-                    <img
+                    {/* Animated Slide Image */}
+                    <motion.img
                       src={image.src}
                       alt={image.alt}
                       className="rounded-2xl shadow-md border border-gray-200"
+                      variants={slideImageVariants}
+                      initial="hidden"
+                      whileInView="visible"
                     />
                   </SwiperSlide>
                 ))}
@@ -58,12 +85,15 @@ const Carousels = () => {
             </div>
           </div>
 
-
-
           {/* Swiper for Housings */}
-          <h3 className="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2 mt-10">
+          <motion.h3
+            className="text-3xl text-gray-800 mb-4 border-b-2 border-gray-300 pb-2 mt-10"
+            variants={sectionHeadingVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
             Housings
-          </h3>
+          </motion.h3>
           <Swiper
             effect="coverflow"
             grabCursor={true}
@@ -83,19 +113,28 @@ const Carousels = () => {
           >
             {housings.map((image) => (
               <SwiperSlide key={image.id}>
-                <img
+                {/* Animated Slide Image */}
+                <motion.img
                   src={image.src}
                   alt={image.alt}
                   className="rounded-2xl shadow-md border border-gray-200"
+                  variants={slideImageVariants}
+                  initial="hidden"
+                  whileInView="visible"
                 />
               </SwiperSlide>
             ))}
           </Swiper>
 
           {/* Swiper for Interior */}
-          <h3 className="text-3xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2 mt-10">
+          <motion.h3
+            className="text-3xl text-gray-800 mb-4 border-b-2 border-gray-300 pb-2 mt-10"
+            variants={sectionHeadingVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
             Interior
-          </h3>
+          </motion.h3>
           <Swiper
             effect="coverflow"
             grabCursor={true}
@@ -115,10 +154,14 @@ const Carousels = () => {
           >
             {interiors.map((image) => (
               <SwiperSlide key={image.id}>
-                <img
+                {/* Animated Slide Image */}
+                <motion.img
                   src={image.src}
                   alt={image.alt}
                   className="rounded-2xl shadow-md border border-gray-200"
+                  variants={slideImageVariants}
+                  initial="hidden"
+                  whileInView="visible"
                 />
               </SwiperSlide>
             ))}

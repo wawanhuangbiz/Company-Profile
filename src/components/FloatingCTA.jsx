@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Phone } from "lucide-react";
+import ctaData from "../data/ctaData.json";
 
-const FloatingCTA = () => {
+const FloatingCTA = ({ selectedLanguage }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const data = ctaData[selectedLanguage];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +40,7 @@ const FloatingCTA = () => {
             >
               <div className="space-y-4">
                 <div className="text-gray-900 font-medium mb-2">
-                  How can we help you?
+                  {data.help}
                 </div>
                 <a
                   href="#contact"
@@ -46,10 +49,10 @@ const FloatingCTA = () => {
                   <MessageCircle className="w-5 h-5 text-blue-600 mr-3" />
                   <div>
                     <div className="text-gray-900 font-medium">
-                      Send a Message
+                      {data.sendMessage}
                     </div>
                     <div className="text-sm text-gray-500">
-                      We'll respond within 24h
+                      {data.respond}
                     </div>
                   </div>
                 </a>
@@ -59,9 +62,9 @@ const FloatingCTA = () => {
                 >
                   <Phone className="w-5 h-5 text-blue-600 mr-3" />
                   <div>
-                    <div className="text-gray-900 font-medium">Call Us</div>
+                    <div className="text-gray-900 font-medium">{data.callUs}</div>
                     <div className="text-sm text-gray-500">
-                      Mon-Sat, 8am-5pm WIB
+                      {data.monSat}
                     </div>
                   </div>
                 </a>

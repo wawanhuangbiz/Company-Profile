@@ -109,15 +109,6 @@
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
-      "id": "wen-long",
-      "name": "Wen Long",
-      "role": "Structural Engineer",
-      "image": "/images/wen-long.jpg",
-      "quote": "The beauty of structure lies not only in strength and stability but also in the perfect combination of science and art.",
-      "intro": "I have 13 years of experience in structural design, focusing on steel structures, concrete structures, and structural optimization design. Through years of practical accumulation, I have rich experience in complex structural analysis and project management, dedicated to providing clients with safe, economical, and efficient structural solutions. Upholding the philosophy of balancing rigor and innovation, I always strive for excellence, aiming for precision and reliability in every project.",
-      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
-    },
-    {
       "id": "rahmad-banu",
       "name": "Rahmad Banu Hendrawan",
       "role": "Architect",
@@ -260,15 +251,6 @@
       "image": "/images/anis.jpg",
       "quote": "希望和变化是通过不懈的努力锻造的。永远不要停留在一个点上，总是追求更多。",
       "intro": "你好，我的名字是Anis Salma Al Fridasari，PT. SSI的结构工程师，专注于建筑结构的设计和分析，以确保其强度和安全性。凭借扎实的教育背景和经验，我也致力于在建筑领域不断学习和发展，以提供最佳和最可持续的解决方案。",
-      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
-    },
-    {
-      "id": "wen-long",
-      "name": "温龙",
-      "role": "结构工程师",
-      "image": "/images/wen-long.jpg",
-      "quote": "结构之美，不仅在于坚固与稳定，更在于科学与艺术的完美结合。",
-      "intro": "我拥有13年的结构设计经验，专注于钢结构、混凝土结构及结构优化设计。通过多年的实践积累，我在复杂结构分析和工程项目管理方面具备丰富的经验，致力于为客户提供安全、经济、高效的结构解决方案。秉持严谨与创新并重的理念，我始终追求卓越，力求在每个项目中做到精准与可靠。",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {

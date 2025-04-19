@@ -47,10 +47,10 @@ const Services = ({ selectedLanguage, IconComponent }) => {
                   >
                     {IconComponent && <IconComponent className="w-20 h-20 text-gray-300 group-hover:scale-110 group-hover:text-blue-600 transition-transform duration-300" />}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl font-custom font-semibold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-600 font-custom mb-6">{service.description}</p>
                 </div>
               </motion.div>
             );

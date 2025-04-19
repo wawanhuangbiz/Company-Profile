@@ -94,10 +94,10 @@ const Contact = ({ selectedLanguage }) => {
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium">
               {contacts?.contactUs}
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-custom font-bold text-gray-900 mb-4">
               {contacts?.contactSub}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 font-custom max-w-2xl mx-auto">
               {contacts?.contactParagraph}
             </p>
           </motion.div>
@@ -121,10 +121,10 @@ const Contact = ({ selectedLanguage }) => {
                     <item.icon className={`w-6 h-6 ${item.iconColor}`} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                    <h3 className="text-lg font-custom font-bold text-gray-900 mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 whitespace-pre-line">
+                    <p className="text-gray-600 font-custom whitespace-pre-line">
                       {item.content}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ const Contact = ({ selectedLanguage }) => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block font-custom text-sm font-medium text-gray-700 mb-1"
                   >
                     {contacts?.form?.fullName}
                   </label>
@@ -160,7 +160,7 @@ const Contact = ({ selectedLanguage }) => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block font-custom text-sm font-medium text-gray-700 mb-1"
                   >
                     {contacts?.form?.email}
                   </label>
@@ -178,7 +178,7 @@ const Contact = ({ selectedLanguage }) => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block font-custom text-sm font-medium text-gray-700 mb-1"
                   >
                     {contacts?.form?.message}
                   </label>
@@ -198,12 +198,12 @@ const Contact = ({ selectedLanguage }) => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition duration-300 flex items-center justify-center space-x-2"
+                  className="w-full px-6 py-3 text-base font-medium font-custom text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition duration-300 flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>{contacts?.form?.isSending}</span>
+                      <span className="font-custom">{contacts?.form?.isSending}</span>
                     </>
                   ) : (
                     <>

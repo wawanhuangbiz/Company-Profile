@@ -26,8 +26,8 @@ const Legality = ({ selectedLanguage, setNavbarVisible }) => {
       {/* Content Container */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold">{legalData.legalDocuments}</h2>
-          <p className="text-gray-600 mt-4">
+          <h2 className="text-3xl font-semibold">{legalData.legalDocuments}</h2>
+          <p className="text-gray-600 font-custom mt-4">
             {legalData.legalParagraph}
           </p>
         </div>
@@ -44,7 +44,7 @@ const Legality = ({ selectedLanguage, setNavbarVisible }) => {
                 onClick={() => handleImageClick(doc.image)}
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold">{doc.title}</h3>
+                <h3 className="text-xl font-custom font-bold">{doc.title}</h3>
               </div>
             </div>
           ))}

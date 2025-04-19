@@ -1,0 +1,16 @@
+{
+  "en": {
+    "help": "How can we help you?",
+    "sendMessage": "Send a Message",
+    "respond": "We'll respond within 24h",
+    "callUs": "Call Us",
+    "monSat": "Mon-Sat, 8am-5pm WIB"
+  },
+  "zh": {
+    "help": "我们如何帮助您？",
+    "sendMessage": "发送消息",
+    "respond": "我们将在24小时内回复",
+    "callUs": "致电我们",
+    "monSat": "周一至周六，上午8点至下午5点（西印尼时间）"
+  }
+}

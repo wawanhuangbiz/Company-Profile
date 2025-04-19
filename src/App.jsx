@@ -5,21 +5,23 @@ import ScrollProgress from "./components/ScrollProgress";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
-import ProcessSteps from "./components/ProcessSteps";
-import Portfolio from "./components/Portfolio";
-import Testimonials from "./components/Testimonials";
 import Legality from "./components/Legality"; // Import your Legality component
 import OurTeam from "./components/OurTeam";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
 import FAQs from "./components/FAQs";
-import ImageGallery from "./components/ImageGallery";
 import Carousels from "./components/Carousels";
 
 const App = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const [selectedLanguage, setSelectedLanguage] = useState("en"); // Default language
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <Router>
@@ -43,10 +45,7 @@ const App = () => {
         selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
       />
-      {/* <ImageGallery /> */}
       <Carousels />
-      {/* <Portfolio selectedLanguage={selectedLanguage} 
-          setSelectedLanguage={setSelectedLanguage}/> */}
       <Legality
         selectedLanguage={selectedLanguage}
         setNavbarVisible={setNavbarVisible} // Pass the function to Legality
@@ -63,10 +62,6 @@ const App = () => {
         selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
       />
-      {/* <Footer 
-        selectedLanguage={selectedLanguage} 
-        setSelectedLanguage={setSelectedLanguage}
-      /> */}
       <FloatingCTA
         selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}

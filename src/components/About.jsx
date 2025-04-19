@@ -81,7 +81,7 @@ const About = ({ selectedLanguage }) => {
               </div>
 
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                {aboutData?.transformingConcepts}{" "}
+                {aboutData?.transformingConcepts}{" "} 
                 <span className="text-blue-600 relative">
                   {aboutData?.industrialExcellence}
                   <svg
