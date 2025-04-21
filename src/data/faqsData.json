@@ -1,61 +1,51 @@
 {
-    "en": [
-        {
-          "question": "What is PT. Surya Solusi Internasional (PT.SSI)?",
-          "answer":
-            "PT. Surya Solusi Internasional, commonly referred to as PT.SSI, is a leading company specializing in providing innovative solutions across various sectors. Our expertise includes design, surveying, and equipment services, ensuring comprehensive support for our clients.",
-          "category": "SSI"
-        },
-        {
-          "question": "What services does PT.SSI offer?",
-          "answer":
-            "PT.SSI offers a wide range of services, including: Design Services: Tailored solutions to meet specific project requirements. Surveying Services: Accurate and reliable surveying for various applications. Transformation Services: Localizing Chinese architects' designs to fit the requirements for Indonesian's Building Permit. ",
-          "category": "Services"
-        },
-        {
-          "question": "What are the business advantages of choosing PT.SSI?",
-          "answer":
-            "Choosing PT.SSI provides several advantages, including:\nExpertise: A team of experienced professionals dedicated to delivering high-quality services.\nResource Collaboration: Efficient collaboration across different resources to enhance project outcomes.\nProven Track Record: A history of successful projects in various industries, demonstrating our capability and reliability.",
-          "category": "Advantages"
-        },
-        {
-          "question": "Where is PT.SSI located?",
-          "answer":
-            "PT.SSI is headquartered in SEMARANG, strategically positioned to serve clients across various regions effectively.",
-          "category": "Location"
-        },
-        {
-          "question": "What is PT.SSI's commitment to quality and customer satisfaction?",
-          "answer":
-            "At PT.SSI, we are committed to maintaining the highest standards of quality in all our services. We prioritize customer satisfaction by ensuring that our solutions meet or exceed client expectations.",
-          "category": "Services"
-        }
-      ],
-      "zh": [
-        {
-          "question": "PT. Surya Solusi Internasional (PT.SSI) 是什么？",
-          "answer": "PT. Surya Solusi Internasional，通常称为 PT.SSI，是一家领先的公司，专注于提供各个行业的创新解决方案。我们的专业领域包括设计、测量和设备服务，确保为客户提供全面支持。",
-          "category": "SSI"
-        },
-        {
-          "question": "PT.SSI 提供哪些服务？",
-          "answer": "PT.SSI 提供广泛的服务，包括：\n设计服务：量身定制的解决方案以满足特定项目要求。\n测量服务：为各种应用提供准确可靠的测量。\n转图服务：将中国建筑师的设计本地化，以符合印度尼西亚建筑许可证的要求。",
-          "category": "服务"
-        },
-        {
-          "question": "选择 PT.SSI 的商业优势是什么？",
-          "answer": "选择 PT.SSI 提供多个优势，包括：\n专业知识：一支经验丰富的专业团队，致力于提供高质量的服务。\n资源协作：不同资源之间的高效协作，以增强项目成果。\n成功记录：在各个行业成功项目的历史，证明我们的能力和可靠性。",
-          "category": "优势"
-        },
-        {
-          "question": "PT.SSI 位于哪里？",
-          "answer": "PT.SSI 总部位于 SEMARANG，战略性地定位于有效服务于各个地区的客户。",
-          "category": "位置"
-        },
-        {
-          "question": "PT.SSI 对质量和客户满意度的承诺是什么？",
-          "answer": "在 PT.SSI，我们致力于在所有服务中保持最高的质量标准。我们优先考虑客户满意度，确保我们的解决方案满足或超出客户的期望。",
-          "category": "服务"
-        }
-      ]
+  "en": [
+    {
+      "question": "SSI is committed to addressing the technical weaknesses of local Indonesian design units and the imperfect industry system by integrating resources and providing one-stop design services.",
+      "answer": "SSI positions itself as a design company that solves problems such as weak technical capabilities of local Indonesian design units, incomplete industry technical systems, domestic design units' unfamiliarity with Indonesian local design codes, execution standards, and craftsmanship levels, as well as foreign investors' lack of understanding regarding the documents and procedures required for obtaining various permits in Indonesia's construction industry. By integrating resources and complementing each other's strengths, SSI offers a one-stop seamless solution to these challenges."
+    },
+    {
+      "question": "SSI is familiar with both Indonesian and Chinese design standards and can effectively balance safety and cost-efficiency.",
+      "answer": "SSI is well-versed in local Indonesian design requirements and technical standards, as well as China's technical systems, enabling it to effectively balance safety and economic considerations."
+    },
+
+    {
+      "question": "SSI has an experienced Chinese-Indonesian technical team and multiple external design support teams, possessing strong design and consulting capabilities.",
+      "answer": "SSI has experienced technical teams from China and Indonesia, as well as Indonesian consulting teams, and integrates multiple top-tier external design support teams from China, providing strong design and consulting services."
+    },
+    {
+      "question": "As a company registered in Indonesia with local qualifications, SSI ensures that design drawings have legal validity.",
+      "answer": "SSI is a locally registered company in Indonesia with Indonesian design qualifications, capable of resolving issues where owners commission foreign design units but the drawings lack legal validity in Indonesia."
+    },
+    {
+      "question": "SSI integrates multiple services including architectural design, surveying, MEP, supervision, and permit processing to provide a one-stop solution.",
+      "answer": "SSI integrates services such as main building design in Indonesia and China, geological survey design, MEP (mechanical, electrical, plumbing) design, crane design and production, project supervision, and handling various permits in the construction industry to offer one-stop service that maximally alleviates owners' concerns."
+    }
+  ],
+  "zh": [
+    {
+      "question": "SSI致力于解决印尼本土设计单位技术薄弱和行业体系不完善的问题，整合资源，提供一站式设计服务",
+      "answer": "SSI的定位在于解决印尼本土设计单位技术力量薄弱、行业技术体系不健全，国内设计单位不了解印尼当地的设计条款、执行标准、工艺水平，外国投资方不了解印尼建筑行业办理各类证件所需的资料、流程等问题，整合资源，取长补短，一站式拼缝解决以上难题的设计公司。"
+    },
+    {
+      "question": "SSI熟悉印尼和中国的设计标准，能够有效平衡安全性与经济性",
+      "answer": "SSI既熟悉印尼当地的设计要求及技术标准，又熟悉中国的技术体系，能够很好地解决安全与经济的平衡问题。"
+    },
+    {
+      "question": "SSI拥有经验丰富的中印技术团队及多方外援设计团队，具备强大的设计与咨询能力",
+      "answer": "SSI既具有经验丰富的中国技术团队、印尼技术团队、印尼顾问团队，又整合国内多个一线外援设计团队，具备强大的设计、咨询服务能力。"
+    },
+    {
+      "question": "作为注册在印尼并具备当地资质的公司，SSI确保设计图纸符合法律效力",
+      "answer": "SSI属于注册地在印尼，具备印尼设计资质的本土公司，能够解决业主方委托他国设计单位设计，但图纸不具备印尼法律效力的问题。"
+    },
+    {
+      "question": "SSI可在项目初期提供咨询服务，帮助规避技术条款、材料替换及施工等后续问题",
+      "answer": "SSI可以在前期就提供设计咨询服务，若图纸由业主方委托国内设计单位设计，能在项目设计过程中就规避印尼技术条款规定、经济合理性、材料的替换、工艺水准的落地、绘图标准的执行等一些列后期办证、采购、施工需要解决的问题。"
+    },
+    {
+      "question": "SSI整合建筑设计、勘察、机电、监理及证件办理等多项服务，实现一站式解决方案",
+      "answer": "SSI整合印尼及国内的建筑主体设计、地质勘察设计、机电设计、行车设计与生产、工程监理、建筑行业各类证件办理等服务，提供一站式服务，最大限度地解决业主的后顾之忧。"
+    }
+  ]
 }

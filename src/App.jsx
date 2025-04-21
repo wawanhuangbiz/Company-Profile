@@ -45,14 +45,17 @@ const App = () => {
         selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
       />
-      <Carousels />
-      <Legality
-        selectedLanguage={selectedLanguage}
-        setNavbarVisible={setNavbarVisible} // Pass the function to Legality
-      />
       <FAQs
         selectedLanguage={selectedLanguage}
         setNavbarVisible={setNavbarVisible}
+      />
+      <Carousels
+        selectedLanguage={selectedLanguage}
+        setNavbarVisible={setNavbarVisible}
+      />
+      <Legality
+        selectedLanguage={selectedLanguage}
+        setNavbarVisible={setNavbarVisible} // Pass the function to Legality
       />
       <OurTeam
         selectedLanguage={selectedLanguage}

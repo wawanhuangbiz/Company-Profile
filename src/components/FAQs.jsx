@@ -36,21 +36,10 @@ const FAQs = ( {selectedLanguage} ) => {
           <h2 className="text-3xl font-custom md:text-4xl font-bold text-gray-900 mb-4">
             {faqData?.faqSub}
           </h2>
-          <p className="text-lg font-custom text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg font-custom text-gray-600 max-w-4xl mx-auto mb-8">
             {faqData?.faqParagraph}
           </p>
 
-          {/* Search Bar */}
-          <div className="max-w-md mx-auto relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search questions..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-full border border-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition duration-200"
-            />
-          </div>
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
@@ -70,7 +59,7 @@ const FAQs = ( {selectedLanguage} ) => {
                   }
                   className={`w-full flex items-center justify-between p-6 rounded-xl transition duration-300 ${
                     activeIndex === index
-                      ? "bg-blue-50 shadow-md"
+                      ? "bg-blue-200 shadow-md"
                       : "bg-white hover:bg-gray-50 shadow-sm hover:shadow-md"
                   }`}
                 >
@@ -106,11 +95,6 @@ const FAQs = ( {selectedLanguage} ) => {
                         <p className="text-gray-600 font-custom leading-relaxed">
                           {faq.answer}
                         </p>
-                        <div className="mt-4 flex items-center">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-sm">
-                            {faq.category}
-                          </span>
-                        </div>
                       </div>
                     </motion.div>
                   )}

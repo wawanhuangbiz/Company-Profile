@@ -17,9 +17,9 @@ export default async (req, res) => {
     const { name, email, message } = req.body;
 
     const mailOptions = {
-      from: `${name} <${email}>`,
+      from: email,
       to: 'studio.pt.ssi@gmail.com',
-      subject: 'New Contact Message',
+      subject: `New Contact Message from ${name}`,
       text: message,
       html: `<p>${message}</p>`,
     };

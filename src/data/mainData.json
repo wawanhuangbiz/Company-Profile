@@ -2,14 +2,14 @@
   "en": {
     "navbar": {
       "menuItems": [
-        { "id":1, "name": "Home", "href": "#home" },
-        { "id":2, "name": "About", "href": "#about" },
-        { "id":3, "name": "Services", "href": "#services" },
-        { "id":4, "name": "Portfolio", "href": "#our-projects" },
-        { "id":5, "name": "FAQs", "href": "#faq" },
-        { "id":6, "name": "Legality", "href": "#legality" },
-        { "id":7, "name": "Our Team", "href": "#our-team" },
-        { "id":8, "name": "Contact", "href": "#contact" }
+        { "id": 1, "name": "Home", "href": "#home" },
+        { "id": 2, "name": "About", "href": "#about" },
+        { "id": 3, "name": "Services", "href": "#services" },
+        { "id": 5, "name": "Benefits", "href": "#faq" },
+        { "id": 4, "name": "Portfolio", "href": "#our-projects" },
+        { "id": 6, "name": "Legality", "href": "#legality" },
+        { "id": 7, "name": "Our Team", "href": "#our-team" },
+        { "id": 8, "name": "Contact", "href": "#contact" }
       ]
     },
     "hero": {
@@ -61,46 +61,45 @@
       "ourServices": "Our Services",
       "solutionWeOffer": "Solution We Offer",
       "servicesParagraph": "We provide comprehensive services to help your business\nthrive in today's competitive landscape.",
-"servicesItems": [
-  {
-    "title": "Design Services",
-    "description": "Industrial projects mainly target various industrial parks, factories, and supporting buildings; civil projects mainly target villas, residences, office buildings, etc.",
-    "icon": "Building"
-  },
-  {
-    "title": "Design Consulting and Optimization",
-    "description": "Optimize domestic drawings according to Indonesian conditions to save costs.",
-    "icon": "Cog"
-  },
-  {
-    "title": "Drawing Conversion Services",
-    "description": "If drawings are designed by Chinese design institutes commissioned by the owner, we are responsible for translating them into Indonesian and reviewing before stamping, assuming responsibility and risk.",
-    "icon": "FileInput"
-  },
-  {
-    "title": "Approval and Construction Permits",
-    "description": "Handle approval procedures such as environmental impact assessment (EIA), PBG (Building Permit), SLF (Certificate of Feasibility), SLO (Operational License), etc.",
-    "icon": "Building2"
-  },
-  {
-    "title": "Supervision",
-     "description": "Ensure the implementation and realization of design intent.",
-     "icon": "Search"
-   },
-   {
-     "title": "Resource Coordination",
-     "description": "If needed, also coordinate resources in upstream and downstream industries (steel structure processing, construction, geological survey, crane production, etc.)",
-     "icon": "ChartBar"
-   }
-]
-
+      "servicesItems": [
+        {
+          "title": "Design Services",
+          "description": "Industrial projects mainly target various industrial parks, factories, and supporting buildings; civil projects mainly target villas, residences, office buildings, etc.",
+          "icon": "Building"
+        },
+        {
+          "title": "Design Consulting and Optimization",
+          "description": "Optimize domestic drawings according to Indonesian conditions to save costs.",
+          "icon": "Cog"
+        },
+        {
+          "title": "Drawing Conversion Services",
+          "description": "If drawings are designed by Chinese design institutes commissioned by the owner, we are responsible for translating them into Indonesian and reviewing before stamping, assuming responsibility and risk.",
+          "icon": "FileInput"
+        },
+        {
+          "title": "Approval and Construction Permits",
+          "description": "Handle approval procedures such as environmental impact assessment (EIA), PBG (Building Permit), SLF (Certificate of Feasibility), SLO (Operational License), etc.",
+          "icon": "Building2"
+        },
+        {
+          "title": "Supervision",
+          "description": "Ensure the implementation and realization of design intent.",
+          "icon": "Search"
+        },
+        {
+          "title": "Resource Coordination",
+          "description": "If needed, also coordinate resources in upstream and downstream industries (steel structure processing, construction, geological survey, crane production, etc.)",
+          "icon": "ChartBar"
+        }
+      ]
     },
     "ourteam": {
       "heading": "Meet and Greet",
       "subheading": "Our Astounding Team"
     },
     "portfolio": {
-      "ourWork": "Our Work",
+      "ourWork": "Our Projects",
       "featuredProjects": "Featured Projects",
       "exploreOur": "Explore our recent work and see how we've helped businesses achieve\ntheir digital goals through innovative solutions.",
       "noProjects": "No projects found",
@@ -119,9 +118,9 @@
       "legalParagraph": "Explore our essential legal documents that validate our operations and compliance."
     },
     "faq": {
-      "faqTitle": "FAQ",
-      "faqSub": "Frequently Asked Questions",
-      "faqParagraph": "Find answers to common questions about our services."
+      "faqTitle": "Discover Our Unique Strengths",
+      "faqSub": "Why Choose SSI",
+      "faqParagraph": "Explore how SSI's expertise and integrated approach deliver exceptional design solutions tailored for Indonesia"
     },
     "contact": {
       "contactUs": "Contact Us",
@@ -135,7 +134,7 @@
         "isSending": "Sending..."
       }
     },
-    "footer":{
+    "footer": {
       "footParagraph": "Imagine a space that seamlessly blends form and function, where innovation and sustainability work in perfect harmony. That's the SSI promise. We're more than just architects; we're storytellers, crafting narratives in brick and mortar, glass and steel. We believe that every project is an opportunity to create something extraordinary, a space that reflects your unique vision and contributes to a more sustainable world. Partner with us and experience the power of transformative design."
     }
   },
@@ -145,8 +144,8 @@
         { "name": "首页", "href": "#home" },
         { "name": "关于", "href": "#about" },
         { "name": "服务", "href": "#services" },
+        { "name": "业务优势", "href": "#faq" },
         { "name": "作品集", "href": "#our-projects" },
-        { "name": "常见问题", "href": "#faq" },
         { "name": "合法性", "href": "#legality" },
         { "name": "我们的团队", "href": "#our-team" },
         { "name": "联系", "href": "#contact" }
@@ -264,11 +263,11 @@
       }
     },
     "faq": {
-      "faqTitle": "常见问题",
-      "faqSub": "常见问题解答",
-      "faqParagraph": "找到关于我们服务的常见问题的答案。"
+      "faqTitle": "发现我们的优势",
+      "faqSub": "业务优势",
+      "faqParagraph": "探索SSI的专业知识和整合方法，提供量身定制的卓越设计解决方案，专注于印尼市场"
     },
-    "footer":{
+    "footer": {
       "footParagraph": "想象一下，一个空间完美融合了形式与功能，创新与可持续发展和谐共存。这就是 SSI 的承诺。我们不仅仅是建筑师；我们是故事的讲述者，用砖瓦、玻璃和钢铁谱写着动人的篇章。我们相信，每个项目都是创造非凡的契机，一个能够反映您独特愿景并为更可持续的世界做出贡献的空间。与我们携手，体验变革性设计的魅力。"
     }
   }

@@ -10,6 +10,7 @@ import housingData from "../data/housingData.json";
 import interiorData from "../data/interiorData.json";
 import "./Carousels.css";
 import { motion } from "framer-motion"; // Import Framer Motion
+import mainData from "../data/mainData.json";
 
 const factories = imageData || [];
 const housings = housingData || [];
@@ -26,7 +27,8 @@ const slideImageVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
 };
 
-const Carousels = () => {
+const Carousels = ({ selectedLanguage }) => {
+  const data = mainData[selectedLanguage]?.portfolio || {};
   return (
     <section className="bg-gray-100 py-12 image-gallery" id="our-projects">
       <div className="container mx-auto px-4 h-auto">
@@ -37,7 +39,7 @@ const Carousels = () => {
           initial="hidden"
           whileInView="visible"
         >
-          Our Projects
+          {data?.ourWork}
         </motion.h2>
         <>
           {/* Swiper for Factory */}
