@@ -57,7 +57,7 @@ const FloatingCTA = ({ selectedLanguage }) => {
                   </div>
                 </a>
                 <a
-                  href="http://wa.me/6287771273503"
+                  href="http://wa.me/62138503606"
                   className="flex items-center p-3 hover:bg-gray-50 rounded-lg transition duration-300"
                 >
                   <Phone className="w-5 h-5 text-blue-600 mr-3" />

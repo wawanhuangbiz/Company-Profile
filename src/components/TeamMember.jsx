@@ -55,16 +55,16 @@ const TeamMemberPage = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5 }}
                     />
-                    <h1 className="text-4xl font-bold text-gray-900">{member.name}</h1>
-                    <p className="text-gray-600 text-lg mb-4">{member.title}</p>
-                    <p className="text-gray-600 max-w-2xl">{member.description}</p>
+                    <h1 className="text-4xl text-gray-900 font-custom">{member.name}</h1>
+                    <p className="text-gray-600 text-lg mb-4 font-custom">{member.title}</p>
+                    <p className="text-gray-600 max-w-2xl font-custom">{member.description}</p>
                 </div>
 
                 {/* Bio & Skills Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
                     <div>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">About {member.name}</h2>
-                        <p className="text-gray-600">{member.intro}</p>
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 font-custom">About {member.name}</h2>
+                        <p className="text-gray-600 font-custom">{member.intro}</p>
                     </div>
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">Skills & Tools</h2>

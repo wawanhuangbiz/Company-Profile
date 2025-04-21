@@ -17,7 +17,7 @@ const Contact = ({ selectedLanguage }) => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
+      content: "+62-821-3850-3606",
       color: "bg-blue-50",
       iconColor: "text-blue-600",
     },

@@ -61,50 +61,39 @@
       "ourServices": "Our Services",
       "solutionWeOffer": "Solution We Offer",
       "servicesParagraph": "We provide comprehensive services to help your business\nthrive in today's competitive landscape.",
-      "servicesItems": [
-        {
-          "title": "Design",
-          "description": "Mainly focused on various industrial zones, factories, and housing.",
-          "icon": "Building",
-          "color": "#3a53a7",
-          "bgColor": "#77e4c8"
-        },
-        {
-          "title": "Consultation",
-          "description": "Optimizing domestic paper drawings based on printing and tailing.",
-          "icon": "Cog",
-          "color": "#EE7C4B",
-          "bgColor": "#EF5A6F"
-        },
-        {
-          "title": "Transformation",
-          "description": "Translating Chinese drawings into Indonesian and preparing them for building permit.",
-          "icon": "FileInput",
-          "color": "#ec1f24",
-          "bgColor": "purple"
-        },
-        {
-          "title": "Civil Construction Design",
-          "description": "Mainly focused on residential, office, and public building types",
-          "icon": "Building2",
-          "color": "#3a53a7",
-          "bgColor": "pink"
-        },
-        {
-          "title": "Supervision",
-          "description": "Ensuring the implementation of design intentions",
-          "icon": "Search",
-          "color": "#f7d830",
-          "bgColor": "green"
-        },
-        {
-          "title": "Construction Industry Reporting",
-          "description": "Reporting various types of construction, handling procedures, and resolving issues related to the client’s concerns.",
-          "icon": "ChartBar",
-          "color": "#f7d830",
-          "bgColor": "red"
-        }
-      ]
+"servicesItems": [
+  {
+    "title": "Design Services",
+    "description": "Industrial projects mainly target various industrial parks, factories, and supporting buildings; civil projects mainly target villas, residences, office buildings, etc.",
+    "icon": "Building"
+  },
+  {
+    "title": "Design Consulting and Optimization",
+    "description": "Optimize domestic drawings according to Indonesian conditions to save costs.",
+    "icon": "Cog"
+  },
+  {
+    "title": "Drawing Conversion Services",
+    "description": "If drawings are designed by Chinese design institutes commissioned by the owner, we are responsible for translating them into Indonesian and reviewing before stamping, assuming responsibility and risk.",
+    "icon": "FileInput"
+  },
+  {
+    "title": "Approval and Construction Permits",
+    "description": "Handle approval procedures such as environmental impact assessment (EIA), PBG (Building Permit), SLF (Certificate of Feasibility), SLO (Operational License), etc.",
+    "icon": "Building2"
+  },
+  {
+    "title": "Supervision",
+     "description": "Ensure the implementation and realization of design intent.",
+     "icon": "Search"
+   },
+   {
+     "title": "Resource Coordination",
+     "description": "If needed, also coordinate resources in upstream and downstream industries (steel structure processing, construction, geological survey, crane production, etc.)",
+     "icon": "ChartBar"
+   }
+]
+
     },
     "ourteam": {
       "heading": "Meet and Greet",
@@ -214,33 +203,33 @@
       "servicesParagraph": "我们提供全面的数字服务，以帮助您的业务在当今竞争激烈的环境中蓬勃发展。",
       "servicesItems": [
         {
-          "title": "设计",
-          "description": "主要集中在各种工业区、工厂和住宅。",
+          "title": "设计业务",
+          "description": "工业项目主要针对各类工业园区、厂房及配套建筑；民用项目主要针对别墅、住宅、办公楼等",
           "icon": "Building"
         },
         {
-          "title": "咨询",
-          "description": "根据印刷和尾部优化国内纸质图纸。",
+          "title": "设计咨询及优化",
+          "description": "按印尼国情对国内图纸进行优化，节约成本",
           "icon": "Cog"
         },
         {
-          "title": "转图",
-          "description": "如果图纸由客户设计并委托给中国设计院，我们将帮助将其翻译成印尼文并准备建筑许可证。",
+          "title": "转图业务",
+          "description": "即图纸若由业主方委托中国设计院设计，我们负责翻译成印尼文及审核后签章，承担责任与风险",
           "icon": "FileInput"
         },
         {
-          "title": "土木建筑设计",
-          "description": "主要集中在住宅、办公室和公共建筑类型。",
+          "title": "报批报建",
+          "description": "办理环评、PBG、SLF、SLO等报批手续",
           "icon": "Building2"
         },
         {
-          "title": "监督",
-          "description": "确保设计意图的实施。",
+          "title": "监理",
+          "description": "保证设计意图的落地与实施",
           "icon": "Search"
         },
         {
-          "title": "建筑行业报告",
-          "description": "报告各种类型的建筑，处理程序，并解决与客户关切相关的问题。",
+          "title": "资源协同",
+          "description": "若有需要，也可配合进行上下游产业（钢构加工、施工、地勘、行车生产等）的资源协同",
           "icon": "ChartBar"
         }
       ]
