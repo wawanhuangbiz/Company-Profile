@@ -17,11 +17,11 @@ export default async (req, res) => {
     const { name, email, message } = req.body;
 
     const mailOptions = {
-      from: email,
+      from: process.env.EMAIL_USER,
       to: 'studio.pt.ssi@gmail.com',
       subject: `New Contact Message from ${name}`,
-      text: message,
-      html: `<p>${message}</p>`,
+      text: `Message from: ${email}\n\n${message}`,
+      html: `<p><strong>From:</strong> ${email}</p><p>${message}</p>`,
     };
 
     try {
