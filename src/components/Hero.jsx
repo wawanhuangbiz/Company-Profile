@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Play } from "lucide-react";
+import { ArrowDown, Star, Play } from "lucide-react";
 import mainData from "../data/mainData.json";
 
 const Hero = ({ selectedLanguage }) => {
@@ -92,15 +92,15 @@ const Hero = ({ selectedLanguage }) => {
                 transition={{ delay: 0.5 }}
                 className="flex flex-wrap gap-4"
               >
-                <motion.button
+                {/* <motion.button
                   whileHover={{ scale: 1.05, backgroundColor: "#2563eb" }}
                   whileTap={{ scale: 0.95 }}
                   href="#contact"
                   className="px-8 py-4 bg-blue-600 text-white rounded-full transition-all duration-300 font-medium inline-flex items-center shadow-lg hover:shadow-blue-500/50"
                 >
                   {heroItems?.[0]?.text}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </motion.button>
+                  <ArrowDown className="ml-2 h-5 w-5" />
+                </motion.button> */}
                 {/* <motion.button
                   whileHover={{ scale: 1.05, backgroundColor: "#f8fafc" }}
                   whileTap={{ scale: 0.95 }}

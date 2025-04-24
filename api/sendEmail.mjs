@@ -19,17 +19,17 @@ export default async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'studio.pt.ssi@gmail.com',
-      subject: `New Contact Message from ${name}`,
-      text: `Message from: ${email}\n\n${message}`,
-      html: `<p><strong>From:</strong> ${email}</p><p>${message}</p>`,
+      subject: `New Contact Form Submission from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
     };
 
     try {
       await transporter.sendMail(mailOptions);
-      res.status(200).json({ success: true });
+      res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
       console.error('Error sending email:', error);
-      res.status(500).json({ success: false });
+      res.status(500).json({ message: 'Error sending email' });
     }
   } else {
     res.setHeader('Allow', ['POST']);

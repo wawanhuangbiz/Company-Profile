@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import mainData from "../data/mainData";
+import emailjs from 'emailjs-com';
 
 const Contact = ({ selectedLanguage }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,33 +46,39 @@ const Contact = ({ selectedLanguage }) => {
     },
   ];
 
-  const handleSubmit = async (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
-    try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+
+    // EmailJS service ID, template ID, and user ID
+    const SERVICE_ID = 'service_dotu0j7'; 
+    const TEMPLATE_ID = 'template_st80m88'; 
+    const USER_ID = 'pToujn9LJV7ugZaaO'; 
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        alert('Email sent successfully!');
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+        setIsSubmitting(false);
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        alert('Failed to send email. Please try again later.');
+        setIsSubmitting(false);
       });
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        alert('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        alert('Something went wrong! Please try again.');
-      }
-    } catch (error) {
-      console.log('Error:', error);
-      alert('Error sending message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
   };
   return (
     <section
