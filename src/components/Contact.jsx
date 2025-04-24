@@ -24,7 +24,7 @@ const Contact = ({ selectedLanguage }) => {
     {
       icon: Mail,
       title: "Email",
-      content: "suryasolusiinternasional.pt@gmail.com",
+      content: "studio.pt.ssi@gmail.com",
       color: "bg-purple-50",
       iconColor: "text-purple-600",
     },

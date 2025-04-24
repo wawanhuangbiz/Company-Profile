@@ -42,10 +42,10 @@ const Footer = ({ selectedLanguage }) => {
         </p>
 
         {/* Social Media Icons */}
-        <div className="flex justify-center mb-6">
+        {/* <div className="flex justify-center mb-6">
           <a href="#" className="mx-2"><IoLogoWechat /></a>
           <a href="#" className="mx-2"><RxLinkedinLogo /></a>
-        </div>
+        </div> */}
 
         {/* Copyright Section */}
         <div className="text-center">
