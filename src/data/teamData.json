@@ -4,7 +4,7 @@
       "id": "freddy-hermawan",
       "name": "Freddy Hermawan Liwarto",
       "role": "CEO",
-      "image": "/images/PakFred.png",
+      "image": "/images/freddy-liwarto.jpg",
       "quote": "Giving direction, inspiring, listening, and leading the team to shared success.",
       "intro": "I am Freddy Liwarto, Director of PT SSI, I hope my leadership can provide innovation, quality and collaboration to provide the best results for the company, clients and business partners.",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
@@ -16,7 +16,7 @@
       "image": "/images/sun.jpg",
       "quote": "Work hard now, earn money now, until you get the climax of your success, then enjoy your achievement in the future.",
       "intro": "Hello, my name is Sun Qifeng. I am  as the Marketing Director in PT Surya Solusi International. My hobbies are doing exercise and enjoying culinary, which show the philosophical meaning about the balance in our life about effort and grateful. Hope we could achieve our dream together, to be the great team in PT Surya Solusi Internasional.",
-      "tool": ["Microsoft Ofice"]
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "li-weifeng",
@@ -34,7 +34,7 @@
       "image": "/images/bu_rini.jpg",
       "quote": "Unity in harmony speaks up the teamwork performance. Make it strong but elegant",
       "intro": "Hi, I am Rini Ariffiani. I am the commissioner in PT Surya Solusi International. A great honor to be the part of PT Surya Solusi International. We could work, learn and grow together in the excellent team. Good team,good future and good achievement !",
-      "tool": ["Microsoft Ofice"]
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "christian-aji",
@@ -43,15 +43,15 @@
       "image": "/images/ajik.jpg",
       "quote": "Setiap ruang memiliki cerita untuk diceritakan",
       "intro": "Hai! Nama saya Aji. Saya percaya bahwa alam adalah sumber inspirasi terbesar. Oleh karena itu, saya mengintegrasikan elemen-elemen alami ke dalam desain saya, menciptakan ruang yang harmonis dan menenangkan.",
-      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Ofice"]
+      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Office"]
     },
     {
-      "id": "gao-pan",
-      "name": "Gao Pan",
-      "role": "Architect",
-      "image": "/images/gao-pan.jpg",
-      "quote": "No pain, no gain.",
-      "intro": "Positive and upward-looking, serious about work, and passionate about creative design.",
+      "id": "iqbal-setyo-dewanto",
+      "name": "Iqbal Setyo Dewanto",
+      "role": "Structural Engineer",
+      "image": "/images/iqbal.jpg",
+      "quote": "As you start to walk on the way, the way appears",
+      "intro": "Hi, I'm Iqbal, a Structural Engineer. With my strong background and passion for structural design, I always strive for excellence and collaborative success in my projects.",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
@@ -64,13 +64,31 @@
       "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
     },
     {
+      "id": "li-jinyang",
+      "name": "Li Jinyang",
+      "role": "Architect",
+      "image": "/images/li-jinyang-revisi.png",
+      "quote": "Architectural Poetics, Social Value, Future Vision: The Resonance Between Humanity and Space",
+      "intro": "Hello, I’m Li Jinyang, With 20+ years of expertise in both architectural creativity and rigorous construction execution, I design spaces that serve as a medium for emotional and social connection. I believe architecture acts as a continuously evolving life form.",
+      "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
+    },
+    {
+      "id": "zheng-ping",
+      "name": "Zheng Ping",
+      "role": "Structural Engineer",
+      "image": "/images/zheng-ping.jpg",
+      "quote": "Building is a necessity; optimizing architecture is an art.",
+      "intro": "Hello, I'm Zheng Ping. I design with a focus on implementation. By integrating architectural creativity with structural engineering, I ensure that every concept is grounded in reality—balancing visual impact with safety, cost control, and construction feasibility",
+      "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
+    },
+    {
       "id": "wijiyanto",
       "name": "Wijiyanto",
       "role": "Architect",
       "image": "/images/wiji.jpg",
       "quote": "Bekerja bukan hanya tentang mencari nafkah, tetapi tentang membangun nilai, meninggalkan jejak yang baik, dan terus belajar menjadi lebih baik setiap harinya.",
       "intro": "Saya adalah seorang lulusan arsitektur dengan pengalaman lebih dari 10 tahun di bidang konstruksi, khususnya dalam pengawasan proyek. Selama karier saya, saya telah terlibat dalam berbagai jenis pembangunan, mulai dari kawasan industri, perumahan, gedung perkantoran, sekolah, hingga infrastruktur lainnya.",
-      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Ofice"]
+      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Office"]
     },
     {
       "id": "nur-abdul",
@@ -83,11 +101,11 @@
     },
     {
       "id": "tantya-galuh",
-      "name": "Tantya Galuh Puspa Hendika",
+      "name": "Tantya Galuh Puspa",
       "role": "Architect",
       "image": "/images/tantya1.jpg",
       "quote": "Good architectural design is not just about aesthetics, but about how a space can communicate, interact, and function perfectly.",
-      "intro": "Hi, my name is Tantya Galuh. I am an architecture graduate and work at PT Surya Solusi Internasional as a Drafter. With my educational background and experience, I am committed to continuously learning and growing in the field of planning as well as other areas of construction, while striving to give my best for the company.",
+      "intro": "Hi, my name is Tantya Galuh. I am an architecture graduate and work at PT Surya Solusi Internasional as an architect. With my educational background and experience, I am committed to continuously learning and growing in the field of planning as well as other areas of construction, while striving to give my best for the company.",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
@@ -114,8 +132,26 @@
       "role": "Architect",
       "image": "/images/banu.png",
       "quote": "Don't be preoccupied with a single spot. See everything in it's entirety, effortlessly. That is what it means to truly see",
-      "intro": "Greetings, my name is Rahmad Banu, I'm an architecture graduate and work at PT Surya Solusi International as a drafter. I'm highly dedicated in seeking experience to develop my abilities as a whole in a professional work environment.",
-      "tool": ["Microsoft Ofice"]
+      "intro": "Greetings, Hi, I'm Banuk, a junior architect with a strong interest in thoughtful, sustainable design. I'm passionate about turning creative ideas into functional spaces and continuously learning to grow in the field of architecture.",
+      "tool": ["Microsoft Office"]
+    },
+    {
+      "id": "marchelina-eka",
+      "name": "Marchelina Eka Sofyani",
+      "role": "Architect",
+      "image": "/images/marchelina.jpg",
+      "quote": "Every line drawn carries purpose. It shapes experiences and leaves a lasting mark",
+      "intro": "Hi! I’m Marchelina, a change-driven learner who’s always eager to grow and continually improve my skills. I’m committed to contributing and delivering my best to PT SSI.",
+      "tool": ["Microsoft Office"]
+    },
+    {
+      "id": "muhammad-fadillah",
+      "name": "Muhammad Fadillah",
+      "role": "Architect",
+      "image": "/images/fadil.jpg",
+      "quote": "Keep learning and Innovates, Less Complaining and More Action, keep striving for success",
+      "intro": "Halo, Im Muh. Fadillah, as junior Architect. i hope my capability can contribute for the company. I believe an idiom 'you will get what you are fighting for'",
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "ignatius-kew",
@@ -124,16 +160,16 @@
       "image": "/images/wawan1.jpg",
       "quote": "You have power over your mind - not outside events. Realize this, and you will find strength.",
       "intro": "Hi! I'm Wawan, and my life's a constant quest for knowledge. I'm fascinated by everything, always eager to learn and explore new ideas.",
-      "tool": ["Microsoft Ofice", "AutoCAD", "SketchUp"]
+      "tool": ["Microsoft Office", "AutoCAD", "SketchUp"]
     },
     {
       "id": "lafifa",
-      "name": "Lafifatul Badriya",
+      "name": "Lafifatul Badhriyah",
       "role": "Administration",
-      "image": "/images/ifa.jpg",
+      "image": "/images/ifa.png",
       "quote": "Pekerjaan adalah amanah, profesional dalam bekerja adalah pelaksanaan amanah tersebut.",
-      "intro": "Halo. Saya Lafifatul Badriyah, admin dari PT. Surya Solusi Internasional. Proses perkembangan perusahaan merupakan inspirasi untuk  menambah pengalaman dan motivasi bagi saya. Tanggung jawab, jujur, dan cekatan adalah bagian dari profesionalisme kerja yang saya terapkan.",
-      "tool": ["Microsoft Ofice"]
+      "intro": "Halo. Saya Lafifatul Badhriyah, admin dari PT. Surya Solusi Internasional. Proses perkembangan perusahaan merupakan inspirasi untuk  menambah pengalaman dan motivasi bagi saya. Tanggung jawab, jujur, dan cekatan adalah bagian dari profesionalisme kerja yang saya terapkan.",
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "ahmad-Sugiyanto",
@@ -149,7 +185,7 @@
       "id": "freddy-hermawan",
       "name": "Freddy Hermawan Liwarto",
       "role": "首席执行官",
-      "image": "/images/PakFred.png",
+      "image": "/images/freddy-liwarto.jpg",
       "quote": "给予方向，激励，倾听，并引导团队走向共同的成功。",
       "intro": "我是Freddy Hermawan Liwarto，PT SSI的董事，我希望我的领导能够提供创新、质量和合作，为公司、客户和商业伙伴提供最佳结果。",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
@@ -161,7 +197,7 @@
       "image": "/images/sun.jpg",
       "quote": "现在努力工作，现在赚钱，直到你达到成功的巅峰，然后享受未来的成就。",
       "intro": "大家好，我是孙启丰，PT Surya Solusi International的市场总监。我热爱运动和美食，这体现了我对生活平衡的哲学思考——努力与感恩并重。希望我们携手共进，共创PT Surya Solusi International辉煌未来。",
-      "tool": ["Microsoft Ofice"]
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "li-weifeng",
@@ -179,7 +215,7 @@
       "image": "/images/bu_rini.jpg",
       "quote": "和谐中的团结提升团队合作表现。让它强大而优雅。",
       "intro": "嗨，我是Rini Ariffiani。我是PT Surya Solusi International的委员。能够成为PT Surya Solusi International的一部分是我莫大的荣幸。我们可以在优秀的团队中一起工作、学习和成长。好的团队，好的未来，好的成就！",
-      "tool": ["Microsoft Ofice"]
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "christian-aji",
@@ -191,12 +227,12 @@
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Office"]
     },
     {
-      "id": "gao-pan",
-      "name": "高攀",
-      "role": "建筑师",
-      "image": "/images/gao-pan.jpg",
-      "quote": "不劳无获",
-      "intro": "绍:积极向上,工作认真,热爱创意设计。",
+      "id": "iqbal-setyo-dewanto",
+      "name": "Iqbal Setyo Dewanto",
+      "role": "结构工程师",
+      "image": "/images/iqbal.jpg",
+      "quote": "当你开始走在路上，路就会出现。",
+      "intro": "大家好，我叫Iqbal，是一名结构工程师。凭借扎实的结构设计基础和对工程的热情，我始终在每一个项目中追求卓越。我重视合作，并坚信最好的成果源于团队合作与共同的成功。。",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
@@ -209,13 +245,31 @@
       "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
     },
     {
+      "id": "li-jinyang",
+      "name": "李金洋",
+      "role": "建筑师",
+      "image": "/images/li-jinyang-revisi.png",
+      "quote": "雾烟暗遮世外天。",
+      "intro": "您好，我是李金阳，一名结构工程师，在安全、高效和可持续结构设计和分析方面拥有深厚的专业知识。我热衷于将复杂的工程挑战转化为切实可行的解决方案，并乐于与建筑师和其他专业人士合作，将创新设计变为现实。",
+      "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
+    },
+    {
+      "id": "zheng-ping",
+      "name": "郑平",
+      "role": "结构工程师",
+      "image": "/images/zheng-ping.jpg",
+      "quote": "人们为了生活而建造，为了更好的生活而优化建筑。",
+      "intro": "我是一名同时具备建筑设计与结构设计能力的设计师，擅长从‘建筑落地’的角度做设计：既能用建筑语言表达空间、美学与功能需求，也能同步用结构思维把控安全、成本与施工可行性。",
+      "tool": ["AutoCAD", "SketchUp", "Revit", "PKPM"]
+    },
+    {
       "id": "wijiyanto",
       "name": "Wijiyanto",
       "role": "建筑师",
       "image": "/images/wiji.jpg",
       "quote": "工作不仅仅是为了谋生，而是为了建立价值，留下良好的印记，并不断学习每天变得更好。",
       "intro": "我是一名建筑专业毕业生，在建筑领域有超过10年的施工经验，特别是在项目监督方面。在我的职业生涯中，我参与了各种类型的建设，从工业区、住宅、办公楼、学校到其他基础设施。",
-      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Ofice"]
+      "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape", "Microsoft Office"]
     },
     {
       "id": "nur-abdul",
@@ -232,7 +286,7 @@
       "role": "建筑师",
       "image": "/images/tantya1.jpg",
       "quote": "好的建筑设计不仅仅是美学，而是空间如何完美地沟通、互动和运作。",
-      "intro": "嗨，我的名字是Tantya Galuh。我是一名建筑专业毕业生，在PT Surya Solusi Internasional担任绘图员。凭借我的教育背景和经验，我致力于在规划及其他建筑领域不断学习和成长，同时努力为公司提供最佳服务。",
+      "intro": "大家好，我叫 Tantya Galuh。我是一名建筑学毕业生，目前在 PT Surya Solusi Internasional 担任建筑师。凭借我的教育背景和经验，我致力于在规划和其他建筑领域不断学习和成长，同时努力为公司提供最佳服务。",
       "tool": ["AutoCAD", "SketchUp", "Revit", "Enscape"]
     },
     {
@@ -257,10 +311,28 @@
       "id": "rahmad-banu",
       "name": "Rahmad Banu Hendrawan",
       "role": "建筑师",
-      "image": "/images/banu.png",
+      "image": "/images/banuk.jpg",
       "quote": "不要只关注一个点。轻松地看待一切的整体。这才是真正的视野。",
-      "intro": "你好，我的名字是Rahmad Banu，我是一名建筑专业毕业生，在PT Surya Solusi Internasional担任绘图员。我非常致力于寻求经验，以全面发展我的能力，适应专业工作环境。",
-      "tool": ["Microsoft Ofice"]
+      "intro": "大家好，我叫Banuk，是一名初级建筑师。我对周到且可持续的设计充满兴趣，热衷于将创意理念转化为实用空间，并不断学习，以在建筑领域不断成长。",
+      "tool": ["Microsoft Office"]
+    },
+    {
+      "id": "marchelina-eka",
+      "name": "Marchelina Eka Sofyani",
+      "role": "建筑师",
+      "image": "/images/marchelina.jpg",
+      "quote": "落笔之处，皆有深意。它塑造体验，亦铭刻恒久印记。",
+      "intro": "大家好，我是 Marchelina。作为一名拥抱变化的终身学习者，我始终追求自我突破与精进。我将全力以赴，为 PT SSI 贡献我的最佳价值。",
+      "tool": ["Microsoft Office"]
+    },
+    {
+      "id": "muhammad-fadillah",
+      "name": "Muhammad Fadillah",
+      "role": "建筑师",
+      "image": "/images/fadil.jpg",
+      "quote": "持续学习，锐意创新。少一点抱怨，多一份实干。为成功不懈奋斗。",
+      "intro": "大家好，我是 Muh. Fadillah，一名初级建筑师。希望以此微薄之力，为公司创造价值。我坚信一句格言：“功夫不负有心人，付出必有回报。",
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "ignatius-kew",
@@ -269,16 +341,16 @@
       "image": "images/wawan1.jpg",
       "quote": "你能掌控自己的思想，而非外在环境。明白这一点，你就能获得力量。",
       "intro": "嗨，我是Wawan，我的人生是一场持续不断的知识追求。我对一切事物都着迷，总是渴望学习和探索新的想法。",
-      "tool": ["Microsoft Ofice", "AutoCAD", "SketchUp"]
+      "tool": ["Microsoft Office", "AutoCAD", "SketchUp"]
     },
     {
       "id": "lafifa",
-      "name": "Lafifatul Badriya",
+      "name": "Lafifatul Badhriyah",
       "role": "行政",
-      "image": "/images/ifa.jpg",
+      "image": "/images/ifa.png",
       "quote": "工作是一种信任，专业的工作是对这种信任的履行。",
-      "intro": "你好。我是Lafifatul Badriyah，PT. Surya Solusi Internasional的管理员。公司的发展过程是我增加经验和动力的灵感。责任、诚实和敏捷是我在工作中应用的专业精神。",
-      "tool": ["Microsoft Ofice"]
+      "intro": "你好。我是Lafifatul Badhriyah，PT. Surya Solusi Internasional的管理员。公司的发展过程是我增加经验和动力的灵感。责任、诚实和敏捷是我在工作中应用的专业精神。",
+      "tool": ["Microsoft Office"]
     },
     {
       "id": "ahmad-Sugiyanto",

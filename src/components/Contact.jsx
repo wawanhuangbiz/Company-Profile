@@ -15,13 +15,13 @@ const Contact = ({ selectedLanguage }) => {
   const contacts = mainData[selectedLanguage]?.contact || {};
 
   const contactInfo = [
-    {
-      icon: Phone,
-      title: "Phone",
-      content: "+62-821-3850-3606",
-      color: "bg-blue-50",
-      iconColor: "text-blue-600",
-    },
+    // {
+    //   icon: Phone,
+    //   title: "Phone",
+    //   content: "+62-821-3850-3606",
+    //   color: "bg-blue-50",
+    //   iconColor: "text-blue-600",
+    // },
     {
       icon: Mail,
       title: "Email",

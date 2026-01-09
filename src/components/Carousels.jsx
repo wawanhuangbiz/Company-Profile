@@ -16,15 +16,28 @@ const factories = imageData || [];
 const housings = housingData || [];
 const interiors = interiorData || [];
 
+const slideVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 // Define animation variants
 const sectionHeadingVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
 };
 
 const slideImageVariants = {
   hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
 };
 
 const Carousels = ({ selectedLanguage }) => {
@@ -43,49 +56,45 @@ const Carousels = ({ selectedLanguage }) => {
         </motion.h2>
         <>
           {/* Swiper for Factory */}
-          <motion.h3
-            className="text-3xl text-gray-800 mb-4 border-b-2 border-gray-300 pb-2"
+<motion.h3
+            className="text-3xl text-gray-800 mb-4 border-b-2 border-gray-300 pb-2 mt-10"
             variants={sectionHeadingVariants}
             initial="hidden"
             whileInView="visible"
           >
-            Factory
+            Factories
           </motion.h3>
-          <div className="swiper-container">
-            <div className="swiper-wrapper">
-              <Swiper
-                effect="coverflow"
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView="auto"
-                coverflowEffect={{
-                  rotate: 50,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
-                pagination={true}
-                navigation={true}
-                modules={[EffectCoverflow, Pagination, Navigation]}
-                className="mySwiper ease-in"
-              >
-                {factories.map((image) => (
-                  <SwiperSlide key={image.id}>
-                    {/* Animated Slide Image */}
-                    <motion.img
-                      src={image.src}
-                      alt={image.alt}
-                      className="rounded-2xl shadow-md border border-gray-200"
-                      variants={slideImageVariants}
-                      initial="hidden"
-                      whileInView="visible"
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
+          <Swiper
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView="auto"
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={true}
+            navigation={true}
+            modules={[EffectCoverflow, Pagination, Navigation]}
+            className="mySwiper ease-in"
+          >
+            {factories.map((image) => (
+              <SwiperSlide key={image.id}>
+                {/* Animated Slide Image */}
+                <motion.img
+                  src={image.src}
+                  alt={image.alt}
+                  className="rounded-2xl shadow-md border border-gray-200"
+                  variants={slideImageVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
           {/* Swiper for Housings */}
           <motion.h3

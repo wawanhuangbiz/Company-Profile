@@ -1,32 +1,55 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Search } from "lucide-react";
 import { useState, useEffect } from "react";
-import teamData from "../data/teamData"; // Ensure this path is correct
+import { supabase } from '../supabaseClient'; 
 import mainData from "../data/mainData.json";
-import './OurTeam.css'; // Import the CSS file
+import './OurTeam.css';
 
 const OurTeam = ({ selectedLanguage }) => {
+    // 1. Tambahkan state untuk menampung data tim dari Supabase
+    const [teams, setTeams] = useState([]); 
+    const [loading, setLoading] = useState(true);
+    
     const [activeFilter, setActiveFilter] = useState("All");
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredTeams, setFilteredTeams] = useState([]);
-    const [flippedCards, setFlippedCards] = useState({}); // Object to track flipped state
+    const [flippedCards, setFlippedCards] = useState({});
+    const fetchTeams = async () => {
+        try {
+            setLoading(true);
+            let { data, error } = await supabase
+                .from('teamData')
+                .select('*')
+                .order('id', { ascending: true });
 
+            if (error) throw error;
+            if (data) setTeams(data); // Sekarang setTeams sudah ada definisinya
+        } catch (error) {
+            console.log('Error fetching teams:', error.message);
+        } finally {
+            setLoading(false); // Sekarang setLoading sudah ada definisinya
+        }
+    };
+
+    useEffect(() => {
+        fetchTeams();
+    }, []);
 
     const handleCardClick = (id) => {
         setFlippedCards((prev) => ({
             ...prev,
-            [id]: !prev[id], // Toggle the flipped state for the clicked card
+            [id]: !prev[id],
         }));
     };
 
-    const teams = teamData[selectedLanguage] || [];
-
+    // Ambil data heading/subheading dari JSON local
     const data = mainData[selectedLanguage]?.ourteam || {};
 
     useEffect(() => {
         const filtered = teams.filter((team) => {
+            // Pastikan team.role dan team.name ada sebelum diolah
             const matchesCategory = activeFilter === "All" || team.role === activeFilter;
-            const matchesSearch = team.name.toLowerCase().includes(searchTerm.toLowerCase());
+            const matchesSearch = (team.name || "").toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesSearch;
         });
         setFilteredTeams(filtered);
@@ -40,6 +63,7 @@ const OurTeam = ({ selectedLanguage }) => {
                     <p className="mx-auto max-w-2xl text-lg font-custom text-gray-600">{data?.subheading}</p>
                 </div>
 
+                {/* Search Bar */}
                 <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                     <div className="relative">
                         <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
@@ -53,29 +77,34 @@ const OurTeam = ({ selectedLanguage }) => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-8 md:grid-cols-2 lg:grid-cols-3 small-screen">
-                    <AnimatePresence>
-                        {filteredTeams.map((team) => (
-                            <motion.div className="card-container" key={team.id}>
-                                <div className={`card ${flippedCards[team.id] ? "flipped" : ""}`} onClick={() => handleCardClick(team.id)}>
-                                    <div className="card-front">
-                                        <img src={team.image} alt={team.name} className="w-full h-48 object-cover rounded-t-lg" />
-                                        <div className="p-4">
-                                            <h3 className="text-xl font-custom font-bold">{team.name}</h3>
-                                            <p className="text-gray-600 font-custom">{team.role}</p>
+                {/* Tampilkan Loading jika sedang fetch data */}
+                {loading ? (
+                    <div className="text-center">Loading team members...</div>
+                ) : (
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <AnimatePresence>
+                            {filteredTeams.map((team) => (
+                                <motion.div className="card-container" key={team.id}>
+                                    <div className={`card ${flippedCards[team.id] ? "flipped" : ""}`} onClick={() => handleCardClick(team.id)}>
+                                        <div className="card-front">
+                                            <img src={team.image} alt={team.name} className="w-full h-48 object-cover rounded-t-lg" />
+                                            <div className="p-4">
+                                                <h3 className="text-xl font-custom font-bold">{team.name}</h3>
+                                                <p className="text-gray-600 font-custom">{team.role}</p>
+                                            </div>
+                                        </div>
+                                        <div className="card-back">
+                                            <div className="p-4">
+                                                <p className="text-gray-800 font-bold">"{team.quote}"</p>
+                                                <p className="text-gray-600">{team.intro}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="card-back">
-                                        <div className="p-4">
-                                            <p className="text-gray-800 font-bold">"{team.quote}"</p>
-                                            <p className="text-gray-600">{team.intro}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </AnimatePresence>
-                </div>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </div>
+                )}
             </div>
         </section>
     );

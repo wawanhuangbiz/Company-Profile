@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
 import FAQs from "./components/FAQs";
 import Carousels from "./components/Carousels";
+import Portfolio from "./components/Portfolio";
+import ProjectCollage from "./components/ProjectCollage";
+import Porto from "./components/Porto";
 
 const App = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
@@ -49,10 +52,23 @@ const App = () => {
         selectedLanguage={selectedLanguage}
         setNavbarVisible={setNavbarVisible}
       />
-      <Carousels
+      {/* <Carousels
+        selectedLanguage={selectedLanguage}
+        setNavbarVisible={setNavbarVisible}
+      /> */}
+      {/* <Porto
+        selectedLanguage={selectedLanguage}
+        setNavbarVisible={setNavbarVisible}
+      /> */}
+      <Portfolio
         selectedLanguage={selectedLanguage}
         setNavbarVisible={setNavbarVisible}
       />
+      {/* <ProjectCollage
+        selectedLanguage={selectedLanguage}
+        setNavbarVisible={setNavbarVisible}
+      /> */}
+
       <Legality
         selectedLanguage={selectedLanguage}
         setNavbarVisible={setNavbarVisible} // Pass the function to Legality

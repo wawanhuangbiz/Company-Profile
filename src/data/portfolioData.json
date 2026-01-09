@@ -3,21 +3,17 @@
     {
       "title": "PT. Kahatex",
       "area": "m²",
-      "image": "/logo-ssi.jpg",
-      "description": "Real-time tracking and management system",
+      "image": "/project/kahatex-ruko.jpg",
+      "description": "Bandung",
       "icon": "Expand",
-      "categories": [
-        "Building Maintenance",
-        "Design",
-        "Building Permit Approval"
-      ],
-      "link": ""
+      "categories": ["Design"],
+      "link": "https://www.google.com/maps/place/PT.+KAHATEX/@-6.9618483,107.792554,18z/data=!4m6!3m5!1s0x2e68c47f6a621705:0x96d8b12b91a23c83!8m2!3d-6.961347!4d107.7926873!16s%2Fg%2F11c1wy1p7c?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       "title": "PT.Lesso Technology Indonesia",
       "area": "120.000m²",
       "image": "/project/lesso.png",
-      "description": "Jl. Raya Serang No.KM. 16, Talaga, Kec. Cikupa, Kabupaten Tangerang, Banten 15710",
+      "description": "Jatengland Industrial Park Sayung",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
       "link": "https://www.google.com/maps/place/PT.+Lesso+Technology+Indonesia/@-6.9230975,110.5474705,17z/data=!3m1!4b1!4m6!3m5!1s0x2e70eda2dcdd763d:0x58c011a47b5fc354!8m2!3d-6.9230975!4d110.5500454!16s%2Fg%2F11qp3nk8dl?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
@@ -25,44 +21,44 @@
     {
       "title": "PT. Food Packaging Jaya",
       "area": "300.000m²",
-      "image": "/logo-ssi.jpg",
-      "description": "Secure and user-friendly banking application",
+      "images": ["/project/FPJ.jpg", "/project/FPJ01.jpg", "/project/FPJ02.jpg"],
+      "description": "Kawasan Industri Wiratama Indramayu Perkasa",
       "icon": "Expand",
-      "categories": ["Transformation", "Building Permit Approval"],
+      "categories": ["Transformation"],
       "link": "https://www.google.com/maps/place/PT.+Fuling+Food+Packaging+Indonesia+%E5%AF%8C%E5%B2%AD%E9%A3%9F%E5%93%81%E5%8C%85%E8%A3%85%EF%BC%88%E5%8D%B0%E5%B0%BC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@-6.9693542,110.3218803,17z/data=!3m1!4b1!4m6!3m5!1s0x2e705fce380d4a77:0xd1249928119bc2b4!8m2!3d-6.9693595!4d110.3244552!16s%2Fg%2F11j43dhl74?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
     },
     {
-      "title": "PT. Makuku Care Indonesia",
-      "area": "100.000m²",
-      "image": "/project/makuku.png",
-      "description": "Jatengland Industrial Park Sayung Blok F no. 1, Batu, Kabupaten Demak, Jawa Tengah 59561",
+      "title": "Pickelball Court",
+      "area": " ±500m²",
+      "images": ["/project/pickleball.png", "/project/pickleball02.png"],
+      "description": "Semarang",
       "icon": "Expand",
-      "categories": ["Transformation"],
+      "categories": ["Fascade Concept", "Interior Design"],
       "link": "https://www.google.com/maps/place/PT.+Makuku+Care+Indonesia/@-6.9189592,110.5453439,17z/data=!3m1!4b1!4m6!3m5!1s0x2e70ed063eba3cfd:0x69bcb61124328ff0!8m2!3d-6.9189592!4d110.5479188!16s%2Fg%2F11sk4rtv60?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
     },
     {
-      "title": "Citra Sanxing Indonesia New Factory",
-      "area": "m²",
-      "image": "/logo-ssi.jpg",
-      "description": "Analytics and management platform",
+      "title": "PT. GFT Indonesia Investment",
+      "area": " ±200.000m²",
+      "images": ["/project/GFT01.png", "/project/GFT02.png", "/project/GFT03.png", "/project/GFT04.png", "/project/GFT05.jpg", "/project/GFT06.png"],
+      "description": "Ngawi, Jawa Timur",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
       "link": "#"
     },
     {
       "title": "SMJ-SBRI New Factory",
-      "area": "m²",
-      "image": "/logo-ssi.jpg",
-      "description": "Real-time tracking and management system",
+      "area": "36.000m²",
+      "images": ["/project/SMJ.png", "/project/SMJ01.png", "/project/SMJ02.png", "/project/SMJ03.png"],
+      "description": "Kawasan Industri Wiratama Indramayu Perkasa",
       "icon": "Expand",
-      "categories": ["Design", "Building Permit Approval"],
+      "categories": ["Design"],
       "link": ""
     },
     {
-      "title": "PT. Sumber Samudra Indonesia",
-      "area": "35.000m²",
-      "image": "/project/samudra.png",
-      "description": "Jl. Kw. Industri Terboyo Gg. 5 No.16 A Blok F, Trimulyo, Kec. Genuk, Kota Semarang, Jawa Tengah 50118",
+      "title": "PT. LKI Machinery Indonesia",
+      "area": "3.947m²",
+      "images": "/project/LKI.png",
+      "description": "BSB Industrial Park blok A5 No 8, Kota Semarang, Jawa Tengah 50219",
       "icon": "Expand",
       "categories": ["Design", "Transformation"],
       "link": "https://www.google.com/maps/place/PT.+Sumber+Samudera+Indonesia/@-6.9452799,110.4674478,17z/data=!3m1!4b1!4m6!3m5!1s0x2e70f3e19e8a424f:0x1ec3b38b2880b994!8m2!3d-6.9452852!4d110.4723187!16s%2Fg%2F11hyxny7_f?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
@@ -93,7 +89,7 @@
       "image": "/logo-ssi.jpg",
       "description": "实时跟踪和管理系统",
       "icon": "展开",
-      "categories": ["建筑维护", "设计", "报批报建"],
+      "categories": ["设计", "报批报建"],
       "link": ""
     },
     {

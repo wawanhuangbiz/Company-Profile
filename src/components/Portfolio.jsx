@@ -1,27 +1,26 @@
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  ArrowRight,
-  ArrowLeft,
-  Expand,
-  ExternalLink,
-  Search,
-} from "lucide-react";
+import { ArrowRight, ArrowLeft, ExternalLink, Search } from "lucide-react";
 import { useState, useEffect } from "react";
 import mainData from "../data/mainData.json";
 import portfolioData from "../data/portfolioData";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// Import required modules
+import { Pagination, Autoplay } from "swiper/modules"; // Opsional: Tambah Autoplay jika ingin geser otomatis
+
 const Portfolio = ({ selectedLanguage }) => {
-  // Access the portfolio data based on the selected language
   const portfolio = mainData[selectedLanguage]?.portfolio || {};
   const [activeFilter, setActiveFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
-  // Extract projects based on the selected language
   const projects = portfolioData[selectedLanguage] || [];
 
-  // Extract unique categories from the projects for filtering
   const categories = [
     "All",
     ...Array.from(new Set(projects.flatMap((project) => project.categories))),
@@ -40,10 +39,9 @@ const Portfolio = ({ selectedLanguage }) => {
     setFilteredProjects(filtered);
   }, [activeFilter, searchTerm, projects]);
 
-  // Determine the projects to display based on the showAll state
   const displayedProjects = showAll
     ? filteredProjects
-    : filteredProjects.slice(0, 6); // Show only the first 6 projects
+    : filteredProjects.slice(0, 6);
 
   return (
     <section id="portfolio" className="bg-gray-50 py-20">
@@ -60,7 +58,6 @@ const Portfolio = ({ selectedLanguage }) => {
 
         {/* Search and Filter Controls */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          {/* Search Input */}
           <div className="relative">
             <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
             <input
@@ -72,7 +69,6 @@ const Portfolio = ({ selectedLanguage }) => {
             />
           </div>
 
-          {/* Filter Buttons */}
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
               <button
@@ -103,24 +99,56 @@ const Portfolio = ({ selectedLanguage }) => {
                 </div>
               </div>
             ) : (
-              displayedProjects.map((project) => (
-                <motion.div
-                  key={project.title}
-                  layout
-                  className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="h-48 w-full object-cover transition duration-500 group-hover:scale-110"
-                    />
+              displayedProjects.map((project, index) => {
+                // Logic untuk menangani data lama (string) dan baru (array)
+                // const projectImages =
+                //   project.images || (project.image ? [project.image] : []);
+
+                let rawData = project.images || project.image || [];
+                const projectImages = Array.isArray(rawData)
+                  ? rawData
+                  : [rawData];
+
+                return (
+                  <motion.div
+                    key={project.title + index} // Tambah index agar key unik jika ada judul sama
+                    layout
+                    className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
+                  >
+                    <div className="relative overflow-hidden h-48">
+                      {/* SWIPER IMPLEMENTATION */}
+                      <Swiper
+                        modules={[Pagination]}
+                        pagination={{
+                          clickable: true,
+                          dynamicBullets: true, // Agar dot tidak terlalu panjang jika gambar banyak
+                        }}
+                        loop={projectImages.length > 1} // Loop hanya aktif jika gambar > 1
+                        className="h-full w-full"
+                      >
+                        {projectImages.map((imgSrc, imgIndex) => (
+                          <SwiperSlide key={imgIndex}>
+                            <img
+                              src={imgSrc}
+                              alt={`${project.title} - ${imgIndex + 1}`}
+                              className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                            />
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                    </div>
+
                     <div className="p-6">
                       <h3 className="mb-2 text-xl font-semibold text-gray-900">
                         {project.title}
                       </h3>
-                      <p className="mb-4 text-gray-600">
+                      <p className="mb-4 text-gray-600 line-clamp-3">
+                        {" "}
+                        {/* Tambah line-clamp agar text rapi */}
                         {project.description}
+                      </p>
+                      <p className="mb-4 text-gray-400 text-sm">
+                        {project.area}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {project.categories.map((category, idx) => (
@@ -133,21 +161,21 @@ const Portfolio = ({ selectedLanguage }) => {
                         ))}
                       </div>
 
-                      {/* View Project Button */}
                       <div className="mt-4 flex justify-end">
                         <a
                           href={project.link}
                           className="inline-flex items-center rounded-full bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 transition duration-300 hover:bg-gray-300"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           View Project
                           <ExternalLink className="ml-2 h-4 w-4" />
                         </a>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))
+                  </motion.div>
+                );
+              })
             )}
           </AnimatePresence>
         </motion.div>

@@ -6,7 +6,7 @@
         { "id": 2, "name": "About", "href": "#about" },
         { "id": 3, "name": "Services", "href": "#services" },
         { "id": 5, "name": "Benefits", "href": "#faq" },
-        { "id": 4, "name": "Portfolio", "href": "#our-projects" },
+        { "id": 4, "name": "Portfolio", "href": "#portfolio" },
         { "id": 6, "name": "Legality", "href": "#legality" },
         { "id": 7, "name": "Our Team", "href": "#our-team" },
         { "id": 8, "name": "Contact", "href": "#contact" }
