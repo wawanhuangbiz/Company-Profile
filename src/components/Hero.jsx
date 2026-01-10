@@ -1,16 +1,48 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Star, Play } from "lucide-react";
-import mainData from "../data/mainData.json";
+import { Star } from "lucide-react"; // ArrowDown & Play dihapus karena di-comment di code asli
+import { supabase } from "../supabaseClient"; // Pastikan path ini benar
 
 const Hero = ({ selectedLanguage }) => {
-  // Ensure mainData is defined
-  const languageData = mainData[selectedLanguage] || {};
-  const heroData = languageData?.hero || {};
-  const heroItems = heroData?.heroItems || [];
+  // 1. State untuk menampung data dari DB
+  const [heroData, setHeroData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // console.log("Language data: ", languageData);
-  // console.log("heroData: ", heroItems[2].text);
-  // console.log("Hero items: ", heroItems);
+  // 2. Fetch data setiap kali selectedLanguage berubah
+  useEffect(() => {
+    const fetchHeroData = async () => {
+      setLoading(true);
+      try {
+        const { data, error } = await supabase
+          .from('mainData')
+          .select('*')
+          .eq('lang_code', selectedLanguage) // Filter berdasarkan bahasa
+          .maybeSingle(); // Ambil 1 baris saja
+
+        if (error) throw error;
+        if (data) setHeroData(data);
+      } catch (error) {
+        console.error("Error fetching hero data:", error);
+        // Fallback jika error (opsional)
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchHeroData();
+  }, [selectedLanguage]); // Dependency array penting!
+
+  // 3. Tampilkan Loading State agar tidak error saat data belum sampai
+  if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-[#EEEEEE]">
+        <p className="text-gray-500 animate-pulse">Loading content...</p>
+      </div>
+    );
+  }
+
+  // Jika data kosong (misal DB belum diisi)
+  if (!heroData) return null;
 
   return (
     <section
@@ -21,11 +53,7 @@ const Hero = ({ selectedLanguage }) => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white backdrop-blur-sm"></div>
 
       <div className="container mx-auto px-4 relative">
-        {/* Background Decorations */}
-        {/* <div className="absolute top-40 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-40 right-72 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div> */}
-
+        
         {/* Extra decorative blur elements */}
         <div className="absolute bottom-0 left-1/4 w-96 h-32 bg-blue-100/30 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-32 bg-purple-100/30 rounded-full filter blur-3xl"></div>
@@ -38,6 +66,7 @@ const Hero = ({ selectedLanguage }) => {
               transition={{ duration: 0.6 }}
               className="max-w-xl mb-12 lg:mb-0"
             >
+              {/* TRUSTED BY BADGE */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -45,17 +74,17 @@ const Hero = ({ selectedLanguage }) => {
                 className="inline-flex items-center px-4 py-2 bg-blue-300 bg-opacity-50 text-blue-600 rounded-full mb-6 text-sm font-medium"
               >
                 <Star className="w-4 h-4 mr-2" />
-                {heroData.trustedBy}
-                {/* || "Trusted by 500+ companies worldwide"} */}
+                {heroData.trusted_by} 
               </motion.div>
 
+              {/* HEADING */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-sans text-blue-600 leading-tight mb-6"
               >
-                {heroData.heading}
+                {heroData.heading}{" "}
                 <span className="relative inline-block">
                   <div className="">
                     <span className="relative text-blue-600">
@@ -77,6 +106,7 @@ const Hero = ({ selectedLanguage }) => {
                 </span>
               </motion.h1>
 
+              {/* PARAGRAPH */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -85,34 +115,21 @@ const Hero = ({ selectedLanguage }) => {
               >
                 {heroData.paragraph}
               </motion.p>
-
+              
+              {/* BUTTONS (Jika ingin diaktifkan, buat kolom button_text di DB) */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="flex flex-wrap gap-4"
-              >
-                {/* <motion.button
-                  whileHover={{ scale: 1.05, backgroundColor: "#2563eb" }}
-                  whileTap={{ scale: 0.95 }}
-                  href="#contact"
-                  className="px-8 py-4 bg-blue-600 text-white rounded-full transition-all duration-300 font-medium inline-flex items-center shadow-lg hover:shadow-blue-500/50"
-                >
-                  {heroItems?.[0]?.text}
-                  <ArrowDown className="ml-2 h-5 w-5" />
-                </motion.button> */}
-                {/* <motion.button
-                  whileHover={{ scale: 1.05, backgroundColor: "#f8fafc" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-white text-gray-900 rounded-full transition-all duration-300 font-medium border-2 border-gray-200 inline-flex items-center shadow-lg hover:shadow-gray-200/50"
-                >
-                  <Play className="mr-2 h-5 w-5" />
-                  {heroItems?.[1]?.text}
-                </motion.button> */}
-              </motion.div>
+                 initial={{ opacity: 0, y: 20 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ delay: 0.5 }}
+                 className="flex flex-wrap gap-4"
+               >
+                 {/* Logic button disini */}
+               </motion.div>
+
             </motion.div>
           </div>
 
+          {/* RIGHT SIDE IMAGE */}
           <div className="hidden lg:block w-full lg:w-1/2 px-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -122,13 +139,15 @@ const Hero = ({ selectedLanguage }) => {
             >
               <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-full filter blur-3xl opacity-70"></div>
               <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-purple-100 rounded-full filter blur-3xl opacity-70"></div>
+              
+              {/* Image Source dari Database */}
               <img
-                src="/images/image_hero.png"
+                src={heroData.hero_image_url || "/images/image_hero.png"}
                 alt="Hero"
                 className="relative rounded-2xl shadow-2xl"
               />
 
-              {/*/!* Floating Elements *!/*/}
+              {/* Floating Element 1 (Green) */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -136,12 +155,13 @@ const Hero = ({ selectedLanguage }) => {
               >
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium fotn-custom">
-                    {heroItems?.[2].text}
+                  <span className="text-sm font-medium font-custom">
+                    {heroData.badge_text_1} 
                   </span>
                 </div>
               </motion.div>
 
+              {/* Floating Element 2 (Blue) */}
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
@@ -150,7 +170,7 @@ const Hero = ({ selectedLanguage }) => {
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   <span className="text-sm font-medium font-custom">
-                    {heroItems?.[3]?.text}
+                     {heroData.badge_text_2}
                   </span>
                 </div>
               </motion.div>
