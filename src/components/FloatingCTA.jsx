@@ -1,14 +1,43 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Phone } from "lucide-react";
-import ctaData from "../data/ctaData.json";
+import { supabase } from "../supabaseClient"; // Import Supabase Client
 
 const FloatingCTA = ({ selectedLanguage }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const data = ctaData[selectedLanguage];
+  // State untuk data
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
+  // 1. Fetch Data dari tabel 'ctaData'
+  useEffect(() => {
+    const fetchCtaData = async () => {
+      setLoading(true);
+      try {
+        const { data: result, error } = await supabase
+          .from('ctaData') // Nama tabel baru
+          .select('*')     // Ambil semua kolom
+          .eq('lang_code', selectedLanguage)
+          .maybeSingle();  // Ambil 1 baris aman
+
+        if (error) throw error;
+        
+        if (result) {
+          setData(result);
+        }
+      } catch (error) {
+        console.error("Error fetching CTA data:", error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCtaData();
+  }, [selectedLanguage]);
+
+  // 2. Handle Scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
@@ -20,6 +49,9 @@ const FloatingCTA = ({ selectedLanguage }) => {
   }, []);
 
   const toggleOpen = () => setIsOpen(!isOpen);
+
+  // Jangan render jika loading atau data kosong
+  if (loading || !data) return null;
 
   return (
     <div className="fixed bottom-8 right-8 z-50">
@@ -40,10 +72,12 @@ const FloatingCTA = ({ selectedLanguage }) => {
             >
               <div className="space-y-4">
                 <div className="text-gray-900 font-medium mb-2">
+                  {/* Langsung panggil nama kolom */}
                   {data.help}
                 </div>
                 <a
                   href="#contact"
+                  onClick={() => setIsOpen(false)}
                   className="flex items-center p-3 hover:bg-gray-50 rounded-lg transition duration-300"
                 >
                   <MessageCircle className="w-5 h-5 text-blue-600 mr-3" />
@@ -57,7 +91,9 @@ const FloatingCTA = ({ selectedLanguage }) => {
                   </div>
                 </a>
                 <a
-                  href="http://wa.me/62811223731"
+                  href="https://wa.me/62811223731"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center p-3 hover:bg-gray-50 rounded-lg transition duration-300"
                 >
                   <Phone className="w-5 h-5 text-blue-600 mr-3" />
