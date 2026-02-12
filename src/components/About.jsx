@@ -6,11 +6,10 @@ const iconMap = {
   Factory,
   Users,
   Trophy,
-  Shield
-}
+  Shield,
+};
 
 const About = ({ selectedLanguage }) => {
-
   const aboutData = mainData[selectedLanguage]?.about || {};
   const aboutItems = mainData[selectedLanguage]?.about?.statsItems || [];
 
@@ -58,11 +57,13 @@ const About = ({ selectedLanguage }) => {
               {/* Experience badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }} 
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl"
               >
-                <div className="text-4xl font-bold text-blue-600 mb-2">2024</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  2024
+                </div>
                 <div className="text-gray-600">{aboutData?.established}</div>
               </motion.div>
             </motion.div>
@@ -73,15 +74,15 @@ const About = ({ selectedLanguage }) => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="lg:pl-8 relative z-10"  // Add relative and z-10 here
+              className="lg:pl-8 relative z-10" // Add relative and z-10 here
             >
-              <div className="inline-flex items-center px-4 py-2 bg-blue-300 text-blue-600 rounded-full mb-6 text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-300 text-blue-600 rounded-full mb-6 text-sm font-semibold font-spartan">
                 <Zap className="w-4 h-4 mr-2" />
                 {aboutData?.whyChooseUs}
               </div>
 
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                {aboutData?.transformingConcepts}{" "} 
+              <h2 className="text-5xl font-semibold font-spartan text-gray-900 mb-6">
+                {aboutData?.transformingConcepts}{" "}
                 <span className="text-blue-600 relative">
                   {aboutData?.industrialExcellence}
                   <svg
@@ -92,8 +93,8 @@ const About = ({ selectedLanguage }) => {
                     <motion.path
                       initial={{ pathLength: 0 }}
                       animate={{ pathLength: 1 }}
-                      transition={{ duration: 1, delay: 0.5 }}
-                      d="M1 5.5C20 3.5 40 3.5 60 5.5C80 7.5 100 9.5 120 9.5C140 9.5 160 7.5 180 5.5C200 3.5 220 3.5 240 5.5"
+                      transition={{ duration: 2, delay: 0.5 }}
+                      d="M1 5.5 L240 5.5"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
@@ -102,7 +103,7 @@ const About = ({ selectedLanguage }) => {
                 </span>
               </h2>
 
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed text-justify font-custom font-thin">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed text-justify font-sans font-semibold">
                 {aboutData?.aboutParagraph}
               </p>
 
@@ -120,7 +121,9 @@ const About = ({ selectedLanguage }) => {
                       className="p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition duration-300 group"
                     >
                       <div className="mb-4">
-                        {IconComponent && <IconComponent className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />}
+                        {IconComponent && (
+                          <IconComponent className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                        )}
                       </div>
                       <div className="text-3xl font-bold text-gray-900 mb-2">
                         {stat.value}
@@ -128,7 +131,7 @@ const About = ({ selectedLanguage }) => {
                       <div className="text-gray-600 font-medium mb-1">
                         {stat.label}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm font-sans font-bold text-gray-500">
                         {stat.description}
                       </div>
                     </motion.div>
@@ -140,7 +143,7 @@ const About = ({ selectedLanguage }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#our-team"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 font-medium group pointer-events-auto"  // Add pointer-events-auto here
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 font-medium group pointer-events-auto" // Add pointer-events-auto here
               >
                 {aboutData?.learnMore}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />

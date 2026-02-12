@@ -5,7 +5,7 @@ import { supabase } from "../supabaseClient";
 
 const FAQs = ({ selectedLanguage }) => {
   const [activeIndex, setActiveIndex] = useState(null);
-  
+
   // State untuk data dari Supabase
   const [faqs, setFaqs] = useState([]);
   const [faqTexts, setFaqTexts] = useState({ title: "", description: "" });
@@ -17,18 +17,19 @@ const FAQs = ({ selectedLanguage }) => {
       setLoading(true);
       try {
         const { data, error } = await supabase
-          .from('faqsData')
-          .select('*')
-          .eq('lang_code', selectedLanguage)
+          .from("faqsData")
+          .select("*")
+          .eq("lang_code", selectedLanguage)
           .maybeSingle();
 
         if (error) throw error;
-        
+
         if (data) {
           setFaqs(data.questions || []);
           setFaqTexts({
             title: data.title || "Why Choose SSI?",
-            description: data.description || ""
+            description: data.description || "",
+            subtitle: data.subtitle || "",
           });
         }
       } catch (error) {
@@ -43,16 +44,18 @@ const FAQs = ({ selectedLanguage }) => {
 
   if (loading) {
     return (
-      <div className="py-20 text-center text-gray-400 animate-pulse font-custom">
+      <div className="py-20 text-center text-gray-400 animate-pulse font-heading">
         Loading Information...
       </div>
     );
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden" id="faq">
+    <section
+      className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+      id="benefits"
+    >
       <div className="container mx-auto px-4 relative">
-        
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,17 +63,21 @@ const FAQs = ({ selectedLanguage }) => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
+          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-600 rounded-full mb-6 text-sm font-medium">
+            <HelpCircle className="w-4 h-4 mr-2" />
+            {faqTexts.subtitle}
+          </div>
           {/* Judul Utama */}
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-custom">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-heading">
             {faqTexts.title}
           </h2>
-          
+
           {/* Deskripsi Pengganti Search Bar */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="max-w-3xl mx-auto text-gray-600 text-lg font-custom leading-relaxed"
+            className="max-w-3xl mx-auto text-gray-600 text-lg font-heading leading-relaxed"
           >
             {faqTexts.description}
           </motion.p>
@@ -89,12 +96,14 @@ const FAQs = ({ selectedLanguage }) => {
                 className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
               >
                 <button
-                  onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                  onClick={() =>
+                    setActiveIndex(activeIndex === index ? null : index)
+                  }
                   className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center space-x-4">
                     <HelpCircle className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                    <span className="font-semibold text-gray-900 font-custom leading-tight">
+                    <span className="font-semibold text-gray-900 font-heading leading-tight">
                       {faq.question}
                     </span>
                   </div>
@@ -114,7 +123,7 @@ const FAQs = ({ selectedLanguage }) => {
                       className="overflow-hidden"
                     >
                       <div className="p-6 bg-white border-t border-gray-100">
-                        <p className="text-gray-600 leading-relaxed font-custom text-base">
+                        <p className="text-gray-600 leading-relaxed font-heading text-base">
                           {faq.answer}
                         </p>
                       </div>

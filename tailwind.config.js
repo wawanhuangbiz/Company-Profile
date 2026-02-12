@@ -14,8 +14,13 @@ module.exports = {
         "footer-image": "url('/background/polos.jpg')",
       }),
       fontFamily: {
-        sans: ['FranklinGothic', 'ui-sans-reif', 'system-ui'],
-        custom: ['Masfield', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        custom: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        spartan: ['"League Spartan"', 'sans-serif']
+      },
+      colors: {
+        'off-white': '#E5E5E5',
       }
     },
   },

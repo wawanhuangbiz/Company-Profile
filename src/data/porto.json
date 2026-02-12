@@ -1,0 +1,34 @@
+{
+  "en": [
+    {
+      "title": "PT. Kahatex",
+      "area": "m²",
+      "image": "/project/kahatex-ruko.jpg",
+      "description": "Bandung",
+      "categories": ["Design"],
+    },
+    {
+      "title": "PT.Lesso Technology Indonesia",
+      "area": "120.000m²",
+      "image": "/project/lesso.png",
+      "description": "Jatengland Industrial Park Sayung",
+      "categories": ["Design", "Transformation"],
+    },
+  ],
+  "zh": [
+    {
+      "title": "PT. Kahatex",
+      "area": "m²",
+      "image": "/logo-ssi.jpg",
+      "description": "Bandung",
+      "categories": ["设计"],
+    },
+    {
+      "title": "PT.Lesso Technology Indonesia",
+      "area": "120.000m²",
+      "image": "/project/lesso.png",
+      "description": "Jatengland Industrial Park Sayung",
+      "categories": ["设计", "转图"],
+    },
+  ]
+}

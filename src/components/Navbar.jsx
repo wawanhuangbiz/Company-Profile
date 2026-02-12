@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSelector from "./LanguageSelector";
-import 'react-tooltip/dist/react-tooltip.css';
+import "react-tooltip/dist/react-tooltip.css";
 import { supabase } from "../supabaseClient";
 import "./Navbar.css";
 
@@ -20,9 +20,9 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
       setLoading(true);
       try {
         const { data, error } = await supabase
-          .from('mainData') // Pastikan nama tabel di Supabase adalah 'mainData'
-          .select('menu_items')
-          .eq('lang_code', selectedLanguage) // Filter berdasarkan kode bahasa (en/id/zh)
+          .from("mainData") // Pastikan nama tabel di Supabase adalah 'mainData'
+          .select("menu_items")
+          .eq("lang_code", selectedLanguage) // Filter berdasarkan kode bahasa (en/id/zh)
           .maybeSingle(); // Mengambil satu baris data saja
 
         if (error) throw error;
@@ -62,14 +62,23 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   }
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+    <nav
+      className={`navbar ${scrolled ? "scrolled" : ""}`}
+      style={{ position: "sticky", top: 0, zIndex: 1000 }}
+    >
       <div className="container mx-auto flex justify-between items-center p-4">
-        
         {/* Logo */}
-        <img src="images/logo-ssi-no-back.png" className="h-[3.75rem] py-0" alt="Logo SSI" />
+        <img
+          src="images/logo-ssi-no-back.png"
+          className="h-[3.75rem] py-0"
+          alt="Logo SSI"
+        />
 
         {/* Menu Button (Mobile) */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-800">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-gray-800"
+        >
           {isOpen ? <X /> : <Menu />}
         </button>
 
@@ -77,9 +86,9 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
         <ul className="hidden md:flex items-center space-x-6">
           {menuItems.map((item, index) => (
             <li key={index}>
-              <a 
-                href={item.href} 
-                className="text-gray-800 hover:text-blue-600 font-custom font-semibold transition-colors"
+              <a
+                href={item.href}
+                className="text-gray-800 hover:text-blue-600 font-heading font-semibold transition-colors"
               >
                 {item.name}
               </a>
@@ -87,7 +96,10 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
           ))}
           {/* Garis pembatas dan Pemilih Bahasa */}
           <div className="pl-4 border-l border-gray-200">
-            <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+            <LanguageSelector
+              selectedLanguage={selectedLanguage}
+              setSelectedLanguage={setSelectedLanguage}
+            />
           </div>
         </ul>
 
@@ -103,9 +115,9 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
               <ul className="flex flex-col p-6 space-y-4">
                 {menuItems.map((item, index) => (
                   <li key={index}>
-                    <a 
-                      href={item.href} 
-                      onClick={() => setIsOpen(false)} 
+                    <a
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
                       className="block text-lg text-gray-800 hover:text-blue-600 font-medium"
                     >
                       {item.name}
@@ -114,7 +126,10 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
                 ))}
                 <hr className="border-gray-100" />
                 <li className="flex justify-start">
-                  <LanguageSelector selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+                  <LanguageSelector
+                    selectedLanguage={selectedLanguage}
+                    setSelectedLanguage={setSelectedLanguage}
+                  />
                 </li>
               </ul>
             </motion.div>
